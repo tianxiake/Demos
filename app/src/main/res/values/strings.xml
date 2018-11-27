@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Demos</string>
+
+    <string-array name="item_data"></string-array>
+
+    <string-array name="click_item_data"></string-array>
+</resources>
