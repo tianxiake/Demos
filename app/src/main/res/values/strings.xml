@@ -1,7 +1,14 @@
 <resources>
     <string name="app_name">Demos</string>
 
-    <string-array name="item_data"></string-array>
+    <string-array name="item_data">
+        <item>底部导航栏实现方式一</item>
+    </string-array>
 
-    <string-array name="click_item_data"></string-array>
+    <string-array name="click_item_data">
+        <item>com.runningsnail.demos.activity.bottomnavigation.BottomWayOneActivity</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

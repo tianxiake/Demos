@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.bottomnavigation.BottomWayOneActivity">
+
+
+    <!--底部导航栏-->
+    <LinearLayout
+        android:id="@+id/ll_bottom_bar"
+        layout="@layout/layout_item_one"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" />
+
+    <!--Fragment区域-->
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_bottom_bar" />
+
+
+</RelativeLayout>
