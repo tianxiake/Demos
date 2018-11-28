@@ -7,10 +7,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import com.runningsnail.demos.HiLog;
 import com.runningsnail.demos.R;
-
 import java.util.Arrays;
 import java.util.List;
 
