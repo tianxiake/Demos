@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.bottomnavigation.BottomWayOneActivity"></activity>
+        <activity android:name=".activity.bottomnavigation.BottomWayOneActivity" />
+        <activity android:name=".activity.ImageSwitcherActivity"></activity>
     </application>
 
 </manifest>
