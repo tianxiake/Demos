@@ -2,11 +2,13 @@
     <string name="app_name">Demos</string>
 
     <string-array name="item_data">
-        <item>底部导航栏实现方式一</item>
+        <item>LinearLayout+TextView实现底部导航栏一</item>
+        <item>RadioGroup+RadioButton实现底部导航栏二</item>
     </string-array>
 
     <string-array name="click_item_data">
         <item>com.runningsnail.demos.activity.bottomnavigation.BottomWayOneActivity</item>
+        <item>com.runningsnail.demos.activity.bottomnavigation.BottomWayTwoActivity</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

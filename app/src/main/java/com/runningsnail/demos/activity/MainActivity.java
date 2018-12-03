@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         itemsData = getItemsData();
         clickItemsData = getClickItemsData();
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.item_main_list,
                 itemsData);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

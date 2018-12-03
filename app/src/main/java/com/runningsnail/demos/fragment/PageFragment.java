@@ -43,6 +43,7 @@ public class PageFragment extends Fragment {
 
 
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--变换颜色使用属性名是color不是drawable 实际使用的ColorStateList-->
+    <item android:color="@color/bottomSelectColor" android:state_checked="true" />
+    <item android:color="@color/bottomNormalColor" android:state_checked="false" />
+</selector>

@@ -22,6 +22,14 @@ import butterknife.ButterKnife;
 
 /**
  * LinearLayout+TextView实现底部导航栏
+ * 本质是使用TextView drawableTop/Right/Bottom/Left这个特殊属性来实现图片显示
+ *
+ * 缺点：
+ * 1>图片的尺寸大小我们不能指定大小，如果图片过大，字体会显示不全，这个没有用一个单独的ImageView好用
+ * 2>对连续点击要自己手动处理
+ *
+ * 优点：
+ * 简单
  */
 
 public class BottomWayOneActivity extends AppCompatActivity implements TextView.OnClickListener {

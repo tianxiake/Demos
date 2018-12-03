@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.bottomnavigation.BottomWayOneActivity" />
-        <activity android:name=".activity.ImageSwitcherActivity"></activity>
+        <activity android:name=".activity.ImageSwitcherActivity" />
+        <activity android:name=".activity.bottomnavigation.BottomWayTwoActivity"></activity>
     </application>
 
 </manifest>
