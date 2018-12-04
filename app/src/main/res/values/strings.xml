@@ -4,11 +4,19 @@
     <string-array name="item_data">
         <item>LinearLayout+TextView实现底部导航栏一</item>
         <item>RadioGroup+RadioButton实现底部导航栏二</item>
+        <item>ViewAnimation之Scale动画</item>
+        <item>ViewAnimation之Alpha动画</item>
+        <item>ViewAnimation之Rotate动画</item>
+        <item>ViewAnimation之Translate动画</item>
     </string-array>
 
     <string-array name="click_item_data">
         <item>com.runningsnail.demos.activity.bottomnavigation.BottomWayOneActivity</item>
         <item>com.runningsnail.demos.activity.bottomnavigation.BottomWayTwoActivity</item>
+        <item>com.runningsnail.demos.activity.viewanimation.ScaleAnimationActivity</item>
+        <item>com.runningsnail.demos.activity.viewanimation.AlphaAnimationActivity</item>
+        <item>com.runningsnail.demos.activity.viewanimation.RotateAnimationActivity</item>
+        <item>com.runningsnail.demos.activity.viewanimation.TranslateAnimationActivity</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
