@@ -8,6 +8,7 @@
         <item>ViewAnimation之Alpha动画</item>
         <item>ViewAnimation之Rotate动画</item>
         <item>ViewAnimation之Translate动画</item>
+        <item>内存泄漏Activity测试</item>
     </string-array>
 
     <string-array name="click_item_data">
@@ -17,6 +18,7 @@
         <item>com.runningsnail.demos.activity.viewanimation.AlphaAnimationActivity</item>
         <item>com.runningsnail.demos.activity.viewanimation.RotateAnimationActivity</item>
         <item>com.runningsnail.demos.activity.viewanimation.TranslateAnimationActivity</item>
+        <item>com.runningsnail.demos.activity.LeakActivity</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

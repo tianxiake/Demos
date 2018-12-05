@@ -21,8 +21,9 @@
         <activity android:name=".activity.bottomnavigation.BottomWayTwoActivity" />
         <activity android:name=".activity.viewanimation.ScaleAnimationActivity" />
         <activity android:name=".activity.viewanimation.AlphaAnimationActivity" />
-        <activity android:name=".activity.viewanimation.RotateAnimationActivity"></activity>
-        <activity android:name=".activity.viewanimation.TranslateAnimationActivity"></activity>
+        <activity android:name=".activity.viewanimation.RotateAnimationActivity" />
+        <activity android:name=".activity.viewanimation.TranslateAnimationActivity" />
+        <activity android:name=".activity.LeakActivity"></activity>
     </application>
 
 </manifest>
