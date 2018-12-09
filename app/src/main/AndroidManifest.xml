@@ -3,7 +3,6 @@
     package="com.runningsnail.demos">
 
     <application
-        android:name=".DemoApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -24,7 +23,11 @@
         <activity android:name=".activity.viewanimation.AlphaAnimationActivity" />
         <activity android:name=".activity.viewanimation.RotateAnimationActivity" />
         <activity android:name=".activity.viewanimation.TranslateAnimationActivity" />
-        <activity android:name=".activity.LeakActivity"></activity>
+        <activity android:name=".activity.viewanimation.SetAnimationActivity" />
+        <activity android:name=".activity.bottomnavigation.BottomWayThreeActivity" />
+        <activity android:name=".activity.bottomnavigation.BottomWayFourActivity" />
+        <activity android:name=".activity.viewanimation.SplashActivity" />
+        <activity android:name=".activity.viewanimation.DoubleTabScaleActivity"></activity>
     </application>
 
 </manifest>

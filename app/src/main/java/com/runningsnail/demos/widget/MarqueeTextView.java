@@ -1,4 +1,4 @@
-package com.runningsnail.demos;
+package com.runningsnail.demos.widget;
 
 import android.content.Context;
 import android.support.v7.widget.AppCompatTextView;
