@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.viewanimation.ScanActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_one"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_circle_one" />
+
+    <ImageView
+        android:id="@+id/iv_two"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_circle_one" />
+
+    <ImageView
+        android:id="@+id/iv_three"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_circle_one" />
+
+    <ImageView
+        android:id="@+id/iv_content"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:background="@drawable/sound" />
+
+
+</FrameLayout>

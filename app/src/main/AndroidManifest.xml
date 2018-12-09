@@ -27,7 +27,9 @@
         <activity android:name=".activity.bottomnavigation.BottomWayThreeActivity" />
         <activity android:name=".activity.bottomnavigation.BottomWayFourActivity" />
         <activity android:name=".activity.viewanimation.SplashActivity" />
-        <activity android:name=".activity.viewanimation.DoubleTabScaleActivity"></activity>
+        <activity android:name=".activity.viewanimation.DoubleTabScaleActivity" />
+        <activity android:name=".activity.viewanimation.LoaddingActivity" />
+        <activity android:name=".activity.viewanimation.ScanActivity"></activity>
     </application>
 
 </manifest>

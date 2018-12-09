@@ -12,6 +12,8 @@
         <item>ViewAnimation之Set动画集</item>
         <item>ViewAnimation之镜头由远到近的效果</item>
         <item>ViewAnimation之双击放大效果</item>
+        <item>ViewAnimation之加载框效果</item>
+        <item>ViewAnimation之扫描效果</item>
         <item>内存泄漏Activity测试</item>
     </string-array>
 
@@ -26,6 +28,8 @@
         <item>com.runningsnail.demos.activity.viewanimation.SetAnimationActivity</item>
         <item>com.runningsnail.demos.activity.viewanimation.SplashActivity</item>
         <item>com.runningsnail.demos.activity.viewanimation.DoubleTabScaleActivity</item>
+        <item>com.runningsnail.demos.activity.viewanimation.LoaddingActivity</item>
+        <item>com.runningsnail.demos.activity.viewanimation.ScanActivity</item>
         <item>com.runningsnail.demos.activity.LeakActivity</item>
     </string-array>
 
