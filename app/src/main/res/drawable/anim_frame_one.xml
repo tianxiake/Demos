@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:drawable="@drawable/big_white_one"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/big_white_two"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/big_white_three"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/big_white_four"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/big_white_five"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/big_white_six"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/big_white_seven"
+        android:duration="60" />
+    <item
+        android:drawable="@drawable/big_white_eight"
+        android:duration="60" />
+</animation-list>

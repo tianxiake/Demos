@@ -29,7 +29,8 @@
         <activity android:name=".activity.viewanimation.SplashActivity" />
         <activity android:name=".activity.viewanimation.DoubleTabScaleActivity" />
         <activity android:name=".activity.viewanimation.LoaddingActivity" />
-        <activity android:name=".activity.viewanimation.ScanActivity"></activity>
+        <activity android:name=".activity.viewanimation.ScanActivity" />
+        <activity android:name=".activity.viewanimation.FrameAnimActivity"></activity>
     </application>
 
 </manifest>
