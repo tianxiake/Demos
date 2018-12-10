@@ -16,21 +16,48 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.bottomnavigation.BottomWayOneActivity" />
+        <activity
+            android:name=".activity.bottomnavigation.BottomWayOneActivity"
+            android:label="底部导航栏一" />
         <activity android:name=".activity.ImageSwitcherActivity" />
-        <activity android:name=".activity.bottomnavigation.BottomWayTwoActivity" />
-        <activity android:name=".activity.viewanimation.ScaleAnimationActivity" />
-        <activity android:name=".activity.viewanimation.AlphaAnimationActivity" />
-        <activity android:name=".activity.viewanimation.RotateAnimationActivity" />
-        <activity android:name=".activity.viewanimation.TranslateAnimationActivity" />
-        <activity android:name=".activity.viewanimation.SetAnimationActivity" />
-        <activity android:name=".activity.bottomnavigation.BottomWayThreeActivity" />
-        <activity android:name=".activity.bottomnavigation.BottomWayFourActivity" />
-        <activity android:name=".activity.viewanimation.SplashActivity" />
-        <activity android:name=".activity.viewanimation.DoubleTabScaleActivity" />
-        <activity android:name=".activity.viewanimation.LoaddingActivity" />
-        <activity android:name=".activity.viewanimation.ScanActivity" />
-        <activity android:name=".activity.viewanimation.FrameAnimActivity"></activity>
+        <activity
+            android:name=".activity.bottomnavigation.BottomWayTwoActivity"
+            android:label="底部导航栏二" />
+        <activity
+            android:name=".activity.bottomnavigation.BottomWayThreeActivity"
+            android:label="底部导航栏三" />
+
+        <activity
+            android:name=".activity.viewanimation.ScaleAnimationActivity"
+            android:label="缩放动画简单示例" />
+        <activity
+            android:name=".activity.viewanimation.AlphaAnimationActivity"
+            android:label="透明度动画简单示例" />
+        <activity
+            android:name=".activity.viewanimation.RotateAnimationActivity"
+            android:label="旋转动画简单示例" />
+        <activity
+            android:name=".activity.viewanimation.TranslateAnimationActivity"
+            android:label="平移动画简单示例" />
+        <activity
+            android:name=".activity.viewanimation.SetAnimationActivity"
+            android:label="动画组合简单示例" />
+        <activity
+            android:name=".activity.viewanimation.SplashActivity"
+            android:label="镜头动画" />
+        <activity
+            android:name=".activity.viewanimation.DoubleTabScaleActivity"
+            android:label="双击放大动画" />
+        <activity
+            android:name=".activity.viewanimation.LoaddingActivity"
+            android:label="加载动画" />
+        <activity
+            android:name=".activity.viewanimation.ScanActivity"
+            android:label="声波动画简单示例" />
+        <activity android:name=".activity.viewanimation.FrameAnimActivity" />
+        <activity
+            android:name=".activity.dialog.DialogOneActivity"
+            android:label="对话框一"></activity>
     </application>
 
 </manifest>

@@ -7,8 +7,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
 import com.runningsnail.demos.HiLog;
 import com.runningsnail.demos.R;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -39,7 +41,10 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                startActivity(clickItemsData.get(position));
+                String content = clickItemsData.get(position);
+                if (content.contains("activity")) {
+                    startActivity(clickItemsData.get(position));
+                }
             }
         });
 

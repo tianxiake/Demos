@@ -14,7 +14,8 @@ import butterknife.ButterKnife;
 
 /**
  * 使用三方框架实现
- * 优点：
+ * 优点：动画多,展示效果好
+ * 缺点：高度目前不可以随便调整
  */
 public class BottomWayThreeActivity extends AppCompatActivity {
 
@@ -43,7 +44,6 @@ public class BottomWayThreeActivity extends AppCompatActivity {
                 .setFirstSelectedPosition(0)
                 .setMode(BottomNavigationBar.MODE_FIXED)
                 .initialise();
-
 
         bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             @Override
