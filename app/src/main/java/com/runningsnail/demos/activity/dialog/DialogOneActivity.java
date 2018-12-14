@@ -1,11 +1,11 @@
 package com.runningsnail.demos.activity.dialog;
 
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,12 +47,15 @@ public class DialogOneActivity extends AppCompatActivity {
                 Dialog dialogOne = createDialogOne();
                 Window window = dialogOne.getWindow();
                 window.getDecorView().setPadding(0,0,0,0);
-                window.setBackgroundDrawable(new ColorDrawable(Color.RED));
+                window.getDecorView().setBackgroundColor(Color.BLUE);
+//                window.setBackgroundDrawable(new ColorDrawable(Color.RED));
                 ViewGroup.MarginLayoutParams marginLayoutParams = new ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
                 marginLayoutParams.leftMargin = 0;
                 marginLayoutParams.rightMargin = 0;
                 window.getDecorView().setLayoutParams(marginLayoutParams);
                 WindowManager.LayoutParams attributes = window.getAttributes();
+                attributes.width=100;
+                attributes.height=100;
                 String s = attributes.toString();
                 window.setAttributes(attributes);
                 HiLog.d(TAG, "alertDialog:" + s);

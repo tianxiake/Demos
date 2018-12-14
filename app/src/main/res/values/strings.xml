@@ -24,6 +24,13 @@
 
         <item>===内存泄漏===</item>
         <item>内存泄漏Activity测试</item>
+
+        <item>===View位置相关信息部分===</item>
+        <item>view相关位置测试</item>
+
+        <item>===RecyclerView系列</item>
+        <item>横向滚动的RecyclerView实现方式一</item>
+
     </string-array>
 
     <string-array name="click_item_data">
@@ -49,6 +56,13 @@
 
         <item>===内存泄漏===</item>
         <item>com.runningsnail.demos.activity.LeakActivity</item>
+
+        <item>===View位置相关信息部分===</item>
+        <item>com.runningsnail.demos.activity.ViewRelationLocationActivity</item>
+
+        <item>===RecyclerView系列</item>
+        <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewOneActivity</item>
+
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

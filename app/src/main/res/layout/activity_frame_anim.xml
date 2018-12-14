@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activity.viewanimation.FrameAnimActivity">
 
 
+
     <ImageView
-        android:id="@+id/iv_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/iv_xml"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/anim_frame_one" />
-</android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_java"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_xml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="帧动画xml实现" />
+
+    <Button
+        android:id="@+id/btn_java"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="帧动画代码实现" />
+</FrameLayout>

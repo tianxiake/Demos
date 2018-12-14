@@ -26,7 +26,6 @@
         <activity
             android:name=".activity.bottomnavigation.BottomWayThreeActivity"
             android:label="底部导航栏三" />
-
         <activity
             android:name=".activity.viewanimation.ScaleAnimationActivity"
             android:label="缩放动画简单示例" />
@@ -57,7 +56,9 @@
         <activity android:name=".activity.viewanimation.FrameAnimActivity" />
         <activity
             android:name=".activity.dialog.DialogOneActivity"
-            android:label="对话框一"></activity>
+            android:label="对话框一" />
+        <activity android:name=".activity.ViewRelationLocationActivity" />
+        <activity android:name=".activity.recyclerview.RecyclerViewOneActivity"></activity>
     </application>
 
 </manifest>
