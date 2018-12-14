@@ -10,6 +10,9 @@
         <item>===对话框系列===</item>
         <item>对话框实现之AlertDialog</item>
 
+        <item>===RecyclerView系列===</item>
+        <item>RecyclerView初体验</item>
+
         <item>===动画系列===</item>
         <item>ViewAnimation之Scale动画</item>
         <item>ViewAnimation之Alpha动画</item>
@@ -30,6 +33,8 @@
 
         <item>===RecyclerView系列</item>
         <item>横向滚动的RecyclerView实现方式一</item>
+        <item>横向滚动的RecyclerView实现方式二</item>
+        <item>横向滚动的RecyclerView布局导致的显示问题</item>
 
     </string-array>
 
@@ -41,6 +46,9 @@
 
         <item>===对话框系列===</item>
         <item>com.runningsnail.demos.activity.dialog.DialogOneActivity</item>
+
+        <item>===RecyclerView系列===</item>
+        <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewOneActivity</item>
 
         <item>===动画系列===</item>
         <item>com.runningsnail.demos.activity.viewanimation.ScaleAnimationActivity</item>
@@ -62,6 +70,8 @@
 
         <item>===RecyclerView系列</item>
         <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewOneActivity</item>
+        <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewTwoActivity</item>
+        <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewShowErrorActivity</item>
 
     </string-array>
 

@@ -58,7 +58,9 @@
             android:name=".activity.dialog.DialogOneActivity"
             android:label="对话框一" />
         <activity android:name=".activity.ViewRelationLocationActivity" />
-        <activity android:name=".activity.recyclerview.RecyclerViewOneActivity"></activity>
+        <activity android:name=".activity.recyclerview.RecyclerViewOneActivity" />
+        <activity android:name=".activity.recyclerview.RecyclerViewTwoActivity" />
+        <activity android:name=".activity.recyclerview.RecyclerViewShowErrorActivity"></activity>
     </application>
 
 </manifest>

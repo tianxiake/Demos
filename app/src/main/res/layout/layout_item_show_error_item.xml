@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="174dp"
+    android:layout_height="281dp"
+    android:orientation="vertical"
+    android:padding="2dp">
+
+    <!--背景图片-->
+    <ImageView
+        android:id="@+id/iv_item_icon"
+        android:layout_width="match_parent"
+        android:layout_height="226dp"
+        android:background="@mipmap/ic_launcher" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_item_icon">
+        <!--未聚焦显示的内容-->
+        <TextView
+            android:id="@+id/tv_normal_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="锦绣未央"
+            android:textColor="#FF0000"
+            android:textSize="22px" />
+
+        <!--聚焦显示的内容-->
+        <LinearLayout
+            android:id="@+id/ll_focus_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!--标题-->
+            <TextView
+                android:id="@+id/tv_focus_title"
+                android:layout_width="match_parent"
+                android:layout_height="23dp"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="锦绣未央"
+                android:textColor="#010101" />
+
+            <!--一句话看点-->
+            <TextView
+                android:id="@+id/tv_focus_sub_title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:text="唐嫣罗晋甜蜜虐恋！" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</RelativeLayout>
