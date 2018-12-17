@@ -6,6 +6,7 @@
     tools:context=".activity.dialog.DialogOneActivity">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -13,7 +14,32 @@
             android:id="@+id/btn_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="单按钮提示对话框" />
+            android:text="全部组成部分提示对话框" />
+
+        <Button
+            android:id="@+id/btn_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="普通提示对话框" />
+
+
+        <Button
+            android:id="@+id/btn_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单选列表" />
+
+        <Button
+            android:id="@+id/btn_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="单选按钮" />
+
+        <Button
+            android:id="@+id/btn_five"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="复选框" />
     </LinearLayout>
 
 </ScrollView>

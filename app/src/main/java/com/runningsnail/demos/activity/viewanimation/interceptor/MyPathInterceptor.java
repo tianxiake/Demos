@@ -1,11 +1,9 @@
 package com.runningsnail.demos.activity.viewanimation.interceptor;
 
-import android.content.Context;
 import android.graphics.Path;
-import android.util.AttributeSet;
 import android.view.animation.PathInterpolator;
 
-import com.runningsnail.demos.HiLog;
+import com.runningsnail.demos.utils.HiLog;
 
 /**
  * 自定义一个Path

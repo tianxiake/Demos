@@ -8,9 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.runningsnail.demos.AnimUtil;
-import com.runningsnail.demos.HiLog;
-import com.runningsnail.demos.BaseAdapter;
+import com.runningsnail.demos.utils.AnimUtil;
+import com.runningsnail.demos.utils.HiLog;
+import com.runningsnail.demos.adapter.BaseAdapter;
 import com.runningsnail.demos.R;
 
 import java.util.ArrayList;
