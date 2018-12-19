@@ -10,7 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.runningsnail.demos.HiLog;
+import com.runningsnail.demos.utils.HiLog;
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.fragment.PageFragment;
 

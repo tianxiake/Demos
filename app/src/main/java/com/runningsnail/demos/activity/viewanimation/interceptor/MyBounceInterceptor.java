@@ -2,7 +2,7 @@ package com.runningsnail.demos.activity.viewanimation.interceptor;
 
 import android.view.animation.BounceInterpolator;
 
-import com.runningsnail.demos.HiLog;
+import com.runningsnail.demos.utils.HiLog;
 
 /**
  * @author yongjie created on 2018/12/9.

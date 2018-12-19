@@ -1,4 +1,4 @@
-package com.runningsnail.demos;
+package com.runningsnail.demos.utils;
 
 import android.util.Log;
 import android.view.View;
