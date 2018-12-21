@@ -2,11 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.runningsnail.demos">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".DemoApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".DemoApplication"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -61,7 +63,12 @@
         <activity android:name=".activity.ViewRelationLocationActivity" />
         <activity android:name=".activity.recyclerview.RecyclerViewOneActivity" />
         <activity android:name=".activity.recyclerview.RecyclerViewTwoActivity" />
-        <activity android:name=".activity.recyclerview.RecyclerViewShowErrorActivity"></activity>
+        <activity android:name=".activity.recyclerview.RecyclerViewShowErrorActivity" />
+        <activity
+            android:name=".activity.SingleTaskActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".activity.rxjava.RxJavaOneActivity" />
+        <activity android:name=".activity.recyclerview.RecyclerViewThreeActivity"></activity>
     </application>
 
 </manifest>

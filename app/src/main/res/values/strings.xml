@@ -2,6 +2,7 @@
     <string name="app_name">Demos</string>
 
     <string-array name="item_data">
+
         <item>===底部导航栏===</item>
         <item>LinearLayout+TextView实现底部导航栏一</item>
         <item>RadioGroup+RadioButton实现底部导航栏二</item>
@@ -9,9 +10,6 @@
 
         <item>===对话框系列===</item>
         <item>对话框实现之AlertDialog</item>
-
-        <item>===RecyclerView系列===</item>
-        <item>RecyclerView初体验</item>
 
         <item>===动画系列===</item>
         <item>ViewAnimation之Scale动画</item>
@@ -31,10 +29,17 @@
         <item>===View位置相关信息部分===</item>
         <item>view相关位置测试</item>
 
-        <item>===RecyclerView系列</item>
+        <item>===RecyclerView系列===</item>
         <item>横向滚动的RecyclerView实现方式一</item>
         <item>横向滚动的RecyclerView实现方式二</item>
         <item>横向滚动的RecyclerView布局导致的显示问题</item>
+        <item>RecyclerView横向滚动</item>
+
+        <item>===Activity系列===</item>
+        <item>SingleTask启动生命周期测试</item>
+
+        <item>===RxJava系列===</item>
+        <item>RxJava简单体验</item>
 
     </string-array>
 
@@ -46,9 +51,6 @@
 
         <item>===对话框系列===</item>
         <item>com.runningsnail.demos.activity.dialog.DialogOneActivity</item>
-
-        <item>===RecyclerView系列===</item>
-        <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewOneActivity</item>
 
         <item>===动画系列===</item>
         <item>com.runningsnail.demos.activity.viewanimation.ScaleAnimationActivity</item>
@@ -72,7 +74,13 @@
         <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewOneActivity</item>
         <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewTwoActivity</item>
         <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewShowErrorActivity</item>
+        <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewThreeActivity</item>
 
+        <item>===Activity系列==</item>
+        <item>com.runningsnail.demos.activity.SingleTaskActivity</item>
+
+        <item>===RxJava系列===</item>
+        <item>com.runningsnail.demos.activity.rxjava.RxJavaOneActivity</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

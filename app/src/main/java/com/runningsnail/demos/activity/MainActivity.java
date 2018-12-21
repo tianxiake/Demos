@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
+        String name = this.getClass().getName();
+        HiLog.d(TAG,"class name:"+name);
         itemsData = getItemsData();
         clickItemsData = getClickItemsData();
 
