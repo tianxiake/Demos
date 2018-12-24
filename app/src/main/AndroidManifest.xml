@@ -64,6 +64,7 @@
         <activity android:name=".activity.recyclerview.RecyclerViewOneActivity" />
         <activity android:name=".activity.recyclerview.RecyclerViewTwoActivity" />
         <activity android:name=".activity.recyclerview.RecyclerViewShowErrorActivity" />
+        <activity android:name=".activity.recyclerview.RecyclerViewFiveActivity" />
         <activity
             android:name=".activity.SingleTaskActivity"
             android:launchMode="singleTask" />

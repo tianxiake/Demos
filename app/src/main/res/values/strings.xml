@@ -34,6 +34,7 @@
         <item>横向滚动的RecyclerView实现方式二</item>
         <item>横向滚动的RecyclerView布局导致的显示问题</item>
         <item>RecyclerView横向滚动</item>
+        <item>RecyclerView两行网格布局</item>
 
         <item>===Activity系列===</item>
         <item>SingleTask启动生命周期测试</item>
@@ -75,6 +76,7 @@
         <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewTwoActivity</item>
         <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewShowErrorActivity</item>
         <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewThreeActivity</item>
+        <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewFiveActivity</item>
 
         <item>===Activity系列==</item>
         <item>com.runningsnail.demos.activity.SingleTaskActivity</item>
