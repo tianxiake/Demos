@@ -7,7 +7,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.animation.ScaleAnimation;
 
-import com.runningsnail.demos.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLog;
 
 /**
  * @author yongjie created on 2018/12/9.

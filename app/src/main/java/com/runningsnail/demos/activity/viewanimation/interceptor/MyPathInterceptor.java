@@ -3,7 +3,7 @@ package com.runningsnail.demos.activity.viewanimation.interceptor;
 import android.graphics.Path;
 import android.view.animation.PathInterpolator;
 
-import com.runningsnail.demos.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLog;
 
 /**
  * 自定义一个Path

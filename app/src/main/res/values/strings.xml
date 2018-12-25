@@ -10,6 +10,7 @@
 
         <item>===对话框系列===</item>
         <item>对话框实现之AlertDialog</item>
+        <item>DialogFragment实现Dialog</item>
 
         <item>===动画系列===</item>
         <item>ViewAnimation之Scale动画</item>
@@ -51,7 +52,9 @@
         <item>com.runningsnail.demos.activity.bottomnavigation.BottomWayThreeActivity</item>
 
         <item>===对话框系列===</item>
-        <item>com.runningsnail.demos.activity.dialog.DialogOneActivity</item>
+        <item>com.runningsnail.demos.activity.dialog.AlertDialogActivity</item>
+        <item>com.runningsnail.demos.activity.dialog.DialogFragmentActivity</item>
+
 
         <item>===动画系列===</item>
         <item>com.runningsnail.demos.activity.viewanimation.ScaleAnimationActivity</item>

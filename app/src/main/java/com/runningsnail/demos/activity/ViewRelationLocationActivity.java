@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.runningsnail.demos.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLog;
 import com.runningsnail.demos.R;
 
 import butterknife.BindView;

@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.runningsnail.demos.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLog;
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.fragment.PageFragment;
 

@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 
 import com.runningsnail.demos.OnItemClickListener;
 import com.runningsnail.demos.OnItemFocusChangeListener;
-import com.runningsnail.demos.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLog;
 
 import java.util.List;
 

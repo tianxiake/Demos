@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.SimpleSpaceItemDecoration;
-import com.runningsnail.demos.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLog;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

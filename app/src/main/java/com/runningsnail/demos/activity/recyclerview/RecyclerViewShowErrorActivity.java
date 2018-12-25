@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.runningsnail.demos.utils.AnimUtil;
+import com.runningsnail.demos.common.utils.AnimUtil;
 import com.runningsnail.demos.adapter.BaseAdapter;
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.RecommendBean;

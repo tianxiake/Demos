@@ -18,9 +18,9 @@ import butterknife.OnClick;
 /**
  * AlertDialog的各种使用
  */
-public class DialogOneActivity extends AppCompatActivity {
+public class AlertDialogActivity extends AppCompatActivity {
 
-    private static final String TAG = "DialogOneActivity";
+    private static final String TAG = "AlertDialogActivity";
     @BindView(R.id.btn_one)
     Button dialogOne;
 
@@ -83,17 +83,17 @@ public class DialogOneActivity extends AppCompatActivity {
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(DialogOneActivity.this, "确定", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AlertDialogActivity.this, "确定", Toast.LENGTH_SHORT).show();
                     }
                 }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(DialogOneActivity.this, "取消", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AlertDialogActivity.this, "取消", Toast.LENGTH_SHORT).show();
                     }
                 }).setNeutralButton("中间", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(DialogOneActivity.this, "中间", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AlertDialogActivity.this, "中间", Toast.LENGTH_SHORT).show();
                     }
                 }).create();
 
@@ -112,18 +112,18 @@ public class DialogOneActivity extends AppCompatActivity {
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(DialogOneActivity.this, "确定", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AlertDialogActivity.this, "确定", Toast.LENGTH_SHORT).show();
                     }
                 }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(DialogOneActivity.this, "取消", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AlertDialogActivity.this, "取消", Toast.LENGTH_SHORT).show();
 
                     }
                 }).setOnCancelListener(new DialogInterface.OnCancelListener() {
                     @Override
                     public void onCancel(DialogInterface dialog) {
-                        Toast.makeText(DialogOneActivity.this, "cancle", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AlertDialogActivity.this, "cancle", Toast.LENGTH_SHORT).show();
                     }
                 }).create();
         return dialog;
@@ -141,7 +141,7 @@ public class DialogOneActivity extends AppCompatActivity {
                 .setItems(charSequences, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(DialogOneActivity.this, charSequences[which], Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AlertDialogActivity.this, charSequences[which], Toast.LENGTH_SHORT).show();
                     }
                 })
                 .create();
@@ -160,7 +160,7 @@ public class DialogOneActivity extends AppCompatActivity {
                 .setSingleChoiceItems(charSequences, 0, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        Toast.makeText(DialogOneActivity.this, "第" + which + "个", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AlertDialogActivity.this, "第" + which + "个", Toast.LENGTH_SHORT).show();
                     }
                 }).create();
         return dialog;

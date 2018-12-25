@@ -58,7 +58,7 @@
             android:label="声波动画简单示例" />
         <activity android:name=".activity.viewanimation.FrameAnimActivity" />
         <activity
-            android:name=".activity.dialog.DialogOneActivity"
+            android:name=".activity.dialog.AlertDialogActivity"
             android:label="对话框一" />
         <activity android:name=".activity.ViewRelationLocationActivity" />
         <activity android:name=".activity.recyclerview.RecyclerViewOneActivity" />
@@ -69,7 +69,8 @@
             android:name=".activity.SingleTaskActivity"
             android:launchMode="singleTask" />
         <activity android:name=".activity.rxjava.RxJavaOneActivity" />
-        <activity android:name=".activity.recyclerview.RecyclerViewThreeActivity"></activity>
+        <activity android:name=".activity.recyclerview.RecyclerViewThreeActivity" />
+        <activity android:name=".activity.dialog.DialogFragmentActivity"></activity>
     </application>
 
 </manifest>
