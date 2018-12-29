@@ -70,7 +70,8 @@
             android:launchMode="singleTask" />
         <activity android:name=".activity.rxjava.RxJavaOneActivity" />
         <activity android:name=".activity.recyclerview.RecyclerViewThreeActivity" />
-        <activity android:name=".activity.dialog.DialogFragmentActivity"></activity>
+        <activity android:name=".activity.dialog.DialogFragmentActivity" />
+        <activity android:name=".activity.animator.ValueAnimatorOneActivity"></activity>
     </application>
 
 </manifest>

@@ -24,6 +24,9 @@
         <item>ViewAnimation之扫描效果</item>
         <item>ViewAnimation之帧动画</item>
 
+        <item>===属性动画系列===</item>
+        <item>ValueAnimator初体验</item>
+
         <item>===内存泄漏===</item>
         <item>内存泄漏Activity测试</item>
 
@@ -67,6 +70,9 @@
         <item>com.runningsnail.demos.activity.viewanimation.LoaddingActivity</item>
         <item>com.runningsnail.demos.activity.viewanimation.ScanActivity</item>
         <item>com.runningsnail.demos.activity.viewanimation.FrameAnimActivity</item>
+
+        <item>===属性动画系列===</item>
+        <item>com.runningsnail.demos.activity.animator.ValueAnimatorOneActivity</item>
 
         <item>===内存泄漏===</item>
         <item>com.runningsnail.demos.activity.LeakActivity</item>
