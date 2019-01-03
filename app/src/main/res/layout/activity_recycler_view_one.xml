@@ -17,6 +17,15 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"></android.support.v7.widget.RecyclerView>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <Button
+        android:id="@+id/btn_test_one"
+        android:text="测试RecyclerView的ScrollToPosition()"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 </LinearLayout>

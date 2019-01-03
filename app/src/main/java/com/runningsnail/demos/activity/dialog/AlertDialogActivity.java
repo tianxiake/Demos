@@ -2,10 +2,15 @@ package com.runningsnail.demos.activity.dialog;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -51,6 +56,11 @@ public class AlertDialogActivity extends AppCompatActivity {
         switch (id) {
             case R.id.btn_one:
                 Dialog dialogOne = createDialogOne();
+//                Window window = dialogOne.getWindow();
+//                window.getDecorView().setPadding(0, 0, 0, 0);
+//                window.setBackgroundDrawable(new ColorDrawable(Color.RED));
+//                window.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+//                window.setGravity(Gravity.CENTER);
                 dialogOne.show();
                 break;
             case R.id.btn_two:
