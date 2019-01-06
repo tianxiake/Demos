@@ -28,6 +28,7 @@
         <item>ValueAnimator简单使用</item>
         <item>加载动画</item>
         <item>A-Z变化的TextView</item>
+        <item>ObjectAnimator体验</item>
 
         <item>===内存泄漏===</item>
         <item>内存泄漏Activity测试</item>
@@ -78,6 +79,7 @@
         <item>com.runningsnail.demos.activity.animator.ValueAnimatorTestActivity</item>
         <item>com.runningsnail.demos.activity.animator.LoadingViewActivity</item>
         <item>com.runningsnail.demos.activity.animator.ChaAnimatorActivity</item>
+        <item>com.runningsnail.demos.activity.animator.ObjectAnimatorTestActivity</item>
 
         <item>===内存泄漏===</item>
         <item>com.runningsnail.demos.activity.LeakActivity</item>

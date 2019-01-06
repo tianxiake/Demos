@@ -73,7 +73,8 @@
         <activity android:name=".activity.dialog.DialogFragmentActivity" />
         <activity android:name=".activity.animator.ValueAnimatorTestActivity" />
         <activity android:name=".activity.animator.LoadingViewActivity" />
-        <activity android:name=".activity.animator.ChaAnimatorActivity"></activity>
+        <activity android:name=".activity.animator.ChaAnimatorActivity" />
+        <activity android:name=".activity.animator.ObjectAnimatorTestActivity"></activity>
     </application>
 
 </manifest>
