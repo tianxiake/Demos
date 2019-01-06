@@ -72,7 +72,8 @@
         <activity android:name=".activity.recyclerview.RecyclerViewThreeActivity" />
         <activity android:name=".activity.dialog.DialogFragmentActivity" />
         <activity android:name=".activity.animator.ValueAnimatorTestActivity" />
-        <activity android:name=".activity.animator.LoadingViewActivity"></activity>
+        <activity android:name=".activity.animator.LoadingViewActivity" />
+        <activity android:name=".activity.animator.ChaAnimatorActivity"></activity>
     </application>
 
 </manifest>
