@@ -74,7 +74,10 @@
         <activity android:name=".activity.animator.ValueAnimatorTestActivity" />
         <activity android:name=".activity.animator.LoadingViewActivity" />
         <activity android:name=".activity.animator.ChaAnimatorActivity" />
-        <activity android:name=".activity.animator.ObjectAnimatorTestActivity"></activity>
+        <activity android:name=".activity.animator.ObjectAnimatorTestActivity" />
+        <activity android:name=".activity.animator.AnimatorSetTestActivity" />
+        <activity android:name=".activity.animator.FloatMenuActivity" />
+        <activity android:name=".activity.animator.PropertyViewHolderActivity"></activity>
     </application>
 
 </manifest>

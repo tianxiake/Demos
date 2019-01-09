@@ -11,6 +11,7 @@ import android.widget.ListView;
 import com.runningsnail.demos.common.utils.HiLog;
 import com.runningsnail.demos.R;
 
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -48,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-
 
     }
 

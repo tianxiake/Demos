@@ -29,6 +29,9 @@
         <item>加载动画</item>
         <item>A-Z变化的TextView</item>
         <item>ObjectAnimator体验</item>
+        <item>AnimatorSet体验</item>
+        <item>浮动菜单</item>
+        <item>PropertyViewHolder使用</item>
 
         <item>===内存泄漏===</item>
         <item>内存泄漏Activity测试</item>
@@ -80,6 +83,9 @@
         <item>com.runningsnail.demos.activity.animator.LoadingViewActivity</item>
         <item>com.runningsnail.demos.activity.animator.ChaAnimatorActivity</item>
         <item>com.runningsnail.demos.activity.animator.ObjectAnimatorTestActivity</item>
+        <item>com.runningsnail.demos.activity.animator.AnimatorSetTestActivity</item>
+        <item>com.runningsnail.demos.activity.animator.FloatMenuActivity</item>
+        <item>com.runningsnail.demos.activity.animator.PropertyViewHolderActivity</item>
 
         <item>===内存泄漏===</item>
         <item>com.runningsnail.demos.activity.LeakActivity</item>
