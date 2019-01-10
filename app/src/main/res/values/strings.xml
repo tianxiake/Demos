@@ -31,7 +31,8 @@
         <item>ObjectAnimator体验</item>
         <item>AnimatorSet体验</item>
         <item>浮动菜单</item>
-        <item>PropertyViewHolder使用</item>
+        <item>PropertyValueHolder使用</item>
+        <item>PropertyValueHolder的ofObject()方法使用</item>
 
         <item>===内存泄漏===</item>
         <item>内存泄漏Activity测试</item>
@@ -86,6 +87,7 @@
         <item>com.runningsnail.demos.activity.animator.AnimatorSetTestActivity</item>
         <item>com.runningsnail.demos.activity.animator.FloatMenuActivity</item>
         <item>com.runningsnail.demos.activity.animator.PropertyViewHolderActivity</item>
+        <item>com.runningsnail.demos.activity.animator.PropertyValueHolderOfObjectActivity</item>
 
         <item>===内存泄漏===</item>
         <item>com.runningsnail.demos.activity.LeakActivity</item>

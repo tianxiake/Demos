@@ -77,7 +77,8 @@
         <activity android:name=".activity.animator.ObjectAnimatorTestActivity" />
         <activity android:name=".activity.animator.AnimatorSetTestActivity" />
         <activity android:name=".activity.animator.FloatMenuActivity" />
-        <activity android:name=".activity.animator.PropertyViewHolderActivity"></activity>
+        <activity android:name=".activity.animator.PropertyViewHolderActivity" />
+        <activity android:name=".activity.animator.PropertyValueHolderOfObjectActivity"></activity>
     </application>
 
 </manifest>
