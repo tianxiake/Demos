@@ -33,6 +33,7 @@
         <item>浮动菜单</item>
         <item>PropertyValueHolder使用</item>
         <item>PropertyValueHolder的ofObject()方法使用</item>
+        <item>ViewPropertyAnimator方法使用</item>
 
         <item>===内存泄漏===</item>
         <item>内存泄漏Activity测试</item>
@@ -88,6 +89,7 @@
         <item>com.runningsnail.demos.activity.animator.FloatMenuActivity</item>
         <item>com.runningsnail.demos.activity.animator.PropertyViewHolderActivity</item>
         <item>com.runningsnail.demos.activity.animator.PropertyValueHolderOfObjectActivity</item>
+        <item>com.runningsnail.demos.activity.animator.ViewPropertyAnimatorActivity</item>
 
         <item>===内存泄漏===</item>
         <item>com.runningsnail.demos.activity.LeakActivity</item>
