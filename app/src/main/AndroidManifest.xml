@@ -79,7 +79,8 @@
         <activity android:name=".activity.animator.FloatMenuActivity" />
         <activity android:name=".activity.animator.PropertyViewHolderActivity" />
         <activity android:name=".activity.animator.PropertyValueHolderOfObjectActivity" />
-        <activity android:name=".activity.animator.ViewPropertyAnimatorActivity"></activity>
+        <activity android:name=".activity.animator.ViewPropertyAnimatorActivity" />
+        <activity android:name=".activity.viewgroupanimation.UseDefaultAniamtionActivity"></activity>
     </application>
 
 </manifest>
