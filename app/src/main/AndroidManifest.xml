@@ -81,6 +81,7 @@
         <activity android:name=".activity.animator.PropertyValueHolderOfObjectActivity" />
         <activity android:name=".activity.animator.ViewPropertyAnimatorActivity" />
         <activity android:name=".activity.viewgroupanimation.UseDefaultAniamtionActivity"></activity>
+        <activity android:name=".activity.viewgroupanimation.LayoutTransitionActivity"></activity>
     </application>
 
 </manifest>

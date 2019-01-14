@@ -37,6 +37,7 @@
 
         <item>===ViewGroup Item动画===</item>
         <item>默认动画 animationLayoutChange</item>
+        <item>LayoutTransition 自定义item动画</item>
 
         <item>===内存泄漏===</item>
         <item>内存泄漏Activity测试</item>
@@ -96,6 +97,7 @@
 
         <item>===ViewGroup Item动画===</item>
         <item>com.runningsnail.demos.activity.viewgroupanimation.UseDefaultAniamtionActivity</item>
+        <item>com.runningsnail.demos.activity.viewgroupanimation.LayoutTransitionActivity</item>
 
         <item>===内存泄漏===</item>
         <item>com.runningsnail.demos.activity.LeakActivity</item>
