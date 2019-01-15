@@ -34,6 +34,7 @@
         <item>PropertyValueHolder使用</item>
         <item>PropertyValueHolder的ofObject()方法使用</item>
         <item>ViewPropertyAnimator方法使用</item>
+        <item>PathMeasure配合ValueAnimator做路径动画</item>
 
         <item>===ViewGroup Item动画===</item>
         <item>默认动画 animationLayoutChange</item>
@@ -94,6 +95,7 @@
         <item>com.runningsnail.demos.activity.animator.PropertyViewHolderActivity</item>
         <item>com.runningsnail.demos.activity.animator.PropertyValueHolderOfObjectActivity</item>
         <item>com.runningsnail.demos.activity.animator.ViewPropertyAnimatorActivity</item>
+        <item>com.runningsnail.demos.activity.animator.PathMeasureActivity</item>
 
         <item>===ViewGroup Item动画===</item>
         <item>com.runningsnail.demos.activity.viewgroupanimation.UseDefaultAniamtionActivity</item>
