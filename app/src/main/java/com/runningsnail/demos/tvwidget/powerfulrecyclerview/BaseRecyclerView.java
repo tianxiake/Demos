@@ -1,4 +1,4 @@
-package com.runningsnail.demos.activity.widget;
+package com.runningsnail.demos.tvwidget.powerfulrecyclerview;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -6,8 +6,6 @@ import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.View;
-
-import java.util.List;
 
 /**
  * # 框架解决的问题
@@ -27,22 +25,17 @@ import java.util.List;
  *
  * @author yongjie created on 2019/1/15.
  */
-public abstract class HiBaseRecyclerView<E> extends RecyclerView {
+public abstract class BaseRecyclerView extends RecyclerView {
 
-	/**
-	 * RecyclerView数据集
-	 */
-	protected List<E> dataList;
-
-	public HiBaseRecyclerView(Context context) {
+	public BaseRecyclerView(Context context) {
 		super(context);
 	}
 
-	public HiBaseRecyclerView(Context context, @Nullable AttributeSet attrs) {
+	public BaseRecyclerView(Context context, @Nullable AttributeSet attrs) {
 		super(context, attrs);
 	}
 
-	public HiBaseRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
+	public BaseRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 	}
 
@@ -58,6 +51,14 @@ public abstract class HiBaseRecyclerView<E> extends RecyclerView {
 	public void requestItemFocus() {
 
 	}
+
+	/**
+	 * 请求指定位置的Item获取焦点
+	 */
+	public void requestItemFocus(int position) {
+
+	}
+
 
 	/**
 	 * 启用焦点记忆功能,下一次这个控件获得焦点会聚集到
@@ -77,48 +78,5 @@ public abstract class HiBaseRecyclerView<E> extends RecyclerView {
 	 * 如果{@link #bindLayoutResId()}方法生效了，此方法不会被调用
 	 */
 	protected abstract View bindLayoutView();
-
-
-	/**
-	 * 请求指定位置的Item获取焦点
-	 */
-	public void requestItemFocus(int position) {
-
-	}
-
-	/**
-	 * 焦点到了四个边缘即将脱离这个View时的回调
-	 * 用于处理焦点的定向处理
-	 */
-	public interface OnFocusInEdgeListener {
-
-	}
-
-	public interface OnHiItemClickListener {
-
-	}
-
-	public interface OnHiItemFocusListener {
-
-	}
-
-	/**
-	 * 这个接口用于告知内部数据条目信息用于外部去显示数据Index
-	 */
-	public interface OnHiItemPostionListener {
-		/**
-		 * 列表数据总数,这个可能依赖于数据集合
-		 *
-		 * @param count
-		 */
-		void onItemTotalCount(int count);
-
-		/**
-		 * 当前聚焦的Item的Index
-		 *
-		 * @param index
-		 */
-		void onItemCurrentFocusItemIndex(int index);
-	}
 
 }

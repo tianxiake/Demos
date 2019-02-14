@@ -1,4 +1,4 @@
-package com.runningsnail.demos.activity.widget;
+package com.runningsnail.demos.tvwidget.powerfulrecyclerview;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -8,7 +8,7 @@ import android.view.View;
 /**
  * @author yongjie created on 2019/1/15.
  */
-public class HiRecyclerView extends HiBaseRecyclerView<String> {
+public class HiRecyclerView extends BaseRecyclerView {
 
     public HiRecyclerView(Context context) {
         super(context);
