@@ -82,7 +82,8 @@
         <activity android:name=".activity.animator.ViewPropertyAnimatorActivity" />
         <activity android:name=".activity.viewgroupanimation.UseDefaultAniamtionActivity" />
         <activity android:name=".activity.viewgroupanimation.LayoutTransitionActivity" />
-        <activity android:name=".activity.animator.PathMeasureActivity"></activity>
+        <activity android:name=".activity.animator.PathMeasureActivity" />
+        <activity android:name=".activity.tvwidget.TvRecyclerViewActivity"></activity>
     </application>
 
 </manifest>

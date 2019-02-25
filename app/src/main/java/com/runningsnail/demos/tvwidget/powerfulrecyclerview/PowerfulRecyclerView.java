@@ -8,17 +8,17 @@ import android.view.View;
 /**
  * @author yongjie created on 2019/1/15.
  */
-public class HiRecyclerView extends BaseRecyclerView {
+public class PowerfulRecyclerView extends BaseRecyclerView {
 
-    public HiRecyclerView(Context context) {
+    public PowerfulRecyclerView(Context context) {
         super(context);
     }
 
-    public HiRecyclerView(Context context, @Nullable AttributeSet attrs) {
+    public PowerfulRecyclerView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public HiRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
+    public PowerfulRecyclerView(Context context, @Nullable AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
