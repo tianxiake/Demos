@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.common.utils.AnimUtil;
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,7 +57,7 @@ public class RecyclerViewFiveActivity extends AppCompatActivity {
 	public void onClick(View view) {
 		int spanIndex = linearLayoutManager.getSpanSizeLookup().getSpanIndex(11, linearLayoutManager.getSpanCount());
 		int spanGroupIndex = linearLayoutManager.getSpanSizeLookup().getSpanGroupIndex(11, linearLayoutManager.getSpanCount());
-		HiLog.d(TAG, "spanIndex:" + spanIndex + ",spanGroupIndex:" + spanGroupIndex);
+		HiLogger.d(TAG, "spanIndex:" + spanIndex + ",spanGroupIndex:" + spanGroupIndex);
 	}
 
 
@@ -71,14 +71,14 @@ public class RecyclerViewFiveActivity extends AppCompatActivity {
 		@NonNull
 		@Override
 		public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-			HiLog.d(TAG, "onCreateViewHolder");
+			HiLogger.d(TAG, "onCreateViewHolder");
 			View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_item_one, parent, false);
 			return new ViewHolder(view);
 		}
 
 		@Override
 		public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-			HiLog.d(TAG, "onBindViewHolder position:" + position);
+			HiLogger.d(TAG, "onBindViewHolder position:" + position);
 			holder.itemView.setFocusable(true);
 			ViewGroup viewGroup = (ViewGroup) holder.itemView;
 			viewGroup.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);

@@ -3,7 +3,7 @@ package com.runningsnail.demos.activity.animator;
 import android.animation.TypeEvaluator;
 
 import com.runningsnail.demos.activity.animator.entity.MyCharacter;
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 
 /**
  * @author yongjie created on 2019/1/6.
@@ -18,7 +18,7 @@ public class CharEvaluator implements TypeEvaluator<MyCharacter> {
         int start = startValue.ch;
         int end = endValue.ch;
         char resultChar = (char) (start + (end - start) * fraction);
-        HiLog.d(TAG, "fraction:" + fraction + ",resultChar:" + resultChar);
+        HiLogger.d(TAG, "fraction:" + fraction + ",resultChar:" + resultChar);
         return new MyCharacter(resultChar);
     }
 }

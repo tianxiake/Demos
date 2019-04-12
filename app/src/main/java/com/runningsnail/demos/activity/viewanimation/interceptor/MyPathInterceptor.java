@@ -3,7 +3,7 @@ package com.runningsnail.demos.activity.viewanimation.interceptor;
 import android.graphics.Path;
 import android.view.animation.PathInterpolator;
 
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 
 /**
  * 自定义一个Path
@@ -24,7 +24,7 @@ public class MyPathInterceptor extends PathInterpolator {
 
     @Override
     public float getInterpolation(float t) {
-        HiLog.d(TAG, "t=" + t);
+        HiLogger.d(TAG, "t=" + t);
         return super.getInterpolation(t);
     }
 }

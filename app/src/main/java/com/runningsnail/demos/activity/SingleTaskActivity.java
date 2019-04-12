@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.runningsnail.demos.R;
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,7 +32,7 @@ public class SingleTaskActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_single_task);
 		ButterKnife.bind(this);
-		HiLog.d(TAG, "onCreate()");
+		HiLogger.d(TAG, "onCreate()");
 	}
 
 	@OnClick({R.id.btn_single_task, R.id.btn_show_dialog})
@@ -58,13 +58,13 @@ public class SingleTaskActivity extends AppCompatActivity {
 	@Override
 	protected void onStart() {
 		super.onStart();
-		HiLog.d(TAG, "onStart()");
+		HiLogger.d(TAG, "onStart()");
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
-		HiLog.d(TAG, "onResume()");
+		HiLogger.d(TAG, "onResume()");
 
 	}
 
@@ -72,25 +72,25 @@ public class SingleTaskActivity extends AppCompatActivity {
 	@Override
 	protected void onPause() {
 		super.onPause();
-		HiLog.d(TAG, "onPause()");
+		HiLogger.d(TAG, "onPause()");
 	}
 
 	@Override
 	protected void onStop() {
 		super.onStop();
-		HiLog.d(TAG, "onStop()");
+		HiLogger.d(TAG, "onStop()");
 	}
 
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		HiLog.d(TAG, "onDestroy()");
+		HiLogger.d(TAG, "onDestroy()");
 	}
 
 	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
-		HiLog.d(TAG, "onNewIntent()");
+		HiLogger.d(TAG, "onNewIntent()");
 	}
 
 	/**

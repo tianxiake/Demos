@@ -3,6 +3,13 @@
 
     <string-array name="item_data">
 
+        <item>===TV开发===</item>
+        <item>KeyEvent测试</item>
+        <item>阴影效果实现方案</item>
+        <item>测试本地命令</item>
+        <item>模拟三方应用</item>
+
+
         <item>===底部导航栏===</item>
         <item>LinearLayout+TextView实现底部导航栏一</item>
         <item>RadioGroup+RadioButton实现底部导航栏二</item>
@@ -35,6 +42,7 @@
         <item>PropertyValueHolder的ofObject()方法使用</item>
         <item>ViewPropertyAnimator方法使用</item>
         <item>PathMeasure配合ValueAnimator做路径动画</item>
+        <item>属性动画滑动View的内容</item>
 
         <item>===ViewGroup Item动画===</item>
         <item>默认动画 animationLayoutChange</item>
@@ -59,9 +67,22 @@
         <item>===RxJava系列===</item>
         <item>RxJava简单体验</item>
 
+        <item>===网络监听===</item>
+        <item>Android网络监听</item>
+
+        <item>===架构===</item>
+        <item>MVP</item>
+
     </string-array>
 
     <string-array name="click_item_data">
+        <item>===TV开发===</item>
+        <item>com.runningsnail.demos.activity.tv.KeyEventTestActivity</item>
+        <item>com.runningsnail.demos.activity.tv.ShadowEffectActivity</item>
+        <item>com.runningsnail.demos.activity.tv.RuntimeExecuteActivity</item>
+        <item>com.runningsnail.demos.activity.tv.MockActivity</item>
+
+
         <item>===底部导航栏===</item>
         <item>com.runningsnail.demos.activity.bottomnavigation.BottomWayOneActivity</item>
         <item>com.runningsnail.demos.activity.bottomnavigation.BottomWayTwoActivity</item>
@@ -96,6 +117,8 @@
         <item>com.runningsnail.demos.activity.animator.PropertyValueHolderOfObjectActivity</item>
         <item>com.runningsnail.demos.activity.animator.ViewPropertyAnimatorActivity</item>
         <item>com.runningsnail.demos.activity.animator.PathMeasureActivity</item>
+        <item>com.runningsnail.demos.activity.animator.AnimatorScrollActivity</item>
+
 
         <item>===ViewGroup Item动画===</item>
         <item>com.runningsnail.demos.activity.viewgroupanimation.UseDefaultAniamtionActivity</item>
@@ -119,6 +142,14 @@
 
         <item>===RxJava系列===</item>
         <item>com.runningsnail.demos.activity.rxjava.RxJavaOneActivity</item>
+
+        <item>===网络监听===</item>
+        <item>com.runningsnail.demos.activity.NetworkActivity</item>
+
+        <item>===架构===</item>
+        <item>com.runningsnail.demos.activity.mvp.UserCollectionActivity</item>
+
+
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

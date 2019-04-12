@@ -10,7 +10,7 @@ import java.util.Date;
  * @author create by yongjie on 2018/6/29
  * Log工具类
  */
-public class HiLog {
+public class HiLogger {
 
     private static volatile boolean OUTPUT_LOG = true;
 

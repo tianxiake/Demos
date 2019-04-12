@@ -16,7 +16,7 @@ public class ImageLoader {
             Glide.with(imageView.getContext()).asGif().load(resId).into(imageView);
 
         } catch (Exception e) {
-            HiLog.e(TAG, "load gif error", e);
+            HiLogger.e(TAG, "load gif error", e);
         }
     }
 }

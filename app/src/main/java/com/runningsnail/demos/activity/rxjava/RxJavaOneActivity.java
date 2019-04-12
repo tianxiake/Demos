@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.runningsnail.demos.R;
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -45,7 +45,7 @@ public class RxJavaOneActivity extends AppCompatActivity {
 
 	@OnClick(R.id.btn_one)
 	public void onClick(View view) {
-		HiLog.d(TAG, "onClick: view:" + view);
+		HiLogger.d(TAG, "onClick: view:" + view);
 		int id = view.getId();
 		switch (id) {
 			case R.id.btn_one:
@@ -63,12 +63,12 @@ public class RxJavaOneActivity extends AppCompatActivity {
 					@Override
 					public void accept(SimpleClass simpleClass) throws Exception {
 						simpleClass.a = 2;
-						HiLog.d(TAG, "simple:" + simpleClass);
+						HiLogger.d(TAG, "simple:" + simpleClass);
 					}
 				}).observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<SimpleClass>() {
 			@Override
 			public void accept(SimpleClass simpleClass) throws Exception {
-				HiLog.d(TAG, "simple:" + simple);
+				HiLogger.d(TAG, "simple:" + simple);
 			}
 		});
 	}

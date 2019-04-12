@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.runningsnail.demos.common.utils.AnimUtil;
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 import com.runningsnail.demos.R;
 
 import java.util.ArrayList;
@@ -55,14 +55,14 @@ public class RecyclerViewOneActivity extends AppCompatActivity {
 		@NonNull
 		@Override
 		public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-			HiLog.d(TAG, "onCreateViewHolder");
+			HiLogger.d(TAG, "onCreateViewHolder");
 			View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_item_one, parent, false);
 			return new ViewHolder(view);
 		}
 
 		@Override
 		public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-			HiLog.d(TAG, "onBindViewHolder position:" + position);
+			HiLogger.d(TAG, "onBindViewHolder position:" + position);
 			holder.itemView.setFocusable(true);
 			ViewGroup viewGroup = (ViewGroup) holder.itemView;
 			viewGroup.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);

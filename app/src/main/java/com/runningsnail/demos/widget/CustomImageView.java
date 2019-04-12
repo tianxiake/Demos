@@ -7,7 +7,7 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.animation.ScaleAnimation;
 
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 
 /**
  * @author yongjie created on 2018/12/9.
@@ -42,7 +42,7 @@ public class CustomImageView extends AppCompatImageView implements GestureDetect
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        HiLog.d(TAG, "onTouchEvent");
+        HiLogger.d(TAG, "onTouchEvent");
         return gestureDetector.onTouchEvent(event);
     }
 
@@ -55,7 +55,7 @@ public class CustomImageView extends AppCompatImageView implements GestureDetect
     public boolean onDoubleTap(MotionEvent e) {
         pivotX = e.getX();
         pivotY = e.getY();
-        HiLog.d(TAG, "双击");
+        HiLogger.d(TAG, "双击");
         if (formY > 2f && fromX > 2f) {
             //回到初始状态
             ScaleAnimation scaleAnimation = new ScaleAnimation(fromX, 1f, formY, 1f, pivotX, pivotY);

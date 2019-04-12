@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 import android.view.animation.AccelerateDecelerateInterpolator;
 
 import com.runningsnail.demos.R;
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 
 /**
  * @author yongjie created on 2019/1/2.
@@ -47,7 +47,7 @@ public class LoadingImageView extends AppCompatImageView {
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                HiLog.d(TAG, "onAnimationUpdate");
+                HiLogger.d(TAG, "onAnimationUpdate");
                 Integer value = (Integer) animation.getAnimatedValue();
                 setTop(top - value);
 
@@ -57,24 +57,24 @@ public class LoadingImageView extends AppCompatImageView {
         valueAnimator.addListener(new Animator.AnimatorListener() {
             @Override
             public void onAnimationStart(Animator animation) {
-                HiLog.d(TAG, "onAnimationStart");
+                HiLogger.d(TAG, "onAnimationStart");
                 setImageResource(R.drawable.pic_one);
             }
 
             @Override
             public void onAnimationEnd(Animator animation) {
-                HiLog.d(TAG, "onAnimationEnd");
+                HiLogger.d(TAG, "onAnimationEnd");
 
             }
 
             @Override
             public void onAnimationCancel(Animator animation) {
-                HiLog.d(TAG, "onAnimationCancel");
+                HiLogger.d(TAG, "onAnimationCancel");
             }
 
             @Override
             public void onAnimationRepeat(Animator animation) {
-                HiLog.d(TAG, "onAnimationRepeat");
+                HiLogger.d(TAG, "onAnimationRepeat");
                 currentIndex++;
                 int extra = currentIndex % count;
                 switch (extra) {
@@ -108,7 +108,7 @@ public class LoadingImageView extends AppCompatImageView {
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
-        HiLog.d(TAG, "onLayout");
+        HiLogger.d(TAG, "onLayout");
         this.top = top;
     }
 }

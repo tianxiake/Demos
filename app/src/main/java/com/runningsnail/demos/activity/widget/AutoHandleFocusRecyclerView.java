@@ -59,7 +59,7 @@ public class AutoHandleFocusRecyclerView extends RecyclerView {
 //					//处理非GridLayout到最左边焦点的问题
 ////					LinearLayoutManager linearLayoutManager = (LinearLayoutManager) layoutManager;
 //					int position = linearLayoutManager.getPosition(childFocus);
-//					HiLog.d(TAG, "focusChildView position:" + position);
+//					HiLogger.d(TAG, "focusChildView position:" + position);
 //					if (position == 0) {
 //						//到了最左边,拦截系统自动寻找焦点
 //						return true;

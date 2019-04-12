@@ -10,7 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.fragment.PageFragment;
 
@@ -98,7 +98,7 @@ public class BottomWayOneActivity extends AppCompatActivity implements TextView.
     @Override
     public void onClick(View v) {
         if (v != currentSelectView) {
-            HiLog.d(TAG, "onClick:" + v);
+            HiLogger.d(TAG, "onClick:" + v);
             FragmentTransaction fragmentTransaction = supportFragmentManager.beginTransaction();
             switch (v.getId()) {
                 case R.id.tv_home:

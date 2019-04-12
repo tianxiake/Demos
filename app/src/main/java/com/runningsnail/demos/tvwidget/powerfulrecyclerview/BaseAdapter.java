@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BaseAdapter<E> extends RecyclerView.Adapter<BaseAdapter.BaseViewHolder> {
+public abstract class BaseAdapter<E> extends RecyclerView.Adapter<BaseAdapter.BaseViewHolder> {
 
 	/**
 	 * 适配器的数据集合
@@ -25,10 +25,7 @@ public class BaseAdapter<E> extends RecyclerView.Adapter<BaseAdapter.BaseViewHol
 		return null;
 	}
 
-	@Override
-	public void onBindViewHolder(@NonNull BaseViewHolder holder, int position) {
 
-	}
 
 	@Override
 	public int getItemCount() {

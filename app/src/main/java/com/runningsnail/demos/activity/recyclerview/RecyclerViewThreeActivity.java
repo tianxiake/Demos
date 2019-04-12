@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.SimpleSpaceItemDecoration;
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -44,10 +44,10 @@ public class RecyclerViewThreeActivity extends AppCompatActivity {
 	public void onClick(View view) {
 		Rect rect = new Rect();
 		recyclerView.getGlobalVisibleRect(rect);
-		HiLog.d(TAG, rect.toString());
+		HiLogger.d(TAG, rect.toString());
 		LinearLayoutManager layoutManager = (LinearLayoutManager) recyclerView.getLayoutManager();
 		int firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition();
-		HiLog.d(TAG, "firstVisibleItemPosition:" + firstVisibleItemPosition);
+		HiLogger.d(TAG, "firstVisibleItemPosition:" + firstVisibleItemPosition);
 	}
 
 

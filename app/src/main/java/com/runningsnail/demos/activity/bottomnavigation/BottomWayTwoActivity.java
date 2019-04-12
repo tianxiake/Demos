@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.fragment.PageFragment;
 
@@ -59,12 +59,12 @@ public class BottomWayTwoActivity extends AppCompatActivity {
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                HiLog.d(TAG, "checkedId:" + checkedId);
+                HiLogger.d(TAG, "checkedId:" + checkedId);
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 hideAllFragment(fragmentTransaction);
                 switch (checkedId) {
                     case R.id.rb_home:
-                        HiLog.d(TAG, "home");
+                        HiLogger.d(TAG, "home");
                         if (homeFragment == null) {
                             Bundle bundle = new Bundle();
                             bundle.putString("content", "第一个Fragment");
@@ -74,7 +74,7 @@ public class BottomWayTwoActivity extends AppCompatActivity {
                         fragmentTransaction.show(homeFragment);
                         break;
                     case R.id.rb_mind:
-                        HiLog.d(TAG, "mind");
+                        HiLogger.d(TAG, "mind");
                         if (mindFragment == null) {
                             Bundle bundle = new Bundle();
                             bundle.putString("content", "第二个Fragment");
@@ -84,7 +84,7 @@ public class BottomWayTwoActivity extends AppCompatActivity {
                         fragmentTransaction.show(mindFragment);
                         break;
                     case R.id.rb_money:
-                        HiLog.d(TAG, "money");
+                        HiLogger.d(TAG, "money");
                         if (moneyFragment == null) {
                             Bundle bundle = new Bundle();
                             bundle.putString("content", "第三个Fragment");
@@ -94,7 +94,7 @@ public class BottomWayTwoActivity extends AppCompatActivity {
                         fragmentTransaction.show(moneyFragment);
                         break;
                     case R.id.rb_my:
-                        HiLog.d(TAG, "my");
+                        HiLogger.d(TAG, "my");
                         if (myFragment == null) {
                             Bundle bundle = new Bundle();
                             bundle.putString("content", "第四个Fragment");

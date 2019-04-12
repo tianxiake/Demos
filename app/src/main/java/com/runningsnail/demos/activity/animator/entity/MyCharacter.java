@@ -3,6 +3,7 @@ package com.runningsnail.demos.activity.animator.entity;
 /**
  * @author yongjie created on 2019/1/10.
  */
+
 public class MyCharacter {
 
     public char ch;

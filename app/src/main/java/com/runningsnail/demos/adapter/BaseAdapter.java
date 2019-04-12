@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 
 import com.runningsnail.demos.OnItemClickListener;
 import com.runningsnail.demos.OnItemFocusChangeListener;
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 
 import java.util.List;
 
@@ -30,7 +30,7 @@ public abstract class BaseAdapter<T> extends RecyclerView.Adapter<BaseAdapter.Ba
 
 	/**
 	 * 对整个itemView生效，如果itemView是一个复合View,需要其中子View获取点击事件,
-	 * 请在{@link #convert(BaseViewHolder, Object, int, int)}方法中去实现
+	 * 请在{@link #convert(BaseViewHolder, Object, inDt, int)}方法中去实现
 	 */
 	private OnItemClickListener onItemClickListener;
 	/**
@@ -136,7 +136,7 @@ public abstract class BaseAdapter<T> extends RecyclerView.Adapter<BaseAdapter.Ba
 
 	@Override
 	public int getItemCount() {
-		HiLog.d(TAG, "getItemCount");
+		HiLogger.d(TAG, "getItemCount");
 		int size = 0;
 		if (headerViews != null) {
 			size = 1;

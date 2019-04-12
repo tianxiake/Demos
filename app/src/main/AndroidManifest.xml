@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.runningsnail.demos">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".DemoApplication"
@@ -12,6 +17,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.tv.MockActivity" />
+
+        <service
+            android:name=".activity.service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".activity.service.RemoteServiceActivity" />
+        <activity android:name=".activity.service.ForegroundServiceActivity" />
+        <activity android:name=".activity.service.BindServiceActivity" />
+        <activity android:name=".activity.service.StartServiceActivity" />
+        <activity android:name=".activity.mvp.UserCollectionActivity" />
+        <activity android:name=".activity.tv.RuntimeExecuteActivity" />
+        <activity android:name=".activity.tv.ShadowEffectActivity" />
+        <activity android:name=".activity.animator.AnimatorScrollActivity" />
+        <activity android:name=".activity.NetworkActivity" />
+        <activity
+            android:name=".activity.tv.KeyEventTestActivity"
+            android:launchMode="singleTask" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -83,7 +107,8 @@
         <activity android:name=".activity.viewgroupanimation.UseDefaultAniamtionActivity" />
         <activity android:name=".activity.viewgroupanimation.LayoutTransitionActivity" />
         <activity android:name=".activity.animator.PathMeasureActivity" />
-        <activity android:name=".activity.tvwidget.TvRecyclerViewActivity"></activity>
+        <activity android:name=".activity.tvwidget.TvRecyclerViewActivity" />
+        <activity android:name=".activity.thirdpart.StartThirdPartActivity"></activity>
     </application>
 
 </manifest>

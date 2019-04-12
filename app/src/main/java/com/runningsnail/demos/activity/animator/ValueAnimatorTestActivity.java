@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.runningsnail.demos.R;
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 
 /**
  * ValueAnimator简单使用
@@ -27,7 +27,7 @@ public class ValueAnimatorTestActivity extends AppCompatActivity {
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                HiLog.d(TAG, "value" + animation.getAnimatedValue() + ",time:" + animation.getCurrentPlayTime());
+                HiLogger.d(TAG, "value" + animation.getAnimatedValue() + ",time:" + animation.getCurrentPlayTime());
             }
         });
     }

@@ -8,9 +8,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.runningsnail.demos.common.utils.HiLog;
 import com.runningsnail.demos.R;
-
+import com.runningsnail.demos.common.utils.HiLogger;
 
 import java.util.Arrays;
 import java.util.List;
@@ -33,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         String name = this.getClass().getName();
-        HiLog.d(TAG,"class name:"+name);
+        HiLogger.d(TAG,"class name:"+name);
         itemsData = getItemsData();
         clickItemsData = getClickItemsData();
 
@@ -49,7 +48,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
     }
 
     private void startActivity(String s) {
@@ -57,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Class.forName(s));
             startActivity(intent);
         } catch (ClassNotFoundException e) {
-            HiLog.e(TAG, "class load error", e);
+            HiLogger.e(TAG, "class load error", e);
         }
     }
 

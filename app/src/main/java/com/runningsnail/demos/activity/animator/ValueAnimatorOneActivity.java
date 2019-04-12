@@ -8,9 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.runningsnail.demos.R;
-import com.runningsnail.demos.common.utils.HiLog;
-
-import java.util.logging.Logger;
+import com.runningsnail.demos.common.utils.HiLogger;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,7 +41,7 @@ public class ValueAnimatorOneActivity extends AppCompatActivity {
 			@Override
 			public void onAnimationUpdate(ValueAnimator animation) {
 				Integer animatedValue = (Integer) animation.getAnimatedValue();
-				HiLog.d(TAG, "animateValue:" + animatedValue);
+				HiLogger.d(TAG, "animateValue:" + animatedValue);
 				tvMove.layout(animatedValue, animatedValue, animatedValue + tvMove.getWidth(), animatedValue + tvMove.getHeight());
 			}
 		});

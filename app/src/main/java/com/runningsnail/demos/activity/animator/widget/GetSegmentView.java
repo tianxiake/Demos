@@ -48,6 +48,8 @@ public class GetSegmentView extends View {
         desPath = new Path();
         paint = new Paint();
         paint.setColor(Color.RED);
+        //开启抗锯齿
+        paint.setAntiAlias(true);
         paint.setStrokeWidth(10);
         paint.setStyle(Paint.Style.STROKE);
         pathMeasure = new PathMeasure(path, false);

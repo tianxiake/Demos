@@ -1,9 +1,10 @@
 package com.runningsnail.demos.activity.mvp;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.runningsnail.demos.R;
+
 
 public class UserCollectionActivity extends AppCompatActivity implements UserCollectionView{
 

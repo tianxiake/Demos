@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 import com.runningsnail.demos.R;
 
 import butterknife.BindView;
@@ -45,7 +45,7 @@ public class ViewRelationLocationActivity extends AppCompatActivity {
                         float x = imageView.getX();
                         float y = imageView.getY();
                         float translationX = imageView.getTranslationX();
-                        HiLog.d(TAG, "end left:" + left + ",top:" + top + ",right:" + right +
+                        HiLogger.d(TAG, "end left:" + left + ",top:" + top + ",right:" + right +
                                 ",bottom:" + bottom + ",x:" + x + ",y:" + y + ",translationX:" + translationX);
                     }
                 }, 500);
@@ -62,7 +62,7 @@ public class ViewRelationLocationActivity extends AppCompatActivity {
                 float x = imageView.getX();
                 float y = imageView.getY();
                 float translationX = imageView.getTranslationX();
-                HiLog.d(TAG, "start left:" + left + ",top:" + top + ",right:" + right +
+                HiLogger.d(TAG, "start left:" + left + ",top:" + top + ",right:" + right +
                         ",bottom:" + bottom + ",x:" + x + ",y:" + y + ",translationX:" + translationX);
             }
         });

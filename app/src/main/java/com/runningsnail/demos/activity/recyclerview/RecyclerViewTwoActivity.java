@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.runningsnail.demos.common.utils.AnimUtil;
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 import com.runningsnail.demos.adapter.BaseAdapter;
 import com.runningsnail.demos.R;
 
@@ -64,7 +64,7 @@ public class RecyclerViewTwoActivity extends AppCompatActivity {
 
 		@Override
 		public void convert(final BaseViewHolder holder, final String data, int position, int viewType) {
-			HiLog.d(TAG, "convert position:" + position);
+			HiLogger.d(TAG, "convert position:" + position);
 			holder.itemView.setFocusable(true);
 			ViewGroup viewGroup = (ViewGroup) holder.itemView;
 			viewGroup.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);

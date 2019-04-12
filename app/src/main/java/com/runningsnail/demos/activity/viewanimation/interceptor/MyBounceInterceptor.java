@@ -2,7 +2,7 @@ package com.runningsnail.demos.activity.viewanimation.interceptor;
 
 import android.view.animation.BounceInterpolator;
 
-import com.runningsnail.demos.common.utils.HiLog;
+import com.runningsnail.demos.common.utils.HiLogger;
 
 /**
  * @author yongjie created on 2018/12/9.
@@ -13,7 +13,7 @@ public class MyBounceInterceptor extends BounceInterpolator {
 
     @Override
     public float getInterpolation(float t) {
-        HiLog.d(TAG, "t=" + t);
+        HiLogger.d(TAG, "t=" + t);
         return super.getInterpolation(t);
     }
 }
