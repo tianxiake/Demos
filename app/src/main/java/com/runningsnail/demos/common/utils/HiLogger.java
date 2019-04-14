@@ -41,7 +41,7 @@ public class HiLogger {
     public static void d(String tag, String format, Object... obj) {
         if (OUTPUT_LOG) {
             String message = String.format(format, obj);
-            Log.v(tag, basicMessage(message));
+            Log.d(tag, basicMessage(message));
         }
     }
 
@@ -54,7 +54,7 @@ public class HiLogger {
     public static void i(String tag, String format, Object... obj) {
         if (OUTPUT_LOG) {
             String message = String.format(format, obj);
-            Log.v(tag, basicMessage(message));
+            Log.i(tag, basicMessage(message));
         }
     }
 
@@ -67,7 +67,7 @@ public class HiLogger {
     public static void w(String tag, String format, Object... obj) {
         if (OUTPUT_LOG) {
             String message = String.format(format, obj);
-            Log.v(tag, basicMessage(message));
+            Log.w(tag, basicMessage(message));
         }
     }
 
@@ -86,7 +86,7 @@ public class HiLogger {
     public static void e(String tag, String format, Object... obj) {
         if (OUTPUT_LOG) {
             String message = String.format(format, obj);
-            Log.v(tag, basicMessage(message));
+            Log.e(tag, basicMessage(message));
         }
     }
 

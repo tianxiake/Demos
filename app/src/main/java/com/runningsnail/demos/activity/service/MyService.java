@@ -2,6 +2,7 @@ package com.runningsnail.demos.activity.service;
 
 import android.app.Service;
 import android.content.Intent;
+import android.os.Binder;
 import android.os.IBinder;
 import android.support.annotation.Nullable;
 
@@ -13,6 +14,8 @@ public class MyService extends Service {
 
 	public MyService() {
 	}
+
+	private MyBinder myBinder = new MyBinder();
 
 	@Override
 	public void onCreate() {
@@ -32,7 +35,7 @@ public class MyService extends Service {
 	@Override
 	public IBinder onBind(Intent intent) {
 		HiLogger.d(TAG, "onBind()");
-		return null;
+		return myBinder;
 	}
 
 	@Override
@@ -45,5 +48,17 @@ public class MyService extends Service {
 	public void onDestroy() {
 		super.onDestroy();
 		HiLogger.d(TAG, "onDestroy()");
+	}
+
+	public class MyBinder extends Binder {
+		public static final String TAG = "MyBinder";
+
+		public void onStart() {
+			HiLogger.d(TAG, "onStart()");
+		}
+
+		public void onStop() {
+			HiLogger.d(TAG, "onStop()");
+		}
 	}
 }

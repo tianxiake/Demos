@@ -3,22 +3,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.service.StartServiceActivity">
+    tools:context=".activity.service.StartAndBindServiceActivity">
 
 
     <Button
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
         android:id="@+id/btn_start_service"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="startService" />
 
     <Button
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:text="stopService"
         android:id="@+id/btn_stop_service"
         android:layout_below="@id/btn_start_service"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="startService" />
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_bind_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_stop_service"
+        android:layout_centerHorizontal="true"
+        android:text="bindService"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn_unbind_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_bind_service"
+        android:layout_centerHorizontal="true"
+        android:text="unbindService"
+        android:textAllCaps="false" />
 
 </RelativeLayout>

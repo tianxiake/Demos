@@ -64,6 +64,10 @@
         <item>===Activity系列===</item>
         <item>SingleTask启动生命周期测试</item>
 
+        <item>===Service系列===</item>
+        <item>startAndBindService</item>
+
+
         <item>===RxJava系列===</item>
         <item>RxJava简单体验</item>
 
@@ -139,6 +143,9 @@
 
         <item>===Activity系列==</item>
         <item>com.runningsnail.demos.activity.SingleTaskActivity</item>
+
+        <item>===Service系列===</item>
+        <item>com.runningsnail.demos.activity.service.StartAndBindServiceActivity</item>
 
         <item>===RxJava系列===</item>
         <item>com.runningsnail.demos.activity.rxjava.RxJavaOneActivity</item>

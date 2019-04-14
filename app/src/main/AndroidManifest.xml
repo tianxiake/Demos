@@ -26,8 +26,7 @@
 
         <activity android:name=".activity.service.RemoteServiceActivity" />
         <activity android:name=".activity.service.ForegroundServiceActivity" />
-        <activity android:name=".activity.service.BindServiceActivity" />
-        <activity android:name=".activity.service.StartServiceActivity" />
+        <activity android:name=".activity.service.StartAndBindServiceActivity" />
         <activity android:name=".activity.mvp.UserCollectionActivity" />
         <activity android:name=".activity.tv.RuntimeExecuteActivity" />
         <activity android:name=".activity.tv.ShadowEffectActivity" />
