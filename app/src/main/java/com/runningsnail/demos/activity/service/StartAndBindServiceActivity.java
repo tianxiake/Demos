@@ -29,6 +29,8 @@ public class StartAndBindServiceActivity extends AppCompatActivity {
     Button bindServiceBtn;
     @BindView(R.id.btn_unbind_service)
     Button unbindServiceBtn;
+    @BindView(R.id.btn_foreground_service)
+    Button foregroundServiceBtn;
 
     private ServiceConnection serviceConnection;
 
@@ -44,7 +46,8 @@ public class StartAndBindServiceActivity extends AppCompatActivity {
 
 
     @OnClick({R.id.btn_start_service, R.id.btn_stop_service,
-            R.id.btn_bind_service, R.id.btn_unbind_service})
+            R.id.btn_bind_service, R.id.btn_unbind_service,
+            R.id.btn_foreground_service})
     public void onClick(View view) {
         int id = view.getId();
         switch (id) {
@@ -60,9 +63,18 @@ public class StartAndBindServiceActivity extends AppCompatActivity {
             case R.id.btn_unbind_service:
                 testUnbindService();
                 break;
+            case R.id.btn_foreground_service:
+                testForegroundService();
+                break;
             default:
                 break;
         }
+    }
+
+    private void testForegroundService() {
+        Intent intent = new Intent(this, ForegroundService.class);
+        bindService(intent, serviceConnection, Context.BIND_AUTO_CREATE);
+        ToastUtil.showToast(this, "前台服务成功");
     }
 
     private void testUnbindService() {

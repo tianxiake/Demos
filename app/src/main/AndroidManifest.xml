@@ -23,9 +23,9 @@
             android:name=".activity.service.MyService"
             android:enabled="true"
             android:exported="true" />
+        <service android:name=".activity.service.ForegroundService" />
 
         <activity android:name=".activity.service.RemoteServiceActivity" />
-        <activity android:name=".activity.service.ForegroundServiceActivity" />
         <activity android:name=".activity.service.StartAndBindServiceActivity" />
         <activity android:name=".activity.mvp.UserCollectionActivity" />
         <activity android:name=".activity.tv.RuntimeExecuteActivity" />
@@ -107,7 +107,6 @@
         <activity android:name=".activity.viewgroupanimation.LayoutTransitionActivity" />
         <activity android:name=".activity.animator.PathMeasureActivity" />
         <activity android:name=".activity.tvwidget.TvRecyclerViewActivity" />
-        <activity android:name=".activity.thirdpart.StartThirdPartActivity"></activity>
     </application>
 
 </manifest>
