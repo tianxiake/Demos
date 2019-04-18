@@ -67,6 +67,9 @@
         <item>===Service系列===</item>
         <item>startAndBindService</item>
 
+        <item>===BroadcastReceiver</item>
+        <item>动态广播</item>
+
 
         <item>===RxJava系列===</item>
         <item>RxJava简单体验</item>
@@ -76,6 +79,9 @@
 
         <item>===架构===</item>
         <item>MVP</item>
+
+        <item>===surface===</item>
+        <item>TextureView的使用</item>
 
     </string-array>
 
@@ -147,6 +153,9 @@
         <item>===Service系列===</item>
         <item>com.runningsnail.demos.activity.service.StartAndBindServiceActivity</item>
 
+        <item>===BroadcastReceiver</item>
+        <item>com.runningsnail.demos.activity.broadcast.DynamicBroadCastActivity</item>
+
         <item>===RxJava系列===</item>
         <item>com.runningsnail.demos.activity.rxjava.RxJavaOneActivity</item>
 
@@ -156,6 +165,8 @@
         <item>===架构===</item>
         <item>com.runningsnail.demos.activity.mvp.UserCollectionActivity</item>
 
+        <item>===surface===</item>
+        <item>com.runningsnail.demos.activity.surface.TextureViewActivity</item>
 
     </string-array>
 

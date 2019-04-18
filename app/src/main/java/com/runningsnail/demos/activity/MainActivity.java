@@ -10,6 +10,7 @@ import android.widget.ListView;
 
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.common.utils.HiLogger;
+import com.runningsnail.demos.common.utils.ToastUtil;
 
 import java.util.Arrays;
 import java.util.List;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String content = clickItemsData.get(position);
+                HiLogger.d(TAG, "content %s", content);
                 if (content.contains("activity")) {
                     startActivity(clickItemsData.get(position));
                 }
@@ -59,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             Intent intent = new Intent(this, Class.forName(s));
             startActivity(intent);
+            ToastUtil.showToast(this,"startActivity success");
         } catch (ClassNotFoundException e) {
             HiLogger.e(TAG, "class load error", e);
         }

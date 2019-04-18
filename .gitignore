@@ -11,3 +11,5 @@
 .externalNativeBuild
 /.idea/
 /.idea/gradle.xml
+/.idea/markdown-navigator/
+/.idea/codeStyles/
