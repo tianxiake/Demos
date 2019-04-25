@@ -18,7 +18,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.broadcast.DynamicBroadCastActivity"></activity>
+        <activity android:name=".activity.surface.VideoViewActivity"></activity>
+        <activity android:name=".activity.webview.WebViewTestOneActivity" />
+        <activity android:name=".activity.broadcast.DynamicBroadCastActivity" />
         <activity android:name=".activity.tv.MockActivity" />
 
         <service
@@ -110,6 +112,12 @@
         <activity android:name=".activity.animator.PathMeasureActivity" />
         <activity android:name=".activity.tvwidget.TvRecyclerViewActivity" />
         <activity android:name=".activity.surface.TextureViewActivity" />
+
+        <receiver android:name=".activity.broadcast.MyBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

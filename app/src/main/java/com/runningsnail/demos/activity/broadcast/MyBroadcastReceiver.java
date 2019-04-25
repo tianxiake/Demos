@@ -3,6 +3,7 @@ package com.runningsnail.demos.activity.broadcast;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 
 import com.runningsnail.demos.common.utils.HiLogger;
@@ -16,8 +17,8 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         String action = intent.getAction();
         if(WifiManager.NETWORK_STATE_CHANGED_ACTION.equals(action)){
-            String state = intent.getStringExtra(WifiManager.EXTRA_WIFI_STATE);
-            HiLogger.d(TAG, "netWork change state:" + state);
+            WifiInfo wifiInfo = intent.getParcelableExtra(WifiManager.EXTRA_WIFI_INFO);
+            HiLogger.d(TAG, "netWork change wifiInfos:" + wifiInfo);
         }
     }
 }
