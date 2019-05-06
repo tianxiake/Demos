@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:name=".DemoApplication"
@@ -18,7 +19,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.surface.VideoViewActivity"></activity>
+        <activity android:name=".activity.provider.UseOtherAppContentProviderActivity"></activity>
+        <activity android:name=".activity.view.CoordinatorLayoutWithCollapsingToolbarLayoutActivity"></activity>
+        <activity android:name=".activity.view.CoordinatorLayoutWithAppBarLayoutActivity" />
+        <activity android:name=".activity.view.CoordinatorLayoutWithFABActivity" />
+        <activity android:name=".activity.surface.VideoViewActivity" />
         <activity android:name=".activity.webview.WebViewTestOneActivity" />
         <activity android:name=".activity.broadcast.DynamicBroadCastActivity" />
         <activity android:name=".activity.tv.MockActivity" />

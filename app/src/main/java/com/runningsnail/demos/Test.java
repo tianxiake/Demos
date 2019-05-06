@@ -4,7 +4,6 @@ import com.runningsnail.demos.common.utils.StringUtils;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -13,8 +12,7 @@ import java.util.Date;
 public class Test {
 
 	public static void main(String[] args) {
-		String utcShowTime = getUTCShowTime(5693 + "");
-		System.out.println(utcShowTime);
+		print("1");
 	}
 
 	public static String getUTCShowTime(String timeMillis) {
@@ -31,5 +29,27 @@ public class Test {
 		aLong += startTime;
 		Date date = new Date(aLong);
 		return format.format(date);
+	}
+
+
+	public static void print(String... str) {
+		System.out.println("可变长参数");
+		if (str != null) {
+			for (String s : str) {
+				System.out.println(s);
+			}
+		}
+	}
+
+	public static void print(String str) {
+		System.out.println("一个参数");
+	}
+
+	public static void print(String str, String str2) {
+		System.out.println("两个参数");
+	}
+
+	public static void print(String str, String...str1) {
+		System.out.println("------------------");
 	}
 }

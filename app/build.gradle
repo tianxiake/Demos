@@ -50,4 +50,5 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:glide:4.8.0'
     //添加Adapter的依赖
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'com.android.support:design:27.1.1'
 }

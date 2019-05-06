@@ -2,7 +2,7 @@
     <string name="app_name">Demos</string>
 
     <string-array name="item_data">
-        <item>===WebView测试</item>
+        <item>===WebView测试===</item>
         <item>WebView测试One</item>
 
         <item>===TV开发===</item>
@@ -69,8 +69,11 @@
         <item>===Service系列===</item>
         <item>startAndBindService</item>
 
-        <item>===BroadcastReceiver</item>
+        <item>===BroadcastReceiver===</item>
         <item>动态广播</item>
+
+        <item>===ContentProvider===</item>
+        <item>使用其他程序提供的ContentProvider</item>
 
 
         <item>===RxJava系列===</item>
@@ -85,6 +88,12 @@
         <item>===surface===</item>
         <item>TextureView的使用</item>
         <item>VideoView的使用</item>
+
+        <item>===View===</item>
+        <item>CoordinatorLayout和FAB使用</item>
+        <item>CoordinatorLayout和AppBarLayout使用</item>
+        <item>CoordinatorLayout和CollapsingToolbarLayout使用</item>
+
 
     </string-array>
 
@@ -159,8 +168,11 @@
         <item>===Service系列===</item>
         <item>com.runningsnail.demos.activity.service.StartAndBindServiceActivity</item>
 
-        <item>===BroadcastReceiver</item>
+        <item>===BroadcastReceiver===</item>
         <item>com.runningsnail.demos.activity.broadcast.DynamicBroadCastActivity</item>
+
+        <item>===ContentProvider===</item>
+        <item>com.runningsnail.demos.activity.provider.UseOtherAppContentProviderActivity</item>
 
         <item>===RxJava系列===</item>
         <item>com.runningsnail.demos.activity.rxjava.RxJavaOneActivity</item>
@@ -174,6 +186,11 @@
         <item>===surface===</item>
         <item>com.runningsnail.demos.activity.surface.TextureViewActivity</item>
         <item>com.runningsnail.demos.activity.surface.VideoViewActivity</item>
+
+        <item>===View===</item>
+        <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithFABActivity</item>
+        <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithAppBarLayoutActivity</item>
+        <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithCollapsingToolbarLayoutActivity</item>
 
     </string-array>
 
