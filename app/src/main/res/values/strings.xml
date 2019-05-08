@@ -4,6 +4,7 @@
     <string-array name="item_data">
         <item>===WebView测试===</item>
         <item>WebView测试One</item>
+        <item>WebView测试Two</item>
 
         <item>===TV开发===</item>
         <item>KeyEvent测试</item>
@@ -94,12 +95,15 @@
         <item>CoordinatorLayout和AppBarLayout使用</item>
         <item>CoordinatorLayout和CollapsingToolbarLayout使用</item>
 
+        <item>===数据存储===</item>
+        <item>Sqlite数据库测试</item>
 
     </string-array>
 
     <string-array name="click_item_data">
         <item>===WebView测试===</item>
         <item>com.runningsnail.demos.activity.webview.WebViewTestOneActivity</item>
+        <item>com.runningsnail.demos.activity.webview.WebViewTestTwoActivity</item>
 
         <item>===TV开发===</item>
         <item>com.runningsnail.demos.activity.tv.KeyEventTestActivity</item>
@@ -191,6 +195,9 @@
         <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithFABActivity</item>
         <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithAppBarLayoutActivity</item>
         <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithCollapsingToolbarLayoutActivity</item>
+
+        <item>===数据存储===</item>
+        <item>com.runningsnail.demos.activity.datastore.SqliteActivity</item>
 
     </string-array>
 
