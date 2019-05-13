@@ -1,6 +1,8 @@
 package com.runningsnail.demos.activity.provider;
 
 import android.Manifest;
+import android.content.ContentResolver;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -22,21 +24,29 @@ public class UseOtherAppContentProviderActivity extends AppCompatActivity {
     public static final String TAG = "UseOtherAppContentProviderActivity";
     public static final int READ_CONTACT_REQUEST_CODE = 10;
 
+    private ContentResolver contentResolver;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_use_other_app_content_provider);
-
+        contentResolver = this.getContentResolver();
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED) {
             //请求权限
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_CONTACTS}, READ_CONTACT_REQUEST_CODE);
         } else {
             getContactData();
         }
+
+        initListener();
+    }
+
+    private void initListener() {
+
     }
 
     private void getContactData() {
-        Cursor cursor = getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, null, null, null);
+        Cursor cursor = contentResolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI, null, null, null, null);
         if(cursor!=null){
             while(cursor.moveToNext()){
                 String name = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME));
@@ -44,6 +54,7 @@ public class UseOtherAppContentProviderActivity extends AppCompatActivity {
                 String phone = cursor.getString(cursor.getColumnIndex(ContactsContract.CommonDataKinds.Phone.NUMBER));
                 HiLogger.d(TAG, "name: %s phone: %s", name, phone);
             }
+            cursor.close();
         }
 
     }
