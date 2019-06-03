@@ -1,6 +1,7 @@
 package com.runningsnail.demos.activity.provider;
 
 import android.Manifest;
+import android.app.PendingIntent;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -39,6 +40,8 @@ public class UseOtherAppContentProviderActivity extends AppCompatActivity {
         }
 
         initListener();
+
+        PendingIntent activity = PendingIntent.getActivity(this, 100, null, 0);
     }
 
     private void initListener() {

@@ -63,6 +63,7 @@
         <item>横向滚动的RecyclerView布局导致的显示问题</item>
         <item>RecyclerView横向滚动</item>
         <item>RecyclerView两行网格布局</item>
+        <item>RecyclerView自定义Decoration</item>
 
         <item>===Activity系列===</item>
         <item>SingleTask启动生命周期测试</item>
@@ -97,6 +98,13 @@
 
         <item>===数据存储===</item>
         <item>Sqlite数据库测试</item>
+
+        <item>===Android常用布局===</item>
+        <item>TableLayout表格布局</item>
+        <item>GridLayout表格布局</item>
+
+        <item>===Android资源===</item>
+        <item>Assets测试</item>
 
     </string-array>
 
@@ -165,6 +173,7 @@
         <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewShowErrorActivity</item>
         <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewThreeActivity</item>
         <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewFiveActivity</item>
+        <item>com.runningsnail.demos.activity.recyclerview.RecyclerViewDecorationActivity</item>
 
         <item>===Activity系列==</item>
         <item>com.runningsnail.demos.activity.SingleTaskActivity</item>
@@ -199,8 +208,14 @@
         <item>===数据存储===</item>
         <item>com.runningsnail.demos.activity.datastore.SqliteActivity</item>
 
-    </string-array>
+        <item>===Android常用布局===</item>
+        <item>com.runningsnail.demos.activity.viewgroup.TableLayoutTestActivity</item>
+        <item>com.runningsnail.demos.activity.viewgroup.GridLayoutTestActivity</item>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+        <item>===Android资源===</item>
+        <item>com.runningsnail.demos.activity.resources.AssetActivity</item>
+
+
+    </string-array>
 </resources>

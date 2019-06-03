@@ -1,6 +1,7 @@
 package com.runningsnail.demos.activity.rxjava;
 
 import android.content.Intent;
+import android.icu.text.MessageFormat;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;

@@ -3,8 +3,11 @@ package com.runningsnail.demos;
 import com.runningsnail.demos.common.utils.StringUtils;
 
 import java.text.DateFormat;
+import java.text.MessageFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.TimeZone;
 
 /**
  * @author liuyongjie create on 2018/12/21.
@@ -12,8 +15,27 @@ import java.util.Date;
 public class Test {
 
 	public static void main(String[] args) {
-		print("1");
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd HHmmss");
+        String format = simpleDateFormat.format(new Date());
+        System.out.println(format);
+
+
+		String value1 = MessageFormat.format("oh, {0} is 'a' pig", "ZhangSan");
+		System.out.println(value1);
+
+		String value2 = MessageFormat.format("oh, {0} is ''a'' pig", "ZhangSan");
+		System.out.println(value2);
+
+		String value3 = MessageFormat.format("oh, {1} is ''a'' pig", "ZhangSan");
+		System.out.println(value3);
+
+		System.out.println(MessageFormat.format("'{0}'-{1}", 1, 2));
+		System.out.println(MessageFormat.format("{1}xxxx{2}", 1, 2));
+        System.out.println(MessageFormat.format("{0}xxxx{0}", 1, 2));
+
 	}
+
 
 	public static String getUTCShowTime(String timeMillis) {
 		DateFormat format = new SimpleDateFormat("HH:mm:ss");
@@ -51,5 +73,26 @@ public class Test {
 
 	public static void print(String str, String...str1) {
 		System.out.println("------------------");
+	}
+
+
+	/**
+	 * 格式化GMT时间字符串20160505171212 为UTC格式：20160505T091212Z
+	 *
+	 * @return
+	 */
+	public static String formatGMTStrTimeToUTC(String timeStr) {
+		String result = "";
+		try {
+			SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+			Date parseDate = simpleDateFormat.parse(timeStr);
+			simpleDateFormat.applyPattern("yyyyMMdd'T'HHmmss'Z'");
+			simpleDateFormat.setTimeZone(TimeZone.getTimeZone("GMT+:00:00"));
+			result = simpleDateFormat.format(parseDate);
+
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+		return result;
 	}
 }

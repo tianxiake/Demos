@@ -19,7 +19,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.datastore.SqliteActivity"></activity>
+        <activity android:name=".activity.resources.AssetActivity"></activity>
+        <activity android:name=".activity.viewgroup.GridLayoutTestActivity" />
+        <activity android:name=".activity.viewgroup.TableLayoutTestActivity" />
+        <activity android:name=".activity.recyclerview.RecyclerViewDecorationActivity" />
+        <activity android:name=".activity.datastore.SqliteActivity" />
         <activity android:name=".activity.webview.WebViewTestTwoActivity" />
         <activity android:name=".activity.provider.UseOtherAppContentProviderActivity" />
         <activity android:name=".activity.view.CoordinatorLayoutWithCollapsingToolbarLayoutActivity" />
@@ -53,6 +57,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity-alias
+            android:name=".alias_two"
+            android:targetActivity=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias
+            android:name=".alias_one"
+            android:targetActivity=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity-alias>
+
         <activity
             android:name=".activity.bottomnavigation.BottomWayOneActivity"
             android:label="底部导航栏一" />
