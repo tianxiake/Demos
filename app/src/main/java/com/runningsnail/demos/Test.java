@@ -1,13 +1,18 @@
 package com.runningsnail.demos;
 
+import android.os.CountDownTimer;
+
 import com.runningsnail.demos.common.utils.StringUtils;
 
 import java.text.DateFormat;
-import java.text.MessageFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.TimeZone;
+import java.util.TimerTask;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author liuyongjie create on 2018/12/21.
@@ -15,24 +20,6 @@ import java.util.TimeZone;
 public class Test {
 
 	public static void main(String[] args) {
-
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd HHmmss");
-        String format = simpleDateFormat.format(new Date());
-        System.out.println(format);
-
-
-		String value1 = MessageFormat.format("oh, {0} is 'a' pig", "ZhangSan");
-		System.out.println(value1);
-
-		String value2 = MessageFormat.format("oh, {0} is ''a'' pig", "ZhangSan");
-		System.out.println(value2);
-
-		String value3 = MessageFormat.format("oh, {1} is ''a'' pig", "ZhangSan");
-		System.out.println(value3);
-
-		System.out.println(MessageFormat.format("'{0}'-{1}", 1, 2));
-		System.out.println(MessageFormat.format("{1}xxxx{2}", 1, 2));
-        System.out.println(MessageFormat.format("{0}xxxx{0}", 1, 2));
 
 	}
 

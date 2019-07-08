@@ -19,7 +19,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.resources.AssetActivity"></activity>
+        <activity android:name=".activity.androidapi.AndroidApiTestActivity"></activity>
+        <activity android:name=".activity.downlaod.DownloadTestActivity" />
+        <activity android:name=".activity.view.ViewLocationTestActivity" />
+        <activity android:name=".activity.timer.Cron4jTestActivity" />
+        <activity android:name=".activity.timer.QuartzTestActivity" />
+        <activity android:name=".activity.thread.AsyncTaskTestActivity" />
+        <activity android:name=".activity.media.AudioPlayActivity" />
+        <activity android:name=".activity.resources.AssetActivity" />
         <activity android:name=".activity.viewgroup.GridLayoutTestActivity" />
         <activity android:name=".activity.viewgroup.TableLayoutTestActivity" />
         <activity android:name=".activity.recyclerview.RecyclerViewDecorationActivity" />
@@ -59,7 +66,7 @@
         </activity>
 
         <activity-alias
-            android:name=".alias_two"
+            android:name=".alias_one"
             android:targetActivity=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,7 +75,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:name=".alias_one"
+            android:name=".alias_two"
             android:targetActivity=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

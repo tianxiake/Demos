@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--定义两种状态同时满足生效-->
+    <item android:color="#FF0000" android:state_pressed="true" android:state_selected="true" />
+
+    <!--按压状态生效-->
+    <item android:color="#00FF00" android:state_pressed="true" />
+
+    <!--不定义任何状态 这个是默认色-->
+    <item android:color="#FFFFFF" />
+</selector>

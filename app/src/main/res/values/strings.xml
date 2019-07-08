@@ -2,6 +2,7 @@
     <string name="app_name">Demos</string>
 
     <string-array name="item_data">
+
         <item>===WebView测试===</item>
         <item>WebView测试One</item>
         <item>WebView测试Two</item>
@@ -95,6 +96,7 @@
         <item>CoordinatorLayout和FAB使用</item>
         <item>CoordinatorLayout和AppBarLayout使用</item>
         <item>CoordinatorLayout和CollapsingToolbarLayout使用</item>
+        <item>View位置信息测试</item>
 
         <item>===数据存储===</item>
         <item>Sqlite数据库测试</item>
@@ -106,6 +108,21 @@
         <item>===Android资源===</item>
         <item>Assets测试</item>
 
+        <item>===媒体播放===</item>
+        <item>音频播放</item>
+
+        <item>===Android中线程===</item>
+        <item>AsyncTask使用</item>
+
+        <item>===定时任务框架Quartz使用===</item>
+        <item>Quartz使用</item>
+        <item>cron4j的使用</item>
+
+        <item>===文件下载框架===</item>
+        <item>OkDownload测试</item>
+
+        <item>===androidOsApi使用===</item>
+        <item>AndroidApiTestActivity</item>
     </string-array>
 
     <string-array name="click_item_data">
@@ -204,6 +221,7 @@
         <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithFABActivity</item>
         <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithAppBarLayoutActivity</item>
         <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithCollapsingToolbarLayoutActivity</item>
+        <item>com.runningsnail.demos.activity.view.ViewLocationTestActivity</item>
 
         <item>===数据存储===</item>
         <item>com.runningsnail.demos.activity.datastore.SqliteActivity</item>
@@ -216,6 +234,21 @@
         <item>===Android资源===</item>
         <item>com.runningsnail.demos.activity.resources.AssetActivity</item>
 
+        <item>===媒体播放===</item>
+        <item>com.runningsnail.demos.activity.media.AudioPlayActivity</item>
+
+        <item>===Android中线程===</item>
+        <item>com.runningsnail.demos.activity.thread.AsyncTaskTestActivity</item>
+
+        <item>===定时任务框架Quartz使用===</item>
+        <item>com.runningsnail.demos.activity.timer.QuartzTestActivity</item>
+        <item>com.runningsnail.demos.activity.timer.Cron4jTestActivity</item>
+
+        <item>===文件下载框架===</item>
+        <item>com.runningsnail.demos.activity.downlaod.DownloadTestActivity</item>
+
+        <item>===androidOsApi使用===</item>
+        <item>com.runningsnail.demos.activity.androidapi.AndroidApiTestActivity</item>
 
     </string-array>
 </resources>

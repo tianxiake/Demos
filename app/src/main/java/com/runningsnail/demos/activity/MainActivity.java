@@ -1,23 +1,27 @@
 package com.runningsnail.demos.activity;
 
+import android.animation.Animator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.common.utils.HiLogger;
 import com.runningsnail.demos.common.utils.ToastUtil;
 
-import java.text.SimpleDateFormat;
+import java.io.File;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -27,9 +31,34 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     @BindView(R.id.lv_content)
     ListView listView;
+    @BindView(R.id.container)
+    FrameLayout container;
+    @BindView(R.id.iv_startup)
+    ImageView ivStartup;
 
     private List<String> itemsData;
     private List<String> clickItemsData;
+
+    private final int message_a = 0xfff;
+    private final int message_b = 0xbbb;
+
+    private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case message_a:
+//                    handler.removeMessages(message_b);
+                    HiLogger.i(TAG, "message_a");
+                    break;
+                case message_b:
+                    HiLogger.i(TAG, "message_b");
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         String name = this.getClass().getName();
-        HiLogger.d(TAG,"class name:"+name);
+        HiLogger.d(TAG, "class name:" + name);
         itemsData = getItemsData();
         clickItemsData = getClickItemsData();
 
@@ -57,23 +86,35 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     @Override
     protected void onResume() {
         super.onResume();
-//        long test1 = 1556687346000L; //更早
-//        long test2 = 1557724146000L; //本周
-//        long test3 = 1557464946000L; //上周
-//
-//        int time1 = computeAreaTime(test1);
-//        int time2 = computeAreaTime(test2);
-//        int time3 = computeAreaTime(test3);
-        long l = System.currentTimeMillis();
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd HHmmss");
-        TimeZone timeZone = simpleDateFormat.getTimeZone();
-        String displayName = timeZone.getDisplayName();
-        String format = simpleDateFormat.format(l);
-        HiLogger.d(TAG, "l" + l + ",timeFormat:" + format + ",displayName:" + displayName);
+        HiLogger.i(TAG, "执行动画");
+        ivStartup.animate().alpha(0.01f).setDuration(2000).setListener(new Animator.AnimatorListener() {
+            @Override
+            public void onAnimationStart(Animator animation) {
 
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                ivStartup.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                ivStartup.setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animator animation) {
+
+            }
+        }).start();
+
+        File cacheDir = this.getCacheDir();
+        HiLogger.i(TAG, "cacheDir: %s", cacheDir.getAbsolutePath());
     }
 
     /**
@@ -108,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             Intent intent = new Intent(this, Class.forName(s));
             startActivity(intent);
-            ToastUtil.showToast(this,"startActivity success");
+            ToastUtil.showToast(this, "startActivity success");
         } catch (ClassNotFoundException e) {
             HiLogger.e(TAG, "class load error", e);
         }
