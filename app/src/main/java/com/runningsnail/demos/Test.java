@@ -1,17 +1,12 @@
 package com.runningsnail.demos;
 
-import android.os.CountDownTimer;
-
 import com.runningsnail.demos.common.utils.StringUtils;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.TimeZone;
-import java.util.TimerTask;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -21,6 +16,59 @@ public class Test {
 
 	public static void main(String[] args) {
 
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
+		simpleDateFormat.applyPattern("yyyy年MM月dd日 HH时mm分ss秒");
+		String format = simpleDateFormat.format(30000L);
+		System.out.println(format);
+	}
+
+
+	public static class VideoController implements Runnable {
+		CountDownLatch countDownLatch;
+
+		public VideoController(int number) {
+			countDownLatch = new CountDownLatch(number);
+		}
+
+		public void arrive() {
+			System.out.println(Thread.currentThread().getName() + "进入");
+			countDownLatch.countDown();
+			System.out.printf("VideoConference: Waiting for %d participants.\n", countDownLatch.getCount());
+		}
+
+
+		@Override
+		public void run() {
+			System.out.println("视频进入阻塞状态");
+			try {
+				countDownLatch.await(10, TimeUnit.SECONDS);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
+			System.out.println("视频人员全部进入,即将开始视频" + countDownLatch.getCount());
+		}
+	}
+
+	public static class VideoRefrence implements Runnable {
+
+		VideoController videoController;
+
+		public VideoRefrence(VideoController videoController) {
+			this.videoController = videoController;
+		}
+
+		@Override
+		public void run() {
+			System.out.println(Thread.currentThread().getName() + "正在进入视频");
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			System.out.println(Thread.currentThread().getName() + "进入视频");
+			videoController.arrive();
+		}
 	}
 
 

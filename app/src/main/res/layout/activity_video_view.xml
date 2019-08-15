@@ -3,7 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/fl_content"
     tools:context=".activity.surface.VideoViewActivity">
+
+
+
+    <VideoView
+        android:focusable="false"
+        android:id="@+id/video_view"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center" />
 
     <Button
         android:id="@+id/btn_play"
@@ -11,10 +21,12 @@
         android:layout_height="wrap_content"
         android:text="播放" />
 
-    <VideoView
-        android:id="@+id/video_view"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center" />
+    <Button
+        android:layout_gravity="right"
+        android:id="@+id/btn_play_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放下一集" />
+
 
 </FrameLayout>

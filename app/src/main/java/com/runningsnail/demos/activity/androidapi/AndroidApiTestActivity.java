@@ -46,7 +46,7 @@ public class AndroidApiTestActivity extends AppCompatActivity {
      * 倒计时API
      */
     private void countDown() {
-        long time = 31000;
+        long time = 30100;
         final long interval = 1000;
         tvCountDown.setText((time / interval) + "");
         countDownTimer = new CountDownTimer(time, interval) {

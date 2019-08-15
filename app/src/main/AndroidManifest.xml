@@ -19,7 +19,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.androidapi.AndroidApiTestActivity"></activity>
+        <activity android:name=".activity.surface.SurfaceViewActivity"></activity>
+        <activity android:name=".activity.view.ViewUseActivity" />
+        <activity android:name=".activity.viewgroup.ConstraintLayoutTestActivity" />
+        <activity android:name=".activity.androidapi.AndroidApiTestActivity" />
         <activity android:name=".activity.downlaod.DownloadTestActivity" />
         <activity android:name=".activity.view.ViewLocationTestActivity" />
         <activity android:name=".activity.timer.Cron4jTestActivity" />
@@ -66,7 +69,7 @@
         </activity>
 
         <activity-alias
-            android:name=".alias_one"
+            android:name=".alias_two"
             android:targetActivity=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -75,7 +78,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:name=".alias_two"
+            android:name=".alias_one"
             android:targetActivity=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -48,7 +48,7 @@
         <item>PathMeasure配合ValueAnimator做路径动画</item>
         <item>属性动画滑动View的内容</item>
 
-        <item>===ViewGroup Item动画===</item>
+        <item>===ViewGroupItem动画===</item>
         <item>默认动画 animationLayoutChange</item>
         <item>LayoutTransition 自定义item动画</item>
 
@@ -91,12 +91,14 @@
         <item>===surface===</item>
         <item>TextureView的使用</item>
         <item>VideoView的使用</item>
+        <item>SurfaceView的使用</item>
 
         <item>===View===</item>
         <item>CoordinatorLayout和FAB使用</item>
         <item>CoordinatorLayout和AppBarLayout使用</item>
         <item>CoordinatorLayout和CollapsingToolbarLayout使用</item>
         <item>View位置信息测试</item>
+        <item>View使用测试</item>
 
         <item>===数据存储===</item>
         <item>Sqlite数据库测试</item>
@@ -104,6 +106,7 @@
         <item>===Android常用布局===</item>
         <item>TableLayout表格布局</item>
         <item>GridLayout表格布局</item>
+        <item>ConstraintLayout约束布局</item>
 
         <item>===Android资源===</item>
         <item>Assets测试</item>
@@ -174,7 +177,7 @@
         <item>com.runningsnail.demos.activity.animator.AnimatorScrollActivity</item>
 
 
-        <item>===ViewGroup Item动画===</item>
+        <item>===ViewGroupItem动画===</item>
         <item>com.runningsnail.demos.activity.viewgroupanimation.UseDefaultAniamtionActivity</item>
         <item>com.runningsnail.demos.activity.viewgroupanimation.LayoutTransitionActivity</item>
 
@@ -216,12 +219,14 @@
         <item>===surface===</item>
         <item>com.runningsnail.demos.activity.surface.TextureViewActivity</item>
         <item>com.runningsnail.demos.activity.surface.VideoViewActivity</item>
+        <item>com.runningsnail.demos.activity.surface.SurfaceViewActivity</item>
 
         <item>===View===</item>
         <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithFABActivity</item>
         <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithAppBarLayoutActivity</item>
         <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithCollapsingToolbarLayoutActivity</item>
         <item>com.runningsnail.demos.activity.view.ViewLocationTestActivity</item>
+        <item>com.runningsnail.demos.activity.view.ViewUseActivity</item>
 
         <item>===数据存储===</item>
         <item>com.runningsnail.demos.activity.datastore.SqliteActivity</item>
@@ -229,6 +234,7 @@
         <item>===Android常用布局===</item>
         <item>com.runningsnail.demos.activity.viewgroup.TableLayoutTestActivity</item>
         <item>com.runningsnail.demos.activity.viewgroup.GridLayoutTestActivity</item>
+        <item>com.runningsnail.demos.activity.viewgroup.ConstraintLayoutTestActivity</item>
 
 
         <item>===Android资源===</item>

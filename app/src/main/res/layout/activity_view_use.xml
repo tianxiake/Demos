@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.view.ViewUseActivity">
+
+
+    <RatingBar
+        android:id="@+id/rb"
+        style="@style/RatingBar_CustomDrawable"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:numStars="5"
+        android:rating="4.7"
+        android:stepSize="0.1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/mrb_ratingBar"
+        style="@style/RatingBar_CustomDrawable"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:isIndicator="true"
+        android:numStars="5"
+        android:rating="4.3"
+        android:stepSize="0.1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:mrb_fillBackgroundStars="true" />
+
+    <com.willy.ratingbar.BaseRatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:layout_constraintTop_toBottomOf="@id/rb"
+        app:srb_drawableEmpty="@drawable/star01"
+        app:srb_drawableFilled="@drawable/star02"
+        app:srb_isIndicator="true"
+        app:srb_numStars="5"
+        app:srb_starPadding="1dp"
+        app:srb_starWidth="40dp"
+        app:srb_starHeight="40dp"
+        app:srb_rating="4.1"
+        app:srb_stepSize="0.1">
+
+    </com.willy.ratingbar.BaseRatingBar>
+
+</android.support.constraint.ConstraintLayout>
