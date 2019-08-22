@@ -1,14 +1,18 @@
 package com.runningsnail.demos.activity.webview;
 
 import android.content.DialogInterface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.JsResult;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 
 import com.runningsnail.demos.R;
@@ -39,13 +43,40 @@ public class WebViewTestOneActivity extends AppCompatActivity {
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         // 先载入JS代码
         // 格式规定为:file:///android_asset/文件名.html
-        webview.loadUrl("http://218.203.103.205:8080/home.shtml");
+        webview.loadUrl("http://192.168.220.127:58124/epg/hdvod/biz_49273606.epg?code=");
 
         // 由于设置了弹窗检验调用结果,所以需要支持js对话框
         // webview只是载体，内容的渲染需要使用webviewChromClient类去实现
         // 通过设置WebChromeClient对象处理JavaScript的对话框
         //设置响应js 的Alert()函数
+        webview.setWebViewClient(new WebViewClient() {
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                super.onPageFinished(view, url);
+                HiLogger.i(TAG,"onPageFinished");
+            }
+
+            @Override
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                super.onReceivedError(view, errorCode, description, failingUrl);
+                HiLogger.i(TAG, "errorCode: %s,description:%s,failingUrl:%s", errorCode, description, failingUrl);
+            }
+
+            @Override
+            public void onReceivedHttpError(WebView view, WebResourceRequest request, WebResourceResponse errorResponse) {
+                super.onReceivedHttpError(view, request, errorResponse);
+                HiLogger.i(TAG, "errorCode:" + errorResponse.getEncoding());
+            }
+        });
         webview.setWebChromeClient(new WebChromeClient() {
+
+            @Override
+            public void onReceivedTitle(WebView view, String title) {
+                super.onReceivedTitle(view, title);
+                HiLogger.i(TAG, "title:" + title);
+            }
+
             @Override
             public boolean onJsAlert(WebView view, String url, String message, final JsResult result) {
                 HiLogger.d(TAG, "url: %s message: %s", url, message);
@@ -64,7 +95,6 @@ public class WebViewTestOneActivity extends AppCompatActivity {
             }
 
         });
-
 
     }
 

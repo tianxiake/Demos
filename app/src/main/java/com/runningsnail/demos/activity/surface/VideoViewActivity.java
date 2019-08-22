@@ -90,7 +90,6 @@ public class VideoViewActivity extends AppCompatActivity {
         });
 
 //        handler.sendEmptyMessageDelayed(1, 30);
-
     }
 
     //    String playUrl = "http://111.7.174.11/88889315/16/20190710/271128404/271128404.mp4?rrsip=111.7.174.11&icpid=&accounttype=1&limitflux=-1&limitdur=-1&accountinfo=:2019071209264";

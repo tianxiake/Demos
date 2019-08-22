@@ -92,6 +92,7 @@
         <item>TextureView的使用</item>
         <item>VideoView的使用</item>
         <item>SurfaceView的使用</item>
+        <item>SurfaceView+VideoView播放视频</item>
 
         <item>===View===</item>
         <item>CoordinatorLayout和FAB使用</item>
@@ -220,6 +221,7 @@
         <item>com.runningsnail.demos.activity.surface.TextureViewActivity</item>
         <item>com.runningsnail.demos.activity.surface.VideoViewActivity</item>
         <item>com.runningsnail.demos.activity.surface.SurfaceViewActivity</item>
+        <item>com.runningsnail.demos.activity.surface.MediaplayerAndTextureActivity</item>
 
         <item>===View===</item>
         <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithFABActivity</item>
