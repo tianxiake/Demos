@@ -4,13 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context=".activity.surface.MediaplayerAndTextureActivity">
+    android:id="@+id/fl_content"
+    tools:context=".activity.surface.MediaplayerAndSurfaceViewActivity">
+
+
+    <Button
+        android:id="@+id/btn_show_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="ShowSmallVideo"
+        android:textAllCaps="false" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_video_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center" />
 
 
     <TextureView
-        android:id="@+id/tv_text_ure"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_gravity="center" />
+        android:id="@+id/tv_texture_one"
+        android:layout_width="320dp"
+        android:layout_height="180dp"
+        android:visibility="gone" />
 
 </FrameLayout>

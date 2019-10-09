@@ -65,7 +65,7 @@ public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback
 
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-
+        HiLogger.i(TAG, "format: %s width: %s height: %s", format, width, height);
     }
 
     @Override

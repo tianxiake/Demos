@@ -2,16 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.runningsnail.demos">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_CONTACTS" />
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <application
         android:name=".DemoApplication"
         android:allowBackup="true"
@@ -20,7 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.surface.MediaplayerAndTextureActivity"></activity>
+        <activity
+            android:name=".activity.LocationActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity android:name=".activity.surface.MediaPlayerAndTextureViewActivity" />
+        <activity android:name=".activity.surface.MediaplayerAndSurfaceViewActivity" />
         <activity android:name=".activity.surface.SurfaceViewActivity" />
         <activity android:name=".activity.view.ViewUseActivity" />
         <activity android:name=".activity.viewgroup.ConstraintLayoutTestActivity" />
@@ -45,10 +39,8 @@
         <activity android:name=".activity.webview.WebViewTestOneActivity" />
         <activity android:name=".activity.broadcast.DynamicBroadCastActivity" />
         <activity android:name=".activity.tv.MockActivity" />
-
         <activity android:name=".activity.service.RemoteServiceActivity" />
         <activity android:name=".activity.service.StartAndBindServiceActivity" />
-
         <activity android:name=".activity.mvp.UserCollectionActivity" />
         <activity android:name=".activity.tv.RuntimeExecuteActivity" />
         <activity android:name=".activity.tv.ShadowEffectActivity" />
@@ -64,6 +56,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".activity.bottomnavigation.BottomWayOneActivity"
             android:label="底部导航栏一" />
@@ -75,7 +68,6 @@
         <activity
             android:name=".activity.bottomnavigation.BottomWayThreeActivity"
             android:label="底部导航栏三" />
-
         <activity
             android:name=".activity.viewanimation.ScaleAnimationActivity"
             android:label="缩放动画简单示例" />
@@ -150,17 +142,28 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity-alias>
+
         <receiver android:name=".activity.broadcast.MyBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.net.wifi.STATE_CHANGE" />
             </intent-filter>
         </receiver>
+
         <service
             android:name=".activity.service.MyService"
             android:enabled="true"
             android:exported="true" />
-
         <service android:name=".activity.service.ForegroundService" />
     </application>
+
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
 </manifest>

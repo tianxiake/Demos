@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 import android.widget.VideoView;
 
 import com.runningsnail.demos.R;
@@ -30,9 +31,13 @@ public class VideoViewActivity extends AppCompatActivity {
     VideoView videoView;
 
     String[] playUrl = new String[]{
-            "http://111.7.146.91:33200/EPG/MediaService/RedirectPlay.jsp?userToken=123456789&ContentType=vod&MediaID=NanFangCMJCSSP02000201000000022019042399006207&ContentID=NanFangCMJCSSP02000201000000012019042399574357",
-            "http://111.7.146.91:33200/EPG/MediaService/RedirectPlay.jsp?userToken=123456789&ContentType=vod&MediaID=NanFangCMJCSSP02000201000000022019042399006247&ContentID=NanFangCMJCSSP02000201000000012019042399874361",
-            "http://111.7.146.91:33200/EPG/MediaService/RedirectPlay.jsp?userToken=123456789&ContentType=vod&MediaID=NanFangCMJCSSP02000201000000022019042399006207&ContentID=NanFangCMJCSSP02000201000000012019042399574357"
+            "https://o6yh6n9.l.com/grKyofaC_942851.mp4",
+            "https://o6yh6n9.l.com/grKyofaC_942851.mp4"
+//            "rtp://@239.0.1.133:5172",
+//            "rtp://@239.0.1.94:5013",
+//            "rtp://@239.0.1.1:5001"
+//           主RRS: http://120.87.19.109/PLTV/88888973/224/3221225744/10000100000000060000000000334567_0.smil/index.m3u8?rrsip=120.87.4.103&fmt=ts2hls&servicetype=1&icpid=&accounttype=1&limitflux=-1&limitdur=-1&GuardEncType=2&accountinfo=p49v5jIfvzt5O7IlSZAOFothT6NCTKx5J%2BpGD8oFMAI6wMuLMl3oi7cXA9ryuJegtc39pYzYSmHw%2BiYMKqJsDXdBtVsV6b%2Fr2pgml9B6xCpvXvtpPyW1ZTL1lxghKXV8%3A20190926102838%2C11002000000556%2C112.96.29.123%2C20190926102838%2C10000100000000050000000000296969%2CD2822041D245E770558D10433CBB68B7%2C-1%2C1%2C1%2C%2C%2C2%2C%2C%2C%2C2%2CEND
+//            备RRS: http://120.87.4.103/PLTV/88888973/224/3221225744/10000100000000060000000000334567_0.smil/index.m3u8?rrsip=120.87.19.109&fmt=ts2hls&servicetype=1&icpid=&accounttype=1&limitflux=-1&limitdur=-1&GuardEncType=2&accountinfo=p49v5jIfvzt5O7IlSZAOFothT6NCTKx5J%2BpGD8oFMAI6wMuLMl3oi7cXA9ryuJegtc39pYzYSmHw%2BiYMKqJsDXdBtVsV6b%2Fr2pgml9B6xCpvXvtpPyW1ZTL1lxghKXV8%3A20190926102838%2C11002000000556%2C112.96.29.123%2C20190926102838%2C10000100000000050000000000296969%2CD2822041D245E770558D10433CBB68B7%2C-1%2C1%2C1%2C%2C%2C2%2C%2C%2C%2C2%2CEND
     };
     @BindView(R.id.btn_play_next)
     Button btnPlayNext;
@@ -63,14 +68,16 @@ public class VideoViewActivity extends AppCompatActivity {
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
-                HiLogger.d(TAG, "onPrepared");
+                HiLogger.d(TAG, "onPrepared url:%s", playUrl[playIndex]);
+                Toast.makeText(VideoViewActivity.this, "url:" + playUrl[playIndex], Toast.LENGTH_SHORT).show();
+
                 videoView.seekTo(0);
             }
         });
         videoView.setOnInfoListener(new MediaPlayer.OnInfoListener() {
             @Override
             public boolean onInfo(MediaPlayer mp, int what, int extra) {
-                HiLogger.d(TAG, "onInfo %s", what);
+                HiLogger.d(TAG, "url:%s onInfo %s", playUrl[playIndex], what);
                 return false;
             }
         });
@@ -84,8 +91,9 @@ public class VideoViewActivity extends AppCompatActivity {
         videoView.setOnErrorListener(new MediaPlayer.OnErrorListener() {
             @Override
             public boolean onError(MediaPlayer mp, int what, int extra) {
-                HiLogger.i(TAG, "onError what:%s extra:%s", what, extra);
-                return false;
+                Toast.makeText(VideoViewActivity.this, "url:" + playUrl[playIndex] + ",what:" + what, Toast.LENGTH_LONG).show();
+                HiLogger.i(TAG, "onError  url:%s what:%s extra:%s", playUrl[playIndex], what, extra);
+                return true;
             }
         });
 
@@ -100,15 +108,15 @@ public class VideoViewActivity extends AppCompatActivity {
         int id = view.getId();
         switch (id) {
             case R.id.btn_play:
-                videoView.setVideoURI(Uri.parse("rtmp://live.hkstv.hk.lxdns.com/live/hks"));
+                videoView.setVideoURI(Uri.parse(playUrl[playIndex]));
                 videoView.start();
 //                btnPlay.setEnabled(false);
 //                playNext(playIndex);
                 break;
             case R.id.btn_play_next:
-                videoView.stopPlayback();
-                flContent.removeView(videoView);
-//                playNext(playIndex);
+//                videoView.stopPlayback();
+//                flContent.removeView(videoView);
+                playNext(playIndex);
                 break;
             default:
                 break;

@@ -3,6 +3,9 @@
 
     <string-array name="item_data">
 
+        <item>===位置信息===</item>
+        <item>位置信息测试</item>
+
         <item>===WebView测试===</item>
         <item>WebView测试One</item>
         <item>WebView测试Two</item>
@@ -130,6 +133,9 @@
     </string-array>
 
     <string-array name="click_item_data">
+        <item>===位置信息===</item>
+        <item>com.runningsnail.demos.activity.LocationActivity</item>
+
         <item>===WebView测试===</item>
         <item>com.runningsnail.demos.activity.webview.WebViewTestOneActivity</item>
         <item>com.runningsnail.demos.activity.webview.WebViewTestTwoActivity</item>
@@ -221,7 +227,7 @@
         <item>com.runningsnail.demos.activity.surface.TextureViewActivity</item>
         <item>com.runningsnail.demos.activity.surface.VideoViewActivity</item>
         <item>com.runningsnail.demos.activity.surface.SurfaceViewActivity</item>
-        <item>com.runningsnail.demos.activity.surface.MediaplayerAndTextureActivity</item>
+        <item>com.runningsnail.demos.activity.surface.MediaplayerAndSurfaceViewActivity</item>
 
         <item>===View===</item>
         <item>com.runningsnail.demos.activity.view.CoordinatorLayoutWithFABActivity</item>

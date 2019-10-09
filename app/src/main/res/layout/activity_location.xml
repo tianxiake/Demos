@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activity.LocationActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_image_one"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="#00FF00" />
+
+        <ImageView
+
+            android:id="@+id/iv_image_two"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/iv_image_one"
+            android:background="#FF0000" />
+
+    </RelativeLayout>
+
+
+</ScrollView>

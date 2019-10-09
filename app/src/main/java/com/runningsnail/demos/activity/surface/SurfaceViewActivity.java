@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 
 import com.runningsnail.demos.R;
+import com.runningsnail.demos.common.utils.HiLogger;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,13 +24,15 @@ import butterknife.OnClick;
  */
 
 public class SurfaceViewActivity extends AppCompatActivity {
-
+    private static final String TAG = "SurfaceViewActivity";
     @BindView(R.id.msv_content)
     MySurfaceView msvContent;
     @BindView(R.id.btn_translate)
     Button btnTranslate;
     @BindView(R.id.fl_content)
     FrameLayout flContent;
+    int width = 100;
+    int height = 50;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +47,13 @@ public class SurfaceViewActivity extends AppCompatActivity {
 
     @OnClick({R.id.btn_translate})
     public void onClick(View view) {
-        msvContent.setScaleX(msvContent.getScaleX() + 1);
-        msvContent.setTranslationY(msvContent.getTranslationY() + 50);
-        msvContent.restart(10);
+//        ViewGroup.LayoutParams layoutParams = msvContent.getLayoutParams();
+//        layoutParams.width *= 2;
+//        layoutParams.height *= 2;
+//        msvContent.setLayoutParams(layoutParams);
+        width = width -10;
+        height = height - 10;
+        msvContent.getHolder().setFixedSize(width, height);
     }
+
 }
