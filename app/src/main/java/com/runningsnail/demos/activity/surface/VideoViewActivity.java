@@ -3,8 +3,6 @@ package com.runningsnail.demos.activity.surface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
@@ -30,14 +28,7 @@ public class VideoViewActivity extends AppCompatActivity {
     @BindView(R.id.video_view)
     VideoView videoView;
 
-    String[] playUrl = new String[]{
-            "https://o6yh6n9.l.com/grKyofaC_942851.mp4",
-            "https://o6yh6n9.l.com/grKyofaC_942851.mp4"
-//            "rtp://@239.0.1.133:5172",
-//            "rtp://@239.0.1.94:5013",
-//            "rtp://@239.0.1.1:5001"
-//           主RRS: http://120.87.19.109/PLTV/88888973/224/3221225744/10000100000000060000000000334567_0.smil/index.m3u8?rrsip=120.87.4.103&fmt=ts2hls&servicetype=1&icpid=&accounttype=1&limitflux=-1&limitdur=-1&GuardEncType=2&accountinfo=p49v5jIfvzt5O7IlSZAOFothT6NCTKx5J%2BpGD8oFMAI6wMuLMl3oi7cXA9ryuJegtc39pYzYSmHw%2BiYMKqJsDXdBtVsV6b%2Fr2pgml9B6xCpvXvtpPyW1ZTL1lxghKXV8%3A20190926102838%2C11002000000556%2C112.96.29.123%2C20190926102838%2C10000100000000050000000000296969%2CD2822041D245E770558D10433CBB68B7%2C-1%2C1%2C1%2C%2C%2C2%2C%2C%2C%2C2%2CEND
-//            备RRS: http://120.87.4.103/PLTV/88888973/224/3221225744/10000100000000060000000000334567_0.smil/index.m3u8?rrsip=120.87.19.109&fmt=ts2hls&servicetype=1&icpid=&accounttype=1&limitflux=-1&limitdur=-1&GuardEncType=2&accountinfo=p49v5jIfvzt5O7IlSZAOFothT6NCTKx5J%2BpGD8oFMAI6wMuLMl3oi7cXA9ryuJegtc39pYzYSmHw%2BiYMKqJsDXdBtVsV6b%2Fr2pgml9B6xCpvXvtpPyW1ZTL1lxghKXV8%3A20190926102838%2C11002000000556%2C112.96.29.123%2C20190926102838%2C10000100000000050000000000296969%2CD2822041D245E770558D10433CBB68B7%2C-1%2C1%2C1%2C%2C%2C2%2C%2C%2C%2C2%2CEND
+    String[] playUrl = new String[]{"https://o6yh618n9.qnssl.com/grKyofaC_9428902051.mp4"
     };
     @BindView(R.id.btn_play_next)
     Button btnPlayNext;
@@ -45,17 +36,6 @@ public class VideoViewActivity extends AppCompatActivity {
     FrameLayout flContent;
 
     private int playIndex = 0;
-
-    Handler handler = new Handler() {
-
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            int currentPosition = videoView.getCurrentPosition();
-            HiLogger.i(TAG, "currentPosition:" + currentPosition);
-            this.sendEmptyMessageDelayed(1, 30);
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,11 +77,7 @@ public class VideoViewActivity extends AppCompatActivity {
             }
         });
 
-//        handler.sendEmptyMessageDelayed(1, 30);
     }
-
-    //    String playUrl = "http://111.7.174.11/88889315/16/20190710/271128404/271128404.mp4?rrsip=111.7.174.11&icpid=&accounttype=1&limitflux=-1&limitdur=-1&accountinfo=:2019071209264";
-//    String playUrl = "http://111.7.174.11/88889315/16/20190703/271066682/271066682.mp4?rrsip=111.7.174.11&icpid=&accounttype=1&limitflux=-1&limitdur=-1&accountinfo=:2019071210405";
     @OnClick({R.id.btn_play, R.id.btn_play_next})
     public void onClick(View view) {
         HiLogger.i(TAG, "onClick");
@@ -110,12 +86,8 @@ public class VideoViewActivity extends AppCompatActivity {
             case R.id.btn_play:
                 videoView.setVideoURI(Uri.parse(playUrl[playIndex]));
                 videoView.start();
-//                btnPlay.setEnabled(false);
-//                playNext(playIndex);
                 break;
             case R.id.btn_play_next:
-//                videoView.stopPlayback();
-//                flContent.removeView(videoView);
                 playNext(playIndex);
                 break;
             default:
@@ -154,6 +126,19 @@ public class VideoViewActivity extends AppCompatActivity {
 //        HiLogger.i(TAG, "netVideoBitmap:" + (netVideoBitmap == null ? "Null" : "获取成功"));
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        HiLogger.i(TAG, "onPause stop");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        HiLogger.i(TAG, "onRestart invalidate");
+    }
+
 
     private void playNext(int index) {
         if (index > (playUrl.length - 1)) {

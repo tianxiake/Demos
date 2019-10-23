@@ -46,27 +46,6 @@ public class MainActivity extends AppCompatActivity {
     private List<String> itemsData;
     private List<String> clickItemsData;
 
-    private final int message_a = 0xfff;
-    private final int message_b = 0xbbb;
-
-    private Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            switch (msg.what) {
-                case message_a:
-//                    handler.removeMessages(message_b);
-                    HiLogger.i(TAG, "message_a");
-                    break;
-                case message_b:
-                    HiLogger.i(TAG, "message_b");
-                    break;
-                default:
-                    break;
-            }
-        }
-    };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,27 +98,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         }).start();
-
-        File cacheDir = this.getCacheDir();
-        HiLogger.i(TAG, "cacheDir: %s", cacheDir.getAbsolutePath());
-
-	    String url = "http://120.87.4.103/PLTV/88888973/224/3221225744/10000100000000060000000000334567_0.smil/index.m3u8?rrsip=120.87.19.109&fmt=ts2hls&servicetype=1&icpid=&accounttype=1&limitflux=-1&limitdur=-1&GuardEncType=2&accountinfo=p49v5jIfvzt5O7IlSZAOFothT6NCTKx5J%2BpGD8oFMAI6wMuLMl3oi7cXA9ryuJegtc39pYzYSmHw%2BiYMKqJsDXdBtVsV6b%2Fr2pgml9B6xCpvXvtpPyW1ZTL1lxghKXV8%3A20190926102838%2C11002000000556%2C112.96.29.123%2C20190926102838%2C10000100000000050000000000296969%2CD2822041D245E770558D10433CBB68B7%2C-1%2C1%2C1%2C%2C%2C2%2C%2C%2C%2C2%2CEND";
-	    Uri parse = Uri.parse(url);
-	    String rrsip = parse.getQueryParameter("rrsi");
-	    String host = parse.getHost();
-	    HiLogger.i(TAG, "rrsip:%s  host:%s", rrsip, host);
-
-
-	    HiLogger.i(TAG, "状态栏1:" + getStatusHeight1(this) + ",状态栏2:" + getStatusHeight2(this) +
-			    ",导航栏:" + getNavigationBarHeight(this) + "状态栏是否可见:" + isStatusBarShown(this));
-
-	    ivStartup.postDelayed(new Runnable() {
-		    @Override
-		    public void run() {
-				goToApp();
-		    }
-	    }, 3000);
-
     }
 
     private void goToApp(){
@@ -238,18 +196,4 @@ public class MainActivity extends AppCompatActivity {
         return Arrays.asList(stringArray);
     }
 
-	public static void main(String[] args) {
-
-		int a = (int) 0.3f;
-		byte a1 = (byte) ((a >> 8) & 0xFF);
-		byte a2 = (byte) (a >> 16 & 0xFF);
-		byte a3 = (byte) (a >> 24 & 0xff);
-		byte a4 = (byte) (a >> 32 & 0xff);
-
-		String s = Integer.toBinaryString(a1 & 0xFF);
-		System.out.println(s);
-
-//        StringBuilder stringBuilder = new StringBuilder();
-//        stringBuilder.append(a4).append(a3).append()
-	}
 }
