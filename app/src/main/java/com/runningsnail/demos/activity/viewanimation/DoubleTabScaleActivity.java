@@ -1,8 +1,10 @@
 package com.runningsnail.demos.activity.viewanimation;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.runningsnail.demos.R;
 

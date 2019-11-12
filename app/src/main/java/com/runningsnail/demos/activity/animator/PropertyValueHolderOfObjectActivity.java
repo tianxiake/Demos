@@ -3,7 +3,9 @@ package com.runningsnail.demos.activity.animator;
 import android.animation.ObjectAnimator;
 import android.animation.PropertyValuesHolder;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.activity.animator.entity.MyCharacter;

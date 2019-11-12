@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".activity.recyclerview.RecyclerViewDecorationActivity">
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_content"
         android:layout_width="300dp"
         android:layout_height="500dp"
         android:layout_gravity="center"
         android:background="#FF0000">
 
-    </android.support.v7.widget.RecyclerView>
+    </androidx.recyclerview.widget.RecyclerView>
 
 </FrameLayout>

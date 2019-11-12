@@ -2,8 +2,10 @@ package com.runningsnail.demos.activity.thread;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
 import android.widget.ProgressBar;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.common.utils.HiLogger;

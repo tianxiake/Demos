@@ -1,10 +1,11 @@
 package com.runningsnail.demos;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.Nullable;
 
 /**
  * @author yongjie created on 2019/3/18.

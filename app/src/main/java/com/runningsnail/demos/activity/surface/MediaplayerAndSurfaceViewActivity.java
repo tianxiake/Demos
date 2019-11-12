@@ -3,9 +3,11 @@ package com.runningsnail.demos.activity.surface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.common.utils.HiLogger;

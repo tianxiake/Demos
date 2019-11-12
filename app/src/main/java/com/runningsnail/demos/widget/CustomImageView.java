@@ -1,11 +1,12 @@
 package com.runningsnail.demos.widget;
 
 import android.content.Context;
-import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.animation.ScaleAnimation;
+
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.runningsnail.demos.common.utils.HiLogger;
 

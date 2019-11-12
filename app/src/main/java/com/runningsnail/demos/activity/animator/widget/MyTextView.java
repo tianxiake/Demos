@@ -1,16 +1,19 @@
 package com.runningsnail.demos.activity.animator.widget;
 
 import android.content.Context;
-import android.support.annotation.Nullable;
+
 import android.util.AttributeSet;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatTextView;
 
 import com.runningsnail.demos.activity.animator.entity.MyCharacter;
 
 /**
  * @author yongjie created on 2019/1/10.
  */
-public class MyTextView extends TextView {
+public class MyTextView extends AppCompatTextView {
     public MyTextView(Context context) {
         super(context);
     }

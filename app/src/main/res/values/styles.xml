@@ -20,9 +20,4 @@
     </style>
 
 
-    <!--自定义RatingBar Drawable-->
-    <style name="RatingBar_CustomDrawable" parent="@style/Widget.MaterialRatingBar.RatingBar">
-        <item name="android:progressDrawable">@drawable/custom_bar</item>
-    </style>
-
 </resources>

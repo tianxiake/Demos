@@ -3,10 +3,11 @@ package com.runningsnail.demos.activity.widget;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.view.animation.AccelerateDecelerateInterpolator;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.common.utils.HiLogger;

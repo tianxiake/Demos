@@ -95,13 +95,13 @@ public class HiLogger {
             message = "null";
         }
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("[ ")
+        stringBuilder.append("[")
                 .append(new SimpleDateFormat("yyyy/MM/dd HH:mm:ss").
                         format(new Date(System.currentTimeMillis())))
-                .append(" PID:").append(Process.myPid())
-                .append(", TID:").append(Thread.currentThread().getId())
-                .append(", TName:").append(Thread.currentThread().getName())
-                .append(" ]")
+                .append(" P:").append(Process.myPid())
+                .append(",T:").append(Thread.currentThread().getId())
+                .append(",TN:").append(Thread.currentThread().getName())
+                .append("]")
                 .append("==>");
 
         String format = String.format("%s %s", stringBuilder.toString(), message);

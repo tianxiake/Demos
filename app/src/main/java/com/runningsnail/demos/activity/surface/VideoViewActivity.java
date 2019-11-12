@@ -3,13 +3,15 @@ package com.runningsnail.demos.activity.surface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 import android.widget.VideoView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.common.utils.HiLogger;
@@ -131,6 +133,7 @@ public class VideoViewActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         HiLogger.i(TAG, "onPause stop");
+
     }
 
     @Override
