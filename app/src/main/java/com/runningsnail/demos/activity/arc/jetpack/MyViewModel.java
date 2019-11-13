@@ -38,8 +38,8 @@ public class MyViewModel extends AndroidViewModel {
 	public MutableLiveData<String> getNameLiveData() {
 		if (nameLiveData == null) {
 			nameLiveData = new MutableLiveData<>();
-			loadName();
 		}
+		loadName();
 		return nameLiveData;
 	}
 

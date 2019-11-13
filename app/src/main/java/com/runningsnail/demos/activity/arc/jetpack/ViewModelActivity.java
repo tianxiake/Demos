@@ -25,6 +25,7 @@ public class ViewModelActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_view_model);
 		ButterKnife.bind(this);
+		HiLogger.i(TAG,"onCreate");
 
 		myViewModel = ViewModelProviders.of(this).get(MyViewModel.class);
 
@@ -40,6 +41,7 @@ public class ViewModelActivity extends AppCompatActivity {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
+		HiLogger.i(TAG,"onDestroy");
 		myViewModel.onCleared();
 	}
 }
