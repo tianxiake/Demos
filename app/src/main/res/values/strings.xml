@@ -91,6 +91,7 @@
         <item>===架构===</item>
         <item>MVP</item>
         <item>Lifecycler的简单使用</item>
+        <item>ViewModel的简单使用</item>
 
         <item>===surface===</item>
         <item>TextureView的使用</item>
@@ -224,6 +225,7 @@
         <item>===架构===</item>
         <item>com.runningsnail.demos.activity.mvp.UserCollectionActivity</item>
         <item>com.runningsnail.demos.activity.arc.jetpack.LifecyclerActivity</item>
+        <item>com.runningsnail.demos.activity.arc.jetpack.ViewModelActivity</item>
 
         <item>===surface===</item>
         <item>com.runningsnail.demos.activity.surface.TextureViewActivity</item>
