@@ -4,7 +4,6 @@ import android.app.Application;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.DefaultLifecycleObserver;
 import androidx.lifecycle.MutableLiveData;
 
 import com.runningsnail.demos.common.utils.HiLogger;
@@ -78,6 +77,7 @@ public class MyViewModel extends AndroidViewModel {
 	@Override
 	protected void onCleared() {
 		super.onCleared();
+		HiLogger.i(TAG, "onCleared");
 		if (disposable != null) {
 			disposable.dispose();
 		}

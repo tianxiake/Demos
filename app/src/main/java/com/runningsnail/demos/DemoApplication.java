@@ -1,14 +1,18 @@
 package com.runningsnail.demos;
 
 import android.app.Application;
+import android.content.Context;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.StrictMode;
+
+import androidx.multidex.MultiDex;
 
 /**
  * @author liuyongjie create on 2018/12/5.
  */
 public class DemoApplication extends Application {
+
 
     @Override
     public void onCreate() {
@@ -20,19 +24,14 @@ public class DemoApplication extends Application {
                 .build());
 
         Thread.setDefaultUncaughtExceptionHandler(new CrashHandler());
+    }
 
-        String name;
-        HandlerThread handlerThread = new HandlerThread("handler");
-        handlerThread.start();
-        Handler handler = new Handler(){
-
-
-        };
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-            }
-        },300);
+    /**
+     *  多Dex的支持,解决方法数超64K的问题
+     */
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
     }
 }

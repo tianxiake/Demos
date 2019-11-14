@@ -32,7 +32,7 @@ public class ViewModelActivity extends AppCompatActivity {
 		myViewModel.getNameLiveData().observe(this, new Observer<String>() {
 			@Override
 			public void onChanged(String s) {
-				HiLogger.i(TAG, "s");
+				HiLogger.i(TAG, "%s", s);
 				tvName.setText(s);
 			}
 		});
@@ -42,6 +42,5 @@ public class ViewModelActivity extends AppCompatActivity {
 	protected void onDestroy() {
 		super.onDestroy();
 		HiLogger.i(TAG,"onDestroy");
-		myViewModel.onCleared();
 	}
 }
