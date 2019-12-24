@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.runningsnail.demos.activity.arc.jetpack.databinding.User" />
+
+        <variable
+            name="user"
+            type="User" />
+
+        <variable
+            name="myOnClick"
+            type="com.runningsnail.demos.activity.arc.jetpack.databinding.MyOnClickListener" />
+
+        <variable
+            name="myTask"
+            type="com.runningsnail.demos.activity.arc.jetpack.databinding.MyTask" />
+
+        <variable
+            name="myPresenter"
+            type="com.runningsnail.demos.activity.arc.jetpack.databinding.Presenter" />
+
+    </data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.arc.jetpack.databinding.DatabindingActivity">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/atv_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:onClick="@{myOnClick::onViewClick}"
+            android:text="@{user.name}" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/atv_age"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:onClick="@{()-> myPresenter.onTaskClick(myTask)}"
+            android:text='@{user.age+"hello"}' />
+
+
+    </LinearLayout>
+
+</layout>

@@ -2,7 +2,9 @@ package com.runningsnail.demos.activity.tv;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -77,8 +79,15 @@ public class KeyEventTestActivity extends AppCompatActivity {
 
 	@Override
 	public boolean dispatchKeyEvent(KeyEvent event) {
-		HiLogger.d(TAG, "KeyEvent" + event.getKeyCode());
+		Log.e(TAG, "", new Throwable());
+		HiLogger.e(TAG, "KeyEvent" + event.getKeyCode(), new Throwable());
 		return super.dispatchKeyEvent(event);
+	}
+
+	@Override
+	public boolean dispatchTouchEvent(MotionEvent ev) {
+		HiLogger.e(TAG, "dispatchTouchEvent", new Throwable());
+		return super.dispatchTouchEvent(ev);
 	}
 
 	@OnClick(R.id.btn_three)

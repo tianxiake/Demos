@@ -19,7 +19,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.arc.jetpack.ViewModelActivity"></activity>
+        <activity android:name=".activity.material.ConbineTestActivity"></activity>
+        <activity android:name=".activity.webview.OriginAppActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="data"
+                    android:scheme="snail" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.webview.H5OpenAppTestActivity" />
+        <activity android:name=".activity.material.AppbarLayoutActivity" />
+        <activity android:name=".activity.nested.SimpleNestedActivity" />
+        <activity android:name=".activity.arc.jetpack.combine.CombineOneActivity" />
+        <activity android:name=".activity.arc.jetpack.databinding.DatabindingActivity" />
+        <activity android:name=".activity.arc.jetpack.ViewModelActivity" />
         <activity android:name=".activity.arc.jetpack.LifecyclerActivity" />
         <activity
             android:name=".activity.LocationActivity"
@@ -57,6 +75,7 @@
         <activity android:name=".activity.tv.ShadowEffectActivity" />
         <activity android:name=".activity.animator.AnimatorScrollActivity" />
         <activity android:name=".activity.NetworkActivity" />
+        <activity android:name=".activity.material.CordinatorLayoutTestActivity" />
         <activity
             android:name=".activity.tv.KeyEventTestActivity"
             android:launchMode="singleTask" />
@@ -69,7 +88,7 @@
         </activity>
 
         <activity-alias
-            android:name=".alias_one"
+            android:name=".alias_two"
             android:targetActivity=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -78,7 +97,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:name=".alias_two"
+            android:name=".alias_one"
             android:targetActivity=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -2,8 +2,6 @@ package com.runningsnail.demos;
 
 import android.app.Application;
 import android.content.Context;
-import android.os.Handler;
-import android.os.HandlerThread;
 import android.os.StrictMode;
 
 import androidx.multidex.MultiDex;
@@ -27,7 +25,7 @@ public class DemoApplication extends Application {
     }
 
     /**
-     *  多Dex的支持,解决方法数超64K的问题
+     * 多Dex的支持,解决方法数超64K的问题
      */
     @Override
     protected void attachBaseContext(Context base) {

@@ -9,6 +9,7 @@
         <item>===WebView测试===</item>
         <item>WebView测试One</item>
         <item>WebView测试Two</item>
+        <item>H5跳原生app测试</item>
 
         <item>===TV开发===</item>
         <item>KeyEvent测试</item>
@@ -92,6 +93,8 @@
         <item>MVP</item>
         <item>Lifecycler的简单使用</item>
         <item>ViewModel的简单使用</item>
+        <item>dataBinding的简单使用</item>
+        <item>综合使用1简单使用</item>
 
         <item>===surface===</item>
         <item>TextureView的使用</item>
@@ -132,6 +135,16 @@
 
         <item>===androidOsApi使用===</item>
         <item>AndroidApiTestActivity</item>
+
+        <item>===嵌套滑动===</item>
+        <item>简单的嵌套滑动</item>
+
+        <item>===material===</item>
+        <item>AppbarLayout基本使用</item>
+        <item>CoordinatorLayout基本使用</item>
+        <item>组合使用</item>
+
+
     </string-array>
 
     <string-array name="click_item_data">
@@ -141,6 +154,7 @@
         <item>===WebView测试===</item>
         <item>com.runningsnail.demos.activity.webview.WebViewTestOneActivity</item>
         <item>com.runningsnail.demos.activity.webview.WebViewTestTwoActivity</item>
+        <item>com.runningsnail.demos.activity.webview.H5OpenAppTestActivity</item>
 
         <item>===TV开发===</item>
         <item>com.runningsnail.demos.activity.tv.KeyEventTestActivity</item>
@@ -226,6 +240,8 @@
         <item>com.runningsnail.demos.activity.mvp.UserCollectionActivity</item>
         <item>com.runningsnail.demos.activity.arc.jetpack.LifecyclerActivity</item>
         <item>com.runningsnail.demos.activity.arc.jetpack.ViewModelActivity</item>
+        <item>com.runningsnail.demos.activity.arc.jetpack.databinding.DatabindingActivity</item>
+        <item>com.runningsnail.demos.activity.arc.jetpack.combine.CombineOneActivity</item>
 
         <item>===surface===</item>
         <item>com.runningsnail.demos.activity.surface.TextureViewActivity</item>
@@ -267,6 +283,14 @@
 
         <item>===androidOsApi使用===</item>
         <item>com.runningsnail.demos.activity.androidapi.AndroidApiTestActivity</item>
+
+        <item>===嵌套滑动===</item>
+        <item>com.runningsnail.demos.activity.nested.SimpleNestedActivity</item>
+
+        <item>===material===</item>
+        <item>com.runningsnail.demos.activity.material.AppbarLayoutActivity</item>
+        <item>com.runningsnail.demos.activity.material.CordinatorLayoutTestActivity</item>
+        <item>com.runningsnail.demos.activity.material.ConbineTestActivity</item>
 
     </string-array>
 </resources>
