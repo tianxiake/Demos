@@ -1,0 +1,478 @@
+{
+  "content": [
+    {
+      "title": "===TV开发===",
+      "sub": [
+        {
+          "subTitle": "KeyEvent测试",
+          "path": "com.runningsnail.demos.activity.tv.KeyEventTestActivity"
+        },
+        {
+          "subTitle": "阴影效果实现方案",
+          "path": "com.runningsnail.demos.activity.tv.ShadowEffectActivity"
+        },
+        {
+          "subTitle": "测试本地命令",
+          "path": "com.runningsnail.demos.activity.tv.RuntimeExecuteActivity"
+        },
+        {
+          "subTitle": "模拟三方应用",
+          "path": "com.runningsnail.demos.activity.tv.MockActivity"
+        },
+        {
+          "subTitle": "有趣的属性",
+          "path": "com.runningsnail.demos.activity.tv.FunnyPropertyActivity"
+        }
+      ]
+    },
+    {
+      "title": "===对话框系列===",
+      "sub": [
+        {
+          "subTitle": "对话框实现之AlertDialog",
+          "path": "com.runningsnail.demos.activity.dialog.AlertDialogActivity"
+        },
+        {
+          "subTitle": "DialogFragment实现Dialog",
+          "path": "com.runningsnail.demos.activity.dialog.DialogFragmentActivity"
+        }
+      ]
+    },
+    {
+      "title": "===位置信息===",
+      "sub": [
+        {
+          "subTitle": "位置信息测试",
+          "path": "com.runningsnail.demos.activity.LocationActivity"
+        }
+      ]
+    },
+    {
+      "title": "===WebView测试===",
+      "sub": [
+        {
+          "subTitle": "WebView测试One",
+          "path": "com.runningsnail.demos.activity.webview.WebViewTestOneActivity"
+        },
+        {
+          "subTitle": "WebView测试Two",
+          "path": "com.runningsnail.demos.activity.webview.WebViewTestTwoActivity"
+        },
+        {
+          "subTitle": "H5跳原生app测试",
+          "path": "com.runningsnail.demos.activity.webview.H5OpenAppTestActivity"
+        }
+      ]
+    },
+    {
+      "title": "===底部导航栏===",
+      "sub": [
+        {
+          "subTitle": "LinearLayout+TextView实现底部导航栏一",
+          "path": "com.runningsnail.demos.activity.bottomnavigation.BottomWayOneActivity"
+        },
+        {
+          "subTitle": "RadioGroup+RadioButton实现底部导航栏二",
+          "path": "com.runningsnail.demos.activity.bottomnavigation.BottomWayTwoActivity"
+        },
+        {
+          "subTitle": "第三方框架NavigationBarView实现底部导航栏三(比较好的实现方案)",
+          "path": "com.runningsnail.demos.activity.bottomnavigation.BottomWayThreeActivity"
+        }
+      ]
+    },
+    {
+      "title": "===补间动画系列===",
+      "sub": [
+        {
+          "subTitle": "ViewAnimation之Scale动画",
+          "path": "com.runningsnail.demos.activity.viewanimation.ScaleAnimationActivity"
+        },
+        {
+          "subTitle": "ViewAnimation之Alpha动画",
+          "path": "com.runningsnail.demos.activity.viewanimation.AlphaAnimationActivity"
+        },
+        {
+          "subTitle": "ViewAnimation之Rotate动画",
+          "path": "com.runningsnail.demos.activity.viewanimation.RotateAnimationActivity"
+        },
+        {
+          "subTitle": "ViewAnimation之Translate动画",
+          "path": "com.runningsnail.demos.activity.viewanimation.TranslateAnimationActivity"
+        },
+        {
+          "subTitle": "ViewAnimation之Set动画集",
+          "path": "com.runningsnail.demos.activity.viewanimation.SetAnimationActivity"
+        },
+        {
+          "subTitle": "ViewAnimation之镜头由远到近的效果",
+          "path": "com.runningsnail.demos.activity.viewanimation.SplashActivity"
+        },
+        {
+          "subTitle": "ViewAnimation之双击放大效果",
+          "path": "com.runningsnail.demos.activity.viewanimation.DoubleTabScaleActivity"
+        },
+        {
+          "subTitle": "ViewAnimation之加载框效果",
+          "path": "com.runningsnail.demos.activity.viewanimation.LoaddingActivity"
+        },
+        {
+          "subTitle": "ViewAnimation之扫描效果",
+          "path": "com.runningsnail.demos.activity.viewanimation.ScanActivity"
+        },
+        {
+          "subTitle": "ViewAnimation之帧动画",
+          "path": "com.runningsnail.demos.activity.viewanimation.FrameAnimActivity"
+        }
+      ]
+    },
+    {
+      "title": "===属性动画系列===",
+      "sub": [
+        {
+          "subTitle": "ValueAnimator简单使用",
+          "path": "com.runningsnail.demos.activity.animator.ValueAnimatorTestActivity"
+        },
+        {
+          "subTitle": "加载动画",
+          "path": "com.runningsnail.demos.activity.animator.LoadingViewActivity"
+        },
+        {
+          "subTitle": "A-Z变化的TextView",
+          "path": "com.runningsnail.demos.activity.animator.ChaAnimatorActivity"
+        },
+        {
+          "subTitle": "ObjectAnimator体验",
+          "path": "com.runningsnail.demos.activity.animator.ObjectAnimatorTestActivity"
+        },
+        {
+          "subTitle": "AnimatorSet体验",
+          "path": "com.runningsnail.demos.activity.animator.AnimatorSetTestActivity"
+        },
+        {
+          "subTitle": "浮动菜单",
+          "path": "com.runningsnail.demos.activity.animator.FloatMenuActivity"
+        },
+        {
+          "subTitle": "PropertyValueHolder使用",
+          "path": "com.runningsnail.demos.activity.animator.PropertyViewHolderActivity"
+        },
+        {
+          "subTitle": "PropertyValueHolder的ofObject()方法使用",
+          "path": "com.runningsnail.demos.activity.animator.PropertyValueHolderOfObjectActivity"
+        },
+        {
+          "subTitle": "ViewPropertyAnimator方法使用",
+          "path": "com.runningsnail.demos.activity.animator.ViewPropertyAnimatorActivity"
+        },
+        {
+          "subTitle": "PathMeasure配合ValueAnimator做路径动画",
+          "path": "com.runningsnail.demos.activity.animator.PathMeasureActivity"
+        },
+        {
+          "subTitle": "属性动画滑动View的内容",
+          "path": "com.runningsnail.demos.activity.animator.AnimatorScrollActivity"
+        }
+      ]
+    },
+    {
+      "title": "===ViewGroupItem动画===",
+      "sub": [
+        {
+          "subTitle": "默认动画 animationLayoutChange",
+          "path": "com.runningsnail.demos.activity.viewgroupanimation.UseDefaultAniamtionActivity"
+        },
+        {
+          "subTitle": "LayoutTransition 自定义item动画",
+          "path": "com.runningsnail.demos.activity.viewgroupanimation.LayoutTransitionActivity"
+        }
+      ]
+    },
+    {
+      "title": "===RecyclerView系列===",
+      "sub": [
+        {
+          "subTitle": "横向滚动的RecyclerView实现方式一",
+          "path": "com.runningsnail.demos.activity.recyclerview.RecyclerViewOneActivity"
+        },
+        {
+          "subTitle": "横向滚动的RecyclerView实现方式二",
+          "path": "com.runningsnail.demos.activity.recyclerview.RecyclerViewTwoActivity"
+        },
+        {
+          "subTitle": "横向滚动的RecyclerView布局导致的显示问题",
+          "path": "com.runningsnail.demos.activity.recyclerview.RecyclerViewShowErrorActivity"
+        },
+        {
+          "subTitle": "RecyclerView横向滚动",
+          "path": "com.runningsnail.demos.activity.recyclerview.RecyclerViewThreeActivity"
+        },
+        {
+          "subTitle": "RecyclerView两行网格布局",
+          "path": "com.runningsnail.demos.activity.recyclerview.RecyclerViewFiveActivity"
+        },
+        {
+          "subTitle": "RecyclerView自定义Decoration",
+          "path": "com.runningsnail.demos.activity.recyclerview.RecyclerViewDecorationActivity"
+        }
+      ]
+    },
+    {
+      "title": "===内存泄漏===",
+      "sub": [
+        {
+          "subTitle": "内存泄漏Activity测试",
+          "path": "com.runningsnail.demos.activity.LeakActivity"
+        }
+      ]
+    },
+    {
+      "title": "===View相关===",
+      "sub": [
+        {
+          "subTitle": "view相关位置测试",
+          "path": "com.runningsnail.demos.activity.ViewRelationLocationActivity"
+        },
+        {
+          "subTitle": "CoordinatorLayout和FAB使用",
+          "path": "com.runningsnail.demos.activity.view.CoordinatorLayoutWithFABActivity"
+        },
+        {
+          "subTitle": "CoordinatorLayout和AppBarLayout使用",
+          "path": "com.runningsnail.demos.activity.view.CoordinatorLayoutWithAppBarLayoutActivity"
+        },
+        {
+          "subTitle": "CoordinatorLayout和CollapsingToolbarLayout使用",
+          "path": "com.runningsnail.demos.activity.view.CoordinatorLayoutWithCollapsingToolbarLayoutActivity"
+        },
+        {
+          "subTitle": "View位置信息测试",
+          "path": "com.runningsnail.demos.activity.view.ViewLocationTestActivity"
+        },
+        {
+          "subTitle": "View使用测试",
+          "path": "com.runningsnail.demos.activity.view.ViewUseActivity"
+        }
+      ]
+    },
+    {
+      "title": "===Service系列===",
+      "sub": [
+        {
+          "subTitle": "startAndBindService",
+          "path": "com.runningsnail.demos.activity.service.StartAndBindServiceActivity"
+        }
+      ]
+    },
+    {
+      "title": "===Activity系列===",
+      "sub": [
+        {
+          "subTitle": "SingleTask启动生命周期测试",
+          "path": "com.runningsnail.demos.activity.SingleTaskActivity"
+        }
+      ]
+    },
+    {
+      "title": "===BroadcastReceiver===",
+      "sub": [
+        {
+          "subTitle": "动态广播",
+          "path": "com.runningsnail.demos.activity.broadcast.DynamicBroadCastActivity"
+        }
+      ]
+    },
+    {
+      "title": "===ContentProvider===",
+      "sub": [
+        {
+          "subTitle": "使用其他程序提供的ContentProvider",
+          "path": "com.runningsnail.demos.activity.provider.UseOtherAppContentProviderActivity"
+        }
+      ]
+    },
+    {
+      "title": "===RxJava系列===",
+      "sub": [
+        {
+          "subTitle": "RxJava简单体验",
+          "path": "com.runningsnail.demos.activity.rxjava.RxJavaOneActivity"
+        }
+      ]
+    },
+    {
+      "title": "===网络监听===",
+      "sub": [
+        {
+          "subTitle": "Android网络监听",
+          "path": "com.runningsnail.demos.activity.NetworkActivity"
+        }
+      ]
+    },
+    {
+      "title": "===架构===",
+      "sub": [
+        {
+          "subTitle": "MVP",
+          "path": "com.runningsnail.demos.activity.mvp.UserCollectionActivity"
+        },
+        {
+          "subTitle": "Lifecycler的简单使用",
+          "path": "com.runningsnail.demos.activity.arc.jetpack.LifecyclerActivity"
+        },
+        {
+          "subTitle": "ViewModel的简单使用",
+          "path": "com.runningsnail.demos.activity.arc.jetpack.ViewModelActivity"
+        },
+        {
+          "subTitle": "dataBinding的简单使用",
+          "path": "com.runningsnail.demos.activity.arc.jetpack.databinding.DatabindingActivity"
+        },
+        {
+          "subTitle": "综合使用1简单使用",
+          "path": "com.runningsnail.demos.activity.arc.jetpack.combine.CombineOneActivity"
+        }
+      ]
+    },
+    {
+      "title": "===surface===",
+      "sub": [
+        {
+          "subTitle": "TextureView的使用",
+          "path": "com.runningsnail.demos.activity.surface.TextureViewActivity"
+        },
+        {
+          "subTitle": "VideoView的使用",
+          "path": "com.runningsnail.demos.activity.surface.VideoViewActivity"
+        },
+        {
+          "subTitle": "SurfaceView的使用",
+          "path": "com.runningsnail.demos.activity.surface.SurfaceViewActivity"
+        },
+        {
+          "subTitle": "SurfaceView+VideoView播放视频",
+          "path": "com.runningsnail.demos.activity.surface.MediaplayerAndSurfaceViewActivity"
+        }
+      ]
+    },
+    {
+      "title": "===数据存储===",
+      "sub": [
+        {
+          "subTitle": "Sqlite数据库测试",
+          "path": "com.runningsnail.demos.activity.datastore.SqliteActivity"
+        }
+      ]
+    },
+    {
+      "title": "===媒体播放===",
+      "sub": [
+        {
+          "subTitle": "音频播放",
+          "path": "com.runningsnail.demos.activity.media.AudioPlayActivity"
+        }
+      ]
+    },
+    {
+      "title": "===Android资源===",
+      "sub": [
+        {
+          "subTitle": "Assets测试",
+          "path": "com.runningsnail.demos.activity.resources.AssetActivity"
+        }
+      ]
+    },
+    {
+      "title": "===Android中线程===",
+      "sub": [
+        {
+          "subTitle": "AsyncTask使用",
+          "path": "com.runningsnail.demos.activity.thread.AsyncTaskTestActivity"
+        }
+      ]
+    },
+    {
+      "title": "===文件下载框架===",
+      "sub": [
+        {
+          "subTitle": "OkDownload测试",
+          "path": "com.runningsnail.demos.activity.downlaod.DownloadTestActivity"
+        }
+      ]
+    },
+    {
+      "title": "===嵌套滑动===",
+      "sub": [
+        {
+          "subTitle": "简单的嵌套滑动",
+          "path": "com.runningsnail.demos.activity.nested.SimpleNestedActivity"
+        }
+      ]
+    },
+    {
+      "title": "===androidOsApi使用===",
+      "sub": [
+        {
+          "subTitle": "AndroidApiTestActivity",
+          "path": "com.runningsnail.demos.activity.androidapi.AndroidApiTestActivity"
+        }
+      ]
+    },
+    {
+      "title": "===Android常用布局===",
+      "sub": [
+        {
+          "subTitle": "TableLayout表格布局",
+          "path": "com.runningsnail.demos.activity.viewgroup.TableLayoutTestActivity"
+        },
+        {
+          "subTitle": "GridLayout表格布局",
+          "path": "com.runningsnail.demos.activity.viewgroup.GridLayoutTestActivity"
+        },
+        {
+          "subTitle": "ConstraintLayout约束布局",
+          "path": "com.runningsnail.demos.activity.viewgroup.ConstraintLayoutTestActivity"
+        }
+      ]
+    },
+    {
+      "title": "===定时任务框架Quartz使用===",
+      "sub": [
+        {
+          "subTitle": "Quartz使用",
+          "path": "com.runningsnail.demos.activity.timer.QuartzTestActivity"
+        },
+        {
+          "subTitle": "cron4j的使用",
+          "path": "com.runningsnail.demos.activity.timer.Cron4jTestActivity"
+        }
+      ]
+    },
+    {
+      "title": "===material===",
+      "sub": [
+        {
+          "subTitle": "AppbarLayout基本使用",
+          "path": "com.runningsnail.demos.activity.material.AppbarLayoutActivity"
+        },
+        {
+          "subTitle": "CoordinatorLayout基本使用",
+          "path": "com.runningsnail.demos.activity.material.CordinatorLayoutTestActivity"
+        },
+        {
+          "subTitle": "组合使用",
+          "path": "com.runningsnail.demos.activity.material.ConbineTestActivity"
+        }
+      ]
+    },
+    {
+      "title": "===设计模式===",
+      "sub": [
+        {
+          "subTitle": "状态模式示例",
+          "path": "com.runningsnail.demos.pattern.state_pattern.WelcomActivity"
+        }
+      ]
+    }
+  ]
+}

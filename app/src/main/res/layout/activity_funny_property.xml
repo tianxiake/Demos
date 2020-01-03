@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.tv.FunnyPropertyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#FFFFFF">
+
+        <FrameLayout
+            android:id="@+id/fl_area_one_parent"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            tools:background="#FF0000">
+
+            <FrameLayout
+                android:id="@+id/fl_area_one_child"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/state_change_select"
+                android:duplicateParentState="true"
+                android:focusable="true"
+                tools:background="#FFFF00" />
+        </FrameLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fl_area_one_parent"
+            android:focusable="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF">
+
+        <FrameLayout
+            android:id="@+id/fl_area_two_parent"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:addStatesFromChildren="true"
+            android:background="@drawable/state_change_select"
+            tools:background="#FF0000">
+
+            <FrameLayout
+                android:id="@+id/fl_area_two_child"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:focusable="true"
+                android:background="#FFFF00" />
+        </FrameLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/fl_area_two_parent"
+            android:focusable="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

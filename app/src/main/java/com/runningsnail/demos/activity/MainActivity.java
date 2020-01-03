@@ -6,11 +6,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.net.Uri;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -22,12 +18,13 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.gson.Gson;
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.common.utils.HiLogger;
 import com.runningsnail.demos.common.utils.ToastUtil;
 
-import java.io.File;
-import java.util.Arrays;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -45,8 +42,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.iv_startup)
     ImageView ivStartup;
 
-    private List<String> itemsData;
-    private List<String> clickItemsData;
+	private List<String> itemsData = new ArrayList<>();
+	private List<String> clickItemsData = new ArrayList<>();
+	private MainData mainData = new MainData();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +53,8 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         String name = this.getClass().getName();
         HiLogger.d(TAG, "class name:" + name);
-        itemsData = getItemsData();
-        clickItemsData = getClickItemsData();
+	    mainData = readData();
+	    parseItemsData();
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.item_main_list,
                 itemsData);
@@ -66,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String content = clickItemsData.get(position);
                 HiLogger.d(TAG, "content %s", content);
-                if (content.contains("activity")) {
+	            if (content.toLowerCase().contains("activity")) {
                     startActivity(clickItemsData.get(position));
                 }
             }
@@ -74,8 +72,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+	private MainData readData() {
+		MainData mainData = new Gson().fromJson(new InputStreamReader(getResources().openRawResource(R.raw.config)), MainData.class);
+		return mainData;
+	}
 
-    @Override
+
+	@Override
     protected void onResume() {
         super.onResume();
         HiLogger.i(TAG, "执行动画");
@@ -188,14 +191,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public List<String> getItemsData() {
-        String[] stringArray = getResources().getStringArray(R.array.item_data);
-        return Arrays.asList(stringArray);
+	public void parseItemsData() {
+		List<MainData.ContentBean> content = mainData.getContent();
+		for (int i = 0; i < content.size(); i++) {
+			MainData.ContentBean contentBean = content.get(i);
+			itemsData.add(contentBean.getTitle());
+			clickItemsData.add("");
+			List<MainData.ContentBean.SubBean> sub = contentBean.getSub();
+			for (int j = 0; j < sub.size(); j++) {
+				MainData.ContentBean.SubBean subBean = sub.get(j);
+				itemsData.add(subBean.getSubTitle());
+				clickItemsData.add(subBean.getPath());
+			}
+		}
     }
 
-    public List<String> getClickItemsData() {
-        String[] stringArray = getResources().getStringArray(R.array.click_item_data);
-        return Arrays.asList(stringArray);
-    }
 
 }
