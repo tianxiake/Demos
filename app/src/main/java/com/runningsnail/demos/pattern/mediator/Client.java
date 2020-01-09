@@ -1,6 +1,7 @@
 package com.runningsnail.demos.pattern.mediator;
 
 /**
+ * 中介者模式
  * @author yongjie created on 2020-01-02.
  */
 public class Client {
