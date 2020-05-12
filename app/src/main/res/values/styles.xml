@@ -20,4 +20,13 @@
     </style>
 
 
+    <declare-styleable name="lineView">
+        <attr name="lineTextSize" format="dimension" />
+        <attr name="maxShowLine" format="integer" />
+        <attr name="especialTextColor" format="color" />
+        <attr name="especialTextSize" format="dimension" />
+        <attr name="lineTextColor" format="color" />
+        <attr name="lineHeight" format="dimension" />
+        <attr name="lineInterval" format="dimension" />
+    </declare-styleable>
 </resources>

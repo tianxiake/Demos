@@ -4,6 +4,9 @@ buildscript {
     ext.kotlin_version = '1.3.61'
 
     repositories {
+        maven {
+            url 'http://222.66.77.226:8081/repository/chances-release/'
+        }
         google()
         maven { url "https://jitpack.io" }
         maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
@@ -20,6 +23,9 @@ buildscript {
 
 allprojects {
     repositories {
+        maven {
+            url 'http://222.66.77.226:8081/repository/chances-release/'
+        }
         google()
         maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
         //jcenter()

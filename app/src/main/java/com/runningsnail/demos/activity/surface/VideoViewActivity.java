@@ -30,8 +30,7 @@ public class VideoViewActivity extends AppCompatActivity {
     @BindView(R.id.video_view)
     VideoView videoView;
 
-    String[] playUrl = new String[]{"https://o6yh618n9.qnssl.com/grKyofaC_9428902051.mp4"
-    };
+    String[] playUrl = new String[]{"http://vfx.mtime.cn/Video/2019/06/17/mp4/190617102304174102.mp4"};
     @BindView(R.id.btn_play_next)
     Button btnPlayNext;
     @BindView(R.id.fl_content)
@@ -54,13 +53,6 @@ public class VideoViewActivity extends AppCompatActivity {
                 Toast.makeText(VideoViewActivity.this, "url:" + playUrl[playIndex], Toast.LENGTH_SHORT).show();
 
                 videoView.seekTo(0);
-            }
-        });
-        videoView.setOnInfoListener(new MediaPlayer.OnInfoListener() {
-            @Override
-            public boolean onInfo(MediaPlayer mp, int what, int extra) {
-                HiLogger.d(TAG, "url:%s onInfo %s", playUrl[playIndex], what);
-                return false;
             }
         });
         videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {

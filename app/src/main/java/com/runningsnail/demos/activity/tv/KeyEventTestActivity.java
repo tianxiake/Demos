@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.runningsnail.demos.R;
+import com.runningsnail.demos.common.utils.DensityUtils;
 import com.runningsnail.demos.common.utils.HiLogger;
 
 import butterknife.BindView;
@@ -51,6 +52,8 @@ public class KeyEventTestActivity extends AppCompatActivity {
 	protected void onResume() {
 		super.onResume();
 		HiLogger.d(TAG, "onResume");
+		float px = DensityUtils.dp2px(this, 1);
+		HiLogger.d(TAG, "onResume， %s", px);
 	}
 
 	@Override

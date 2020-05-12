@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,12 +19,12 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.gson.Gson;
+import com.runningsnail.demos.MainHandler;
 import com.runningsnail.demos.R;
+import com.runningsnail.demos.ScreenReceiver;
 import com.runningsnail.demos.common.utils.HiLogger;
 import com.runningsnail.demos.common.utils.ToastUtil;
 
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -45,113 +46,78 @@ public class MainActivity extends AppCompatActivity {
 	private List<String> itemsData = new ArrayList<>();
 	private List<String> clickItemsData = new ArrayList<>();
 	private MainData mainData = new MainData();
+	private ScreenReceiver screenReceiver;
 
-    @Override
+	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         String name = this.getClass().getName();
         HiLogger.d(TAG, "class name:" + name);
-	    mainData = readData();
-	    parseItemsData();
+		readStartActivityMessage();
+	}
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.item_main_list,
-                itemsData);
-        listView.setAdapter(arrayAdapter);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String content = clickItemsData.get(position);
-                HiLogger.d(TAG, "content %s", content);
-	            if (content.toLowerCase().contains("activity")) {
-                    startActivity(clickItemsData.get(position));
-                }
-            }
-        });
+	private void readStartActivityMessage() {
+		try {
+			mainData = PathCenter.getMainData();
+			parseItemsData();
+			MainHandler.getInstance().post(new Runnable() {
+				@Override
+				public void run() {
+					ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(MainActivity.this, R.layout.item_main_list,
+							itemsData);
+					listView.setAdapter(arrayAdapter);
+					listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+						@Override
+						public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+							String content = clickItemsData.get(position);
+							HiLogger.d(TAG, "content %s", content);
+							if (content.toLowerCase().contains("activity")) {
+								startActivity(clickItemsData.get(position));
+							}
+						}
+					});
 
-    }
+					IntentFilter intentFilter = new IntentFilter();
+					intentFilter.addAction(Intent.ACTION_SCREEN_ON);
+					intentFilter.addAction(Intent.ACTION_SCREEN_OFF);
+					screenReceiver = new ScreenReceiver();
+					registerReceiver(screenReceiver, intentFilter);
+					HiLogger.i(TAG, "执行动画");
+					ivStartup.animate().alpha(0.01f).setDuration(2000).setListener(new Animator.AnimatorListener() {
+						@Override
+						public void onAnimationStart(Animator animation) {
 
-	private MainData readData() {
-		MainData mainData = new Gson().fromJson(new InputStreamReader(getResources().openRawResource(R.raw.config)), MainData.class);
-		return mainData;
+						}
+
+						@Override
+						public void onAnimationEnd(Animator animation) {
+							ivStartup.setVisibility(View.GONE);
+						}
+
+						@Override
+						public void onAnimationCancel(Animator animation) {
+							ivStartup.setVisibility(View.GONE);
+						}
+
+						@Override
+						public void onAnimationRepeat(Animator animation) {
+
+						}
+					}).start();
+				}
+			});
+		} catch (Exception e) {
+			HiLogger.e(TAG, "Exception", e);
+		}
 	}
 
 
 	@Override
     protected void onResume() {
         super.onResume();
-        HiLogger.i(TAG, "执行动画");
-        ivStartup.animate().alpha(0.01f).setDuration(2000).setListener(new Animator.AnimatorListener() {
-            @Override
-            public void onAnimationStart(Animator animation) {
-
-            }
-
-            @Override
-            public void onAnimationEnd(Animator animation) {
-                ivStartup.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onAnimationCancel(Animator animation) {
-                ivStartup.setVisibility(View.GONE);
-            }
-
-            @Override
-            public void onAnimationRepeat(Animator animation) {
-
-            }
-        }).start();
     }
-
-    private void goToApp(){
-	    ComponentName componentName = new ComponentName("com.utstar.smc","com.utstar.smc.activity.HomeActivity");
-	    Intent intent = new Intent();
-	    intent.setComponent(componentName);
-	    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
-	    startActivity(intent);
-    }
-
-
-	public static int getStatusHeight1(Context context) {
-		int statusHeight = -1;
-		try {
-			Class<?> clazz = Class.forName("com.android.internal.R$dimen");
-			Object object = clazz.newInstance();
-			int height = Integer.parseInt(clazz.getField("status_bar_height").get(object).toString());
-			statusHeight = context.getResources().getDimensionPixelSize(height);
-			Log.i("TAG", "statusHeight:" + statusHeight);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return statusHeight;
-	}
-
-	public static boolean isStatusBarShown(Activity context) {
-		WindowManager.LayoutParams params = context.getWindow().getAttributes();
-		int paramsFlag = params.flags & (~WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		return paramsFlag == params.flags;
-	}
-
-	public static int getStatusHeight2(Context context) {
-		int statusBarHeight1 = -1;
-		//获取status_bar_height资源的ID
-		int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
-		if (resourceId > 0) {
-			//根据资源ID获取响应的尺寸值
-			statusBarHeight1 = context.getResources().getDimensionPixelSize(resourceId);
-		}
-		return statusBarHeight1;
-	}
-
-	private int getNavigationBarHeight(Context context) {
-		Resources resources = context.getResources();
-		int resourceId = resources.getIdentifier("navigation_bar_height", "dimen", "android");
-		int height = resources.getDimensionPixelSize(resourceId);
-		Log.v("dbw", "Navi height:" + height);
-		return height;
-	}
 
     /**
      * 返回值有三个 0代表本周,1代表上周,2代表更早,-1代表未知
@@ -206,5 +172,10 @@ public class MainActivity extends AppCompatActivity {
 		}
     }
 
-
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		HiLogger.i(TAG, "onDestroy");
+		unregisterReceiver(screenReceiver);
+	}
 }

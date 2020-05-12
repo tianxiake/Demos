@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context=".activity.tv.LinearLayoutTVActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_one"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_margin="100dp"
+        android:background="#00FF00"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:id="@+id/iv_focus_one"
+            android:layout_width="296dp"
+            android:layout_height="296dp"
+            android:layout_gravity="center"
+            android:background="#FF0000"
+            android:focusable="true" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fl_two"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="100dp"
+        android:layout_toRightOf="@id/fl_one"
+        android:background="#00FF00"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <ImageView
+            android:id="@+id/iv_focus_two"
+            android:layout_width="296dp"
+            android:layout_height="296dp"
+            android:layout_gravity="center"
+            android:background="#FF0000"
+            android:focusable="true" />
+    </FrameLayout>
+
+    <!--    <ScrollView-->
+    <!--        android:id="@+id/sv_content"-->
+    <!--        android:layout_width="280dp"-->
+    <!--        android:layout_height="342dp"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:background="#dcbdec"-->
+    <!--        android:clipChildren="false"-->
+    <!--        android:clipToPadding="false"-->
+    <!--        android:focusable="false">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/ll_container"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:clipChildren="false"-->
+    <!--            android:clipToPadding="false"-->
+    <!--            android:orientation="vertical" />-->
+    <!--    </ScrollView>-->
+
+    <!--    <Button-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_above="@id/sv_content"-->
+    <!--        android:layout_alignStart="@id/sv_content"-->
+    <!--        android:layout_alignEnd="@id/sv_content"-->
+    <!--        android:text="HelloWorld" />-->
+
+</RelativeLayout>

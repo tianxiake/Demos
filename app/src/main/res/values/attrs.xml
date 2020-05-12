@@ -31,4 +31,9 @@
     </declare-styleable>
 
 
+    <declare-styleable name="CircleCornerLayout">
+        <attr name="isCircle" format="boolean" />
+        <attr name="circleRadius" format="dimension" />
+    </declare-styleable>
+
 </resources>

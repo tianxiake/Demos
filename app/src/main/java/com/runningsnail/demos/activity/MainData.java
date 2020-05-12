@@ -52,6 +52,11 @@ public class MainData {
 			private String subTitle;
 			private String path;
 
+			public SubBean(String subTitle, String path) {
+				this.subTitle = subTitle;
+				this.path = path;
+			}
+
 			public String getSubTitle() {
 				return subTitle;
 			}
