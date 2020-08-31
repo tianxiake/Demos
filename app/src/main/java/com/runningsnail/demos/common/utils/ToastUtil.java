@@ -14,8 +14,27 @@ public class ToastUtil {
     public static void showToast(Context context, CharSequence charSequence) {
         if (toast == null) {
             toast = Toast.makeText(context, charSequence, Toast.LENGTH_SHORT);
-            toast.setGravity(Gravity.CENTER, 0, 0);
         }
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.setText(charSequence);
+        toast.show();
+    }
+
+
+    public static void showToastBottom20(Context context, CharSequence charSequence) {
+        if (toast == null) {
+            toast = Toast.makeText(context, charSequence, Toast.LENGTH_SHORT);
+        }
+        toast.setGravity(Gravity.BOTTOM, 0, 20);
+        toast.setText(charSequence);
+        toast.show();
+    }
+
+    public static void showToastTop20(Context context, CharSequence charSequence) {
+        if (toast == null) {
+            toast = Toast.makeText(context, charSequence, Toast.LENGTH_SHORT);
+        }
+        toast.setGravity(Gravity.TOP, 0, 20);
         toast.setText(charSequence);
         toast.show();
     }

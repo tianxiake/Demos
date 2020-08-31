@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.widget.CustomToastActivity">
+
+    <Button
+        android:id="@+id/btn_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="默认情况" />
+
+    <Button
+        android:id="@+id/btn_bottom_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="居中距离底部20dp" />
+
+    <Button
+        android:id="@+id/btn_top_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="居中距离顶部20dp" />
+
+
+</LinearLayout>

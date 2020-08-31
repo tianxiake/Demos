@@ -33,6 +33,7 @@ import com.runningsnail.demos.activity.viewanimation.TranslateAnimationActivity;
 import com.runningsnail.demos.activity.webview.H5OpenAppTestActivity;
 import com.runningsnail.demos.activity.webview.WebViewTestOneActivity;
 import com.runningsnail.demos.activity.webview.WebViewTestTwoActivity;
+import com.runningsnail.demos.activity.widget.CustomToastActivity;
 
 import java.util.List;
 
@@ -51,7 +52,16 @@ public class PathCenter {
 		content.add(buildWebView("===webView测试==="));
 		content.add(buildBottomNav("===底部导航栏==="));
 		content.add(buildAnimate("===补间动画系列==="));
+		content.add(buildWidget("===widget==="));
 		return mainData;
+	}
+
+	private static MainData.ContentBean buildWidget(String title) {
+		MainData.ContentBean tvBean = new MainData.ContentBean();
+		tvBean.setTitle(title);
+		List<MainData.ContentBean.SubBean> sub = tvBean.getSub();
+		sub.add(new MainData.ContentBean.SubBean("自定义Toast测试页面", CustomToastActivity.class.getName()));
+		return tvBean;
 	}
 
 	private static MainData.ContentBean buildTV(String title) {
