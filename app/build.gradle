@@ -60,7 +60,7 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
     //network
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.7.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
     //注解框架，解决view的创建和事件处理
     implementation 'com.jakewharton:butterknife:10.2.0'

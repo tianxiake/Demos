@@ -3,7 +3,6 @@ package com.runningsnail.demos.activity.surface;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -30,7 +29,7 @@ public class VideoViewActivity extends AppCompatActivity {
     @BindView(R.id.video_view)
     VideoView videoView;
 
-    String[] playUrl = new String[]{"http://vfx.mtime.cn/Video/2019/06/17/mp4/190617102304174102.mp4"};
+    String[] playUrl = new String[]{"http://100.100.0.152:33200/EPG/MediaService/RedirectPlay.jsp?UserToken=100D0A1370703233317C852D91337C32&UserName=cm30088&CPID=NXYDHW&ContentType=live&ContentID=90000001000000050000000000000131&MediaID=&NPT=-7150"};
     @BindView(R.id.btn_play_next)
     Button btnPlayNext;
     @BindView(R.id.fl_content)

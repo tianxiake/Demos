@@ -19,6 +19,7 @@ import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
+import okhttp3.OkHttpClient;
 
 /**
  * RxJava测试Activity
@@ -61,6 +62,7 @@ public class RxJavaOneActivity extends AppCompatActivity {
 	}
 
 	private void simpleChangeThread() {
+		OkHttpClient.Builder builder = new OkHttpClient().newBuilder();
 		Observable.just(simple).subscribeOn(Schedulers.io())
 				.doOnNext(new Consumer<SimpleClass>() {
 					@Override

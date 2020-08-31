@@ -5,6 +5,7 @@ import com.runningsnail.demos.activity.bottomnavigation.BottomWayThreeActivity;
 import com.runningsnail.demos.activity.bottomnavigation.BottomWayTwoActivity;
 import com.runningsnail.demos.activity.dialog.AlertDialogActivity;
 import com.runningsnail.demos.activity.dialog.DialogFragmentActivity;
+import com.runningsnail.demos.activity.surface.VideoViewActivity;
 import com.runningsnail.demos.activity.text.TextEffectActivity;
 import com.runningsnail.demos.activity.tv.ClipPaddingAndChildTestActivity;
 import com.runningsnail.demos.activity.tv.FlyEffectActivity;
@@ -13,6 +14,7 @@ import com.runningsnail.demos.activity.tv.FunnyPropertyActivity;
 import com.runningsnail.demos.activity.tv.KeyEventTestActivity;
 import com.runningsnail.demos.activity.tv.LinearLayoutTVActivity;
 import com.runningsnail.demos.activity.tv.MockActivity;
+import com.runningsnail.demos.activity.tv.RecyclerViewActivity;
 import com.runningsnail.demos.activity.tv.RuntimeExecuteActivity;
 import com.runningsnail.demos.activity.tv.ScreenAdapterActivity;
 import com.runningsnail.demos.activity.tv.ScrollViewActivity;
@@ -68,6 +70,8 @@ public class PathCenter {
 		sub.add(new MainData.ContentBean.SubBean("View可见性测试", ViewVisibleActivity.class.getName()));
 		sub.add(new MainData.ContentBean.SubBean("焦点查找测试", FocusSearchActivity.class.getName()));
 		sub.add(new MainData.ContentBean.SubBean("ClipTest", ClipPaddingAndChildTestActivity.class.getName()));
+		sub.add(new MainData.ContentBean.SubBean("RecyclerView", RecyclerViewActivity.class.getName()));
+		sub.add(new MainData.ContentBean.SubBean("VideoView测试", VideoViewActivity.class.getName()));
 		return tvBean;
 	}
 
