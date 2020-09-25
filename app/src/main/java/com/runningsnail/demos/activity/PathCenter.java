@@ -33,7 +33,9 @@ import com.runningsnail.demos.activity.viewanimation.TranslateAnimationActivity;
 import com.runningsnail.demos.activity.webview.H5OpenAppTestActivity;
 import com.runningsnail.demos.activity.webview.WebViewTestOneActivity;
 import com.runningsnail.demos.activity.webview.WebViewTestTwoActivity;
+import com.runningsnail.demos.activity.widget.CustomSeekBarActivity;
 import com.runningsnail.demos.activity.widget.CustomToastActivity;
+import com.runningsnail.demos.activity.widget.SelectionActivity;
 
 import java.util.List;
 
@@ -61,6 +63,8 @@ public class PathCenter {
 		tvBean.setTitle(title);
 		List<MainData.ContentBean.SubBean> sub = tvBean.getSub();
 		sub.add(new MainData.ContentBean.SubBean("自定义Toast测试页面", CustomToastActivity.class.getName()));
+		sub.add(new MainData.ContentBean.SubBean("轮动组件测试", SelectionActivity.class.getName()));
+		sub.add(new MainData.ContentBean.SubBean("自定义SeekBar", CustomSeekBarActivity.class.getName()));
 		return tvBean;
 	}
 
