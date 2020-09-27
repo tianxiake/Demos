@@ -18,7 +18,7 @@ public class AnimUtil {
             } else {
                 v.bringToFront();
             }
-            v.animate().setDuration(100).scaleX(hasFocus ? 1.3f : 1.0f).scaleY(hasFocus ? 1.3f : 1.0f).start();
+            v.animate().setDuration(100).scaleX(hasFocus ? 2f : 1.0f).scaleY(hasFocus ? 2f : 1.0f).start();
         } catch (Exception e) {
             Log.e(TAG, e.getMessage(), e);
         }
