@@ -3,337 +3,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clipChildren="false"
     android:orientation="horizontal"
+    android:clipChildren="false"
     tools:context=".activity.tv.ClipPaddingAndChildTestActivity">
 
 
-    <FrameLayout
-        android:id="@+id/one"
+    <ScrollView
+        android:id="@+id/menu_view"
         android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/text_one"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/menu_container"
             android:layout_height="match_parent"
-            android:background="#FF0000"
-            android:focusable="true"
-            android:gravity="center"
-            android:text="情况1" />
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/two"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_toRightOf="@id/one">
-
-        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/text_two"
+            <Button
+                android:id="@+id/btn_one"
+                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#FF0000"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="情况二" />
-        </FrameLayout>
+                android:text="情况1" />
 
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/three"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_toRightOf="@id/two">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00FF00"
-            android:clipToPadding="false"
-            android:padding="20dp">
-
-            <TextView
-                android:id="@+id/text_three"
+            <Button
+                android:id="@+id/btn_two"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#FF0000"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="情况三" />
-        </FrameLayout>
+                android:layout_height="wrap_content"
+                android:text="情况2" />
 
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/four"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_toRightOf="@id/three">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00FF00"
-            android:clipChildren="false"
-            android:padding="20dp">
-
-            <TextView
-                android:id="@+id/text_four"
+            <Button
+                android:id="@+id/btn_three"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#FF0000"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="情况四" />
-        </FrameLayout>
+                android:layout_height="wrap_content"
+                android:text="情况3" />
 
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/five"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_toRightOf="@id/four">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00FF00"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:padding="20dp">
-
-            <TextView
-                android:id="@+id/text_five"
+            <Button
+                android:id="@+id/btn_four"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#FF0000"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="情况五" />
-        </FrameLayout>
+                android:layout_height="wrap_content"
+                android:text="情况4" />
 
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/six"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/one"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00FF00"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:padding="20dp">
-
-            <TextView
-                android:id="@+id/text_six"
+            <Button
+                android:id="@+id/btn_five"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#FF0000"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="情况六" />
-        </FrameLayout>
+                android:layout_height="wrap_content"
+                android:text="clipToPadding情况1" />
 
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/seven"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/one"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_toRightOf="@id/six">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00FF00"
-            android:clipChildren="false">
-
-            <TextView
-                android:id="@+id/text_seven"
+            <Button
+                android:id="@+id/btn_six"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="20dp"
-                android:background="#FF0000"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="情况七" />
-        </FrameLayout>
+                android:layout_height="wrap_content"
+                android:text="clipToPadding情况2" />
 
-    </FrameLayout>
-
-
-    <FrameLayout
-        android:id="@+id/eight"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/one"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_toRightOf="@id/seven">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00FF00"
-            android:clipChildren="false">
-
-            <TextView
-                android:id="@+id/text_eight"
+            <Button
+                android:id="@+id/btn_seven"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="30dp"
-                android:background="#FF0000"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="情况八" />
-        </FrameLayout>
+                android:layout_height="wrap_content"
+                android:text="clipToPadding情况3" />
 
-    </FrameLayout>
+            <Button
+                android:id="@+id/btn_eight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="clipToPadding情况4" />
 
-    <FrameLayout
-        android:id="@+id/nine"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/one"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_toRightOf="@id/eight"
-        android:clipChildren="false">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00FF00"
-            android:clipChildren="false">
-
-            <TextView
-                android:id="@+id/text_nine"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="30dp"
-                android:background="#FF0000"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="情况九" />
-
-        </FrameLayout>
-
-    </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
 
     <FrameLayout
-        android:id="@+id/ten"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/one"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="100dp"
-        android:layout_toRightOf="@id/nine">
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/menu_view" />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00FF00"
-            android:clipChildren="false">
-
-            <TextView
-                android:id="@+id/text_ten"
-                android:layout_width="150dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="30dp"
-                android:background="#FF0000"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="情况十" />
-
-        </FrameLayout>
-
-    </FrameLayout>
-
-
-    <FrameLayout
-        android:id="@+id/eleven"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/six"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00FF00"
-            android:clipChildren="false"
-            android:padding="20dp">
-
-            <TextView
-                android:id="@+id/text_eleven"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="-30dp"
-                android:background="#FF0000"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="情况十一" />
-
-        </FrameLayout>
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:id="@+id/twelve"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_below="@id/six"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_toRightOf="@id/eleven">
-
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#00FF00"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:padding="20dp">
-
-            <TextView
-                android:id="@+id/text_twelve"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="-30dp"
-                android:background="#FF0000"
-                android:focusable="true"
-                android:gravity="center"
-                android:text="情况十二 " />
-
-        </FrameLayout>
-
-    </FrameLayout>
 </RelativeLayout>
