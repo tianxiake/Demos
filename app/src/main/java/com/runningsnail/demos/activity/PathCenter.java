@@ -5,10 +5,12 @@ import com.runningsnail.demos.activity.bottomnavigation.BottomWayThreeActivity;
 import com.runningsnail.demos.activity.bottomnavigation.BottomWayTwoActivity;
 import com.runningsnail.demos.activity.dialog.AlertDialogActivity;
 import com.runningsnail.demos.activity.dialog.DialogFragmentActivity;
+import com.runningsnail.demos.activity.retrofit.RetrofitDemoActivity;
 import com.runningsnail.demos.activity.surface.VideoViewActivity;
 import com.runningsnail.demos.activity.text.TextEffectActivity;
 import com.runningsnail.demos.activity.tv.ClipPaddingAndChildTestActivity;
 import com.runningsnail.demos.activity.tv.FlyEffectActivity;
+import com.runningsnail.demos.activity.tv.FocusFinderTestActivity;
 import com.runningsnail.demos.activity.tv.FocusSearchActivity;
 import com.runningsnail.demos.activity.tv.FunnyPropertyActivity;
 import com.runningsnail.demos.activity.tv.KeyEventTestActivity;
@@ -55,7 +57,16 @@ public class PathCenter {
 		content.add(buildBottomNav("===底部导航栏==="));
 		content.add(buildAnimate("===补间动画系列==="));
 		content.add(buildWidget("===widget==="));
+		content.add(buildNetwork("===网络处理==="));
 		return mainData;
+	}
+
+	private static MainData.ContentBean buildNetwork(String title) {
+		MainData.ContentBean tvBean = new MainData.ContentBean();
+		tvBean.setTitle(title);
+		List<MainData.ContentBean.SubBean> sub = tvBean.getSub();
+		sub.add(new MainData.ContentBean.SubBean("Retrofit", RetrofitDemoActivity.class.getName()));
+		return tvBean;
 	}
 
 	private static MainData.ContentBean buildWidget(String title) {
@@ -84,6 +95,7 @@ public class PathCenter {
 		sub.add(new MainData.ContentBean.SubBean("View可见性测试", ViewVisibleActivity.class.getName()));
 		sub.add(new MainData.ContentBean.SubBean("焦点查找测试", FocusSearchActivity.class.getName()));
 		sub.add(new MainData.ContentBean.SubBean("ClipTest", ClipPaddingAndChildTestActivity.class.getName()));
+		sub.add(new MainData.ContentBean.SubBean("FocusFinder", FocusFinderTestActivity.class.getName()));
 		sub.add(new MainData.ContentBean.SubBean("RecyclerView", RecyclerViewActivity.class.getName()));
 		sub.add(new MainData.ContentBean.SubBean("VideoView测试", VideoViewActivity.class.getName()));
 		return tvBean;

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.runningsnail.demos.activity.tv.CustomFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.tv.FocusFinderTestActivity">
+
+    <com.runningsnail.demos.activity.tv.CustomButton
+        android:id="@+id/btn_find_test_one"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Hello" />
+
+    <com.runningsnail.demos.activity.tv.CustomButton
+        android:id="@+id/btn_find_test_two"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="right"
+        android:text="World" />
+
+</com.runningsnail.demos.activity.tv.CustomFrameLayout>
