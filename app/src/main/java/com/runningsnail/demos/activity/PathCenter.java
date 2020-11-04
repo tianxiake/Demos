@@ -9,6 +9,7 @@ import com.runningsnail.demos.activity.retrofit.RetrofitDemoActivity;
 import com.runningsnail.demos.activity.surface.VideoViewActivity;
 import com.runningsnail.demos.activity.text.TextEffectActivity;
 import com.runningsnail.demos.activity.tv.ClipPaddingAndChildTestActivity;
+import com.runningsnail.demos.activity.tv.FinderFocusActivity;
 import com.runningsnail.demos.activity.tv.FlyEffectActivity;
 import com.runningsnail.demos.activity.tv.FocusFinderTestActivity;
 import com.runningsnail.demos.activity.tv.FocusSearchActivity;
@@ -98,6 +99,7 @@ public class PathCenter {
 		sub.add(new MainData.ContentBean.SubBean("FocusFinder", FocusFinderTestActivity.class.getName()));
 		sub.add(new MainData.ContentBean.SubBean("RecyclerView", RecyclerViewActivity.class.getName()));
 		sub.add(new MainData.ContentBean.SubBean("VideoView测试", VideoViewActivity.class.getName()));
+		sub.add(new MainData.ContentBean.SubBean("FocusHandle", FinderFocusActivity.class.getName()));
 		return tvBean;
 	}
 

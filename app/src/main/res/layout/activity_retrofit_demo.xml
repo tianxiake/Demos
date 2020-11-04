@@ -16,6 +16,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="按钮1" />
+
+        <Button
+            android:id="@+id/btn_case_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按钮2" />
     </LinearLayout>
 
 
