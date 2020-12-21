@@ -5,6 +5,7 @@ import com.runningsnail.demos.activity.bottomnavigation.BottomWayThreeActivity;
 import com.runningsnail.demos.activity.bottomnavigation.BottomWayTwoActivity;
 import com.runningsnail.demos.activity.dialog.AlertDialogActivity;
 import com.runningsnail.demos.activity.dialog.DialogFragmentActivity;
+import com.runningsnail.demos.activity.other.KillProcessActivity;
 import com.runningsnail.demos.activity.retrofit.RetrofitDemoActivity;
 import com.runningsnail.demos.activity.surface.VideoViewActivity;
 import com.runningsnail.demos.activity.text.TextEffectActivity;
@@ -59,7 +60,16 @@ public class PathCenter {
 		content.add(buildAnimate("===补间动画系列==="));
 		content.add(buildWidget("===widget==="));
 		content.add(buildNetwork("===网络处理==="));
+		content.add(buildOther("===其他==="));
 		return mainData;
+	}
+
+	private static MainData.ContentBean buildOther(String title) {
+		MainData.ContentBean tvBean = new MainData.ContentBean();
+		tvBean.setTitle(title);
+		List<MainData.ContentBean.SubBean> sub = tvBean.getSub();
+		sub.add(new MainData.ContentBean.SubBean("Android杀进程方式", KillProcessActivity.class.getName()));
+		return tvBean;
 	}
 
 	private static MainData.ContentBean buildNetwork(String title) {
@@ -134,7 +144,7 @@ public class PathCenter {
 		List<MainData.ContentBean.SubBean> sub = tvBean.getSub();
 		sub.add(new MainData.ContentBean.SubBean("WebView测试One", WebViewTestOneActivity.class.getName()));
 		sub.add(new MainData.ContentBean.SubBean("WebView测试Two", WebViewTestTwoActivity.class.getName()));
-		sub.add(new MainData.ContentBean.SubBean("H5跳原生app测试", H5OpenAppTestActivity.class.getName()));
+		sub.add(new MainData.ContentBean.SubBean("打开机顶盒浏览器测试", H5OpenAppTestActivity.class.getName()));
 		return tvBean;
 	}
 

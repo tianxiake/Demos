@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.other.KillProcessActivity">
+
+    <Button
+        android:id="@+id/btn_new"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:text="启动新Activity" />
+
+    <Button
+        android:id="@+id/btn_kill_process"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="Process.killProcess" />
+
+    <Button
+        android:id="@+id/btn_system_exit"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="right"
+        android:text="System.exit(0)" />
+
+    <Button
+        android:id="@+id/btn_system_exit1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:text="System.exit(1)" />
+
+    <Button
+        android:id="@+id/btn_crash"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom|right"
+        android:text="crash" />
+
+
+</FrameLayout>

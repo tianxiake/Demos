@@ -36,7 +36,7 @@ public class H5OpenAppTestActivity extends AppCompatActivity {
 	}
 
 	private void openBrowser() {
-		Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://192.168.222.133:8080/test.html"));
+		Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://192.168.220.147:8080/test.html"));
 		startActivity(intent);
 	}
 }
