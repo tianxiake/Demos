@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.other.KillProcessActivity"></activity>
+        <activity android:name=".activity.other.SpTestActivity"></activity>
+        <activity android:name=".activity.other.KillProcessActivity" />
         <activity android:name=".activity.tv.FinderFocusActivity" />
         <activity android:name=".activity.tv.FocusFinderTestActivity" />
         <activity android:name=".activity.retrofit.RetrofitDemoActivity" />
@@ -121,7 +122,7 @@
         </activity>
 
         <activity-alias
-            android:name=".alias_two"
+            android:name=".alias_one"
             android:targetActivity=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -130,7 +131,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias
-            android:name=".alias_one"
+            android:name=".alias_two"
             android:targetActivity=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -6,6 +6,7 @@ import com.runningsnail.demos.activity.bottomnavigation.BottomWayTwoActivity;
 import com.runningsnail.demos.activity.dialog.AlertDialogActivity;
 import com.runningsnail.demos.activity.dialog.DialogFragmentActivity;
 import com.runningsnail.demos.activity.other.KillProcessActivity;
+import com.runningsnail.demos.activity.other.SpTestActivity;
 import com.runningsnail.demos.activity.retrofit.RetrofitDemoActivity;
 import com.runningsnail.demos.activity.surface.VideoViewActivity;
 import com.runningsnail.demos.activity.text.TextEffectActivity;
@@ -69,6 +70,7 @@ public class PathCenter {
 		tvBean.setTitle(title);
 		List<MainData.ContentBean.SubBean> sub = tvBean.getSub();
 		sub.add(new MainData.ContentBean.SubBean("Android杀进程方式", KillProcessActivity.class.getName()));
+		sub.add(new MainData.ContentBean.SubBean("SP缓存测试", SpTestActivity.class.getName()));
 		return tvBean;
 	}
 
