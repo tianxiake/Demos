@@ -189,7 +189,7 @@
         <activity
             android:name=".activity.SingleTaskActivity"
             android:launchMode="singleTask" />
-        <activity android:name=".activity.rxjava.RxJavaOneActivity" />
+        <activity android:name=".activity.rxjava.RxJava2TestActivity" />
         <activity android:name=".activity.recyclerview.RecyclerViewThreeActivity" />
         <activity android:name=".activity.dialog.DialogFragmentActivity" />
         <activity android:name=".activity.animator.ValueAnimatorTestActivity" />

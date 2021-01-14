@@ -8,6 +8,7 @@ import com.runningsnail.demos.activity.dialog.DialogFragmentActivity;
 import com.runningsnail.demos.activity.other.KillProcessActivity;
 import com.runningsnail.demos.activity.other.SpTestActivity;
 import com.runningsnail.demos.activity.retrofit.RetrofitDemoActivity;
+import com.runningsnail.demos.activity.rxjava.RxJava2TestActivity;
 import com.runningsnail.demos.activity.surface.VideoViewActivity;
 import com.runningsnail.demos.activity.text.TextEffectActivity;
 import com.runningsnail.demos.activity.tv.ClipPaddingAndChildTestActivity;
@@ -62,7 +63,16 @@ public class PathCenter {
 		content.add(buildWidget("===widget==="));
 		content.add(buildNetwork("===网络处理==="));
 		content.add(buildOther("===其他==="));
+		content.add(buildThirdParty("===三方框架==="));
 		return mainData;
+	}
+
+	private static MainData.ContentBean buildThirdParty(String title) {
+		MainData.ContentBean tvBean = new MainData.ContentBean();
+		tvBean.setTitle(title);
+		List<MainData.ContentBean.SubBean> sub = tvBean.getSub();
+		sub.add(new MainData.ContentBean.SubBean("RxJava2", RxJava2TestActivity.class.getName()));
+		return tvBean;
 	}
 
 	private static MainData.ContentBean buildOther(String title) {
