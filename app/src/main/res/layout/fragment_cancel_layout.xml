@@ -5,7 +5,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -13,21 +13,23 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btn_test_subscribe_on"
+                android:id="@+id/btn_cancel_way_one"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="subscribeOn()切线程"
-                android:textAllCaps="false" />
+                android:text="取消方式一" />
 
             <Button
-                android:id="@+id/btn_cancel_task"
+                android:id="@+id/btn_cancel_way_two"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="取消任务"
-                android:textAllCaps="false" />
+                android:text="取消方式二" />
+
+            <Button
+                android:id="@+id/btn_cancel_way_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="取消方式三" />
         </LinearLayout>
-
     </ScrollView>
-
 
 </FrameLayout>
