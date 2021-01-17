@@ -35,13 +35,13 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String TAG = "MainActivity";
-    @BindView(R.id.lv_content)
-    ListView listView;
-    @BindView(R.id.container)
-    FrameLayout container;
-    @BindView(R.id.iv_startup)
-    ImageView ivStartup;
+	private static final String TAG = "MainActivity";
+	@BindView(R.id.lv_content)
+	ListView listView;
+	@BindView(R.id.container)
+	FrameLayout container;
+	@BindView(R.id.iv_startup)
+	ImageView ivStartup;
 
 	private List<String> itemsData = new ArrayList<>();
 	private List<String> clickItemsData = new ArrayList<>();
@@ -49,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
 	private ScreenReceiver screenReceiver;
 
 	@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-        String name = this.getClass().getName();
-        HiLogger.d(TAG, "class name:" + name);
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		ButterKnife.bind(this);
+		String name = this.getClass().getName();
+		HiLogger.d(TAG, "class name:" + name);
 		readStartActivityMessage();
 	}
 
@@ -115,47 +115,47 @@ public class MainActivity extends AppCompatActivity {
 
 
 	@Override
-    protected void onResume() {
-        super.onResume();
-    }
+	protected void onResume() {
+		super.onResume();
+	}
 
-    /**
-     * 返回值有三个 0代表本周,1代表上周,2代表更早,-1代表未知
-     *
-     * @param time
-     * @return
-     */
-    public int computeAreaTime(long time) {
-        Calendar calendar = Calendar.getInstance();
-        long currentTime = calendar.getTime().getTime();
-        //当天零点时间
-        long zoneTime = currentTime - currentTime % (24 * 60 * 60 * 1000) - 8 * 60 * 60 * 1000;
-        calendar.setTime(new Date(zoneTime));
-        //本周第一天时间点
-        int firstDayOfWeek = calendar.getFirstDayOfWeek();
-        calendar.set(Calendar.DAY_OF_WEEK, firstDayOfWeek + 1);
-        long thisWeekFirstDayTime = calendar.getTime().getTime();
-        //上一周第一天时间点
-        calendar.add(Calendar.DAY_OF_WEEK, -7);
-        long lastWeekFirstDayTime = calendar.getTime().getTime();
-        if (time < lastWeekFirstDayTime) {
-            return 2;
-        }
-        if (time >= lastWeekFirstDayTime && time < thisWeekFirstDayTime) {
-            return 1;
-        }
-        return 0;
-    }
+	/**
+	 * 返回值有三个 0代表本周,1代表上周,2代表更早,-1代表未知
+	 *
+	 * @param time
+	 * @return
+	 */
+	public int computeAreaTime(long time) {
+		Calendar calendar = Calendar.getInstance();
+		long currentTime = calendar.getTime().getTime();
+		//当天零点时间
+		long zoneTime = currentTime - currentTime % (24 * 60 * 60 * 1000) - 8 * 60 * 60 * 1000;
+		calendar.setTime(new Date(zoneTime));
+		//本周第一天时间点
+		int firstDayOfWeek = calendar.getFirstDayOfWeek();
+		calendar.set(Calendar.DAY_OF_WEEK, firstDayOfWeek + 1);
+		long thisWeekFirstDayTime = calendar.getTime().getTime();
+		//上一周第一天时间点
+		calendar.add(Calendar.DAY_OF_WEEK, -7);
+		long lastWeekFirstDayTime = calendar.getTime().getTime();
+		if (time < lastWeekFirstDayTime) {
+			return 2;
+		}
+		if (time >= lastWeekFirstDayTime && time < thisWeekFirstDayTime) {
+			return 1;
+		}
+		return 0;
+	}
 
-    private void startActivity(String s) {
-        try {
-            Intent intent = new Intent(this, Class.forName(s));
-            startActivity(intent);
-            ToastUtil.showToast(this, "startActivity success");
-        } catch (ClassNotFoundException e) {
-            HiLogger.e(TAG, "class load error", e);
-        }
-    }
+	private void startActivity(String s) {
+		try {
+			Intent intent = new Intent(this, Class.forName(s));
+			startActivity(intent);
+			ToastUtil.showToast(this, "startActivity success");
+		} catch (ClassNotFoundException e) {
+			HiLogger.e(TAG, "class load error", e);
+		}
+	}
 
 	public void parseItemsData() {
 		List<MainData.ContentBean> content = mainData.getContent();
@@ -170,7 +170,7 @@ public class MainActivity extends AppCompatActivity {
 				clickItemsData.add(subBean.getPath());
 			}
 		}
-    }
+	}
 
 	@Override
 	protected void onDestroy() {

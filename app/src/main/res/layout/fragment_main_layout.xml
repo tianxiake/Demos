@@ -18,6 +18,12 @@
                 android:layout_height="wrap_content"
                 android:text="subscribeOn()切线程"
                 android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义Observable"
+                android:textAllCaps="false" />
         </LinearLayout>
 
     </ScrollView>

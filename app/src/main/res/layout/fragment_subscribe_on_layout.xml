@@ -22,6 +22,28 @@
             android:text="多次调用订阅"
             android:textAllCaps="false" />
 
+        <Button
+            android:id="@+id/btn_test_special_do_on_subscribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="doOnSubscribe特殊情况1"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_test_special_do_on_subscribe2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="doOnSubscribe特殊情况2"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_much_observable_subscribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="多个Observable都调用subscribeOn线程执行情况"
+            android:textAllCaps="false" />
+
+
     </LinearLayout>
 
 

@@ -7,6 +7,7 @@ import com.runningsnail.demos.activity.dialog.AlertDialogActivity;
 import com.runningsnail.demos.activity.dialog.DialogFragmentActivity;
 import com.runningsnail.demos.activity.other.KillProcessActivity;
 import com.runningsnail.demos.activity.other.SpTestActivity;
+import com.runningsnail.demos.activity.phone.GestureTestActivity;
 import com.runningsnail.demos.activity.retrofit.RetrofitDemoActivity;
 import com.runningsnail.demos.activity.rxjava.RxJava2TestActivity;
 import com.runningsnail.demos.activity.surface.VideoViewActivity;
@@ -16,6 +17,7 @@ import com.runningsnail.demos.activity.tv.FinderFocusActivity;
 import com.runningsnail.demos.activity.tv.FlyEffectActivity;
 import com.runningsnail.demos.activity.tv.FocusFinderTestActivity;
 import com.runningsnail.demos.activity.tv.FocusSearchActivity;
+import com.runningsnail.demos.activity.tv.FocusTestActivity;
 import com.runningsnail.demos.activity.tv.FunnyPropertyActivity;
 import com.runningsnail.demos.activity.tv.KeyEventTestActivity;
 import com.runningsnail.demos.activity.tv.LinearLayoutTVActivity;
@@ -25,6 +27,7 @@ import com.runningsnail.demos.activity.tv.RuntimeExecuteActivity;
 import com.runningsnail.demos.activity.tv.ScreenAdapterActivity;
 import com.runningsnail.demos.activity.tv.ScrollViewActivity;
 import com.runningsnail.demos.activity.tv.ShadowEffectActivity;
+import com.runningsnail.demos.activity.tv.TvScrollViewActivity;
 import com.runningsnail.demos.activity.tv.ViewVisibleActivity;
 import com.runningsnail.demos.activity.viewanimation.AlphaAnimationActivity;
 import com.runningsnail.demos.activity.viewanimation.DoubleTabScaleActivity;
@@ -62,6 +65,7 @@ public class PathCenter {
 		content.add(buildAnimate("===补间动画系列==="));
 		content.add(buildWidget("===widget==="));
 		content.add(buildNetwork("===网络处理==="));
+		content.add(buildPhone("===手机端开发==="));
 		content.add(buildOther("===其他==="));
 		content.add(buildThirdParty("===三方框架==="));
 		return mainData;
@@ -89,6 +93,14 @@ public class PathCenter {
 		tvBean.setTitle(title);
 		List<MainData.ContentBean.SubBean> sub = tvBean.getSub();
 		sub.add(new MainData.ContentBean.SubBean("Retrofit", RetrofitDemoActivity.class.getName()));
+		return tvBean;
+	}
+
+	private static MainData.ContentBean buildPhone(String title) {
+		MainData.ContentBean tvBean = new MainData.ContentBean();
+		tvBean.setTitle(title);
+		List<MainData.ContentBean.SubBean> sub = tvBean.getSub();
+		sub.add(new MainData.ContentBean.SubBean("手势开发", GestureTestActivity.class.getName()));
 		return tvBean;
 	}
 
@@ -122,6 +134,8 @@ public class PathCenter {
 		sub.add(new MainData.ContentBean.SubBean("RecyclerView", RecyclerViewActivity.class.getName()));
 		sub.add(new MainData.ContentBean.SubBean("VideoView测试", VideoViewActivity.class.getName()));
 		sub.add(new MainData.ContentBean.SubBean("FocusHandle", FinderFocusActivity.class.getName()));
+		sub.add(new MainData.ContentBean.SubBean("FocusTest", FocusTestActivity.class.getName()));
+		sub.add(new MainData.ContentBean.SubBean("TVScrollView", TvScrollViewActivity.class.getName()));
 		return tvBean;
 	}
 
