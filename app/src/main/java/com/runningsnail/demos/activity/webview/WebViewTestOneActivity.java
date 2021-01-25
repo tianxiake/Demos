@@ -3,8 +3,6 @@ package com.runningsnail.demos.activity.webview;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-
-
 import android.view.View;
 import android.webkit.JsResult;
 import android.webkit.WebChromeClient;
@@ -45,7 +43,7 @@ public class WebViewTestOneActivity extends AppCompatActivity {
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         // 先载入JS代码
         // 格式规定为:file:///android_asset/文件名.html
-        webview.loadUrl("http://192.168.220.147:8080/test.html");
+        webview.loadUrl("file:///android_asset/html/index.html");
 
         // 由于设置了弹窗检验调用结果,所以需要支持js对话框
         // webview只是载体，内容的渲染需要使用webviewChromClient类去实现

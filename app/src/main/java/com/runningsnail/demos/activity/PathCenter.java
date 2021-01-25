@@ -3,11 +3,13 @@ package com.runningsnail.demos.activity;
 import com.runningsnail.demos.activity.bottomnavigation.BottomWayOneActivity;
 import com.runningsnail.demos.activity.bottomnavigation.BottomWayThreeActivity;
 import com.runningsnail.demos.activity.bottomnavigation.BottomWayTwoActivity;
+import com.runningsnail.demos.activity.cpuio.IOAndCPUTestActivity;
 import com.runningsnail.demos.activity.dialog.AlertDialogActivity;
 import com.runningsnail.demos.activity.dialog.DialogFragmentActivity;
 import com.runningsnail.demos.activity.other.KillProcessActivity;
 import com.runningsnail.demos.activity.other.SpTestActivity;
 import com.runningsnail.demos.activity.phone.GestureTestActivity;
+import com.runningsnail.demos.activity.resources.AssetActivity;
 import com.runningsnail.demos.activity.retrofit.RetrofitDemoActivity;
 import com.runningsnail.demos.activity.rxjava.RxJava2TestActivity;
 import com.runningsnail.demos.activity.surface.VideoViewActivity;
@@ -85,6 +87,8 @@ public class PathCenter {
 		List<MainData.ContentBean.SubBean> sub = tvBean.getSub();
 		sub.add(new MainData.ContentBean.SubBean("Android杀进程方式", KillProcessActivity.class.getName()));
 		sub.add(new MainData.ContentBean.SubBean("SP缓存测试", SpTestActivity.class.getName()));
+		sub.add(new MainData.ContentBean.SubBean("Android Asset测试", AssetActivity.class.getName()));
+		sub.add(new MainData.ContentBean.SubBean("IO/CPU计算", IOAndCPUTestActivity.class.getName()));
 		return tvBean;
 	}
 

@@ -11,12 +11,36 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <Button
-        android:textColor="@color/text_selector"
-        android:fontFamily="@font/star"
-        android:id="@+id/btn_show"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:text="展示图片" />
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fontFamily="@font/star"
+            android:text="展示图片"
+            android:textColor="@color/text_selector" />
+
+        <Button
+            android:id="@+id/btn_assert_json"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fontFamily="@font/star"
+            android:text="assert目录json文件" />
+
+        <Button
+            android:id="@+id/btn_assert_dir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:fontFamily="@font/star"
+            android:text="assert多级目录" />
+    </LinearLayout>
+
+
 </FrameLayout>
