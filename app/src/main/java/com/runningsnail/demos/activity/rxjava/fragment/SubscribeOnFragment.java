@@ -70,7 +70,7 @@ public class SubscribeOnFragment extends Fragment {
 				testDoOnSubscribe2();
 				break;
 			case R.id.btn_much_observable_subscribe:
-				testCustomObserverable();
+				testCustomObservable();
 				break;
 			default:
 				break;
@@ -82,7 +82,7 @@ public class SubscribeOnFragment extends Fragment {
 	 * 自定义多个Observable,每个Observable都调用subscribeOn和observerOn,最后最外层也调用
 	 * subscribeOn和observerOn,看线程执行情况
 	 */
-	private void testCustomObserverable() {
+	private void testCustomObservable() {
 
 
 		Observable<Integer> testOneObservable = Observable.just(1).map(new Function<Integer, Integer>() {

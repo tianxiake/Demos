@@ -6,11 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.runningsnail.demos.R;
 import com.runningsnail.demos.base.BaseDemoFragment;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -24,6 +25,8 @@ public class RxJavaMainFragment extends BaseDemoFragment {
 	Button testSubscribeOn;
 	@BindView(R.id.btn_cancel_task)
 	Button testCancelTask;
+	@BindView(R.id.btn_operation_task)
+	Button btnOperationTask;
 
 	@Nullable
 	@Override
@@ -33,7 +36,7 @@ public class RxJavaMainFragment extends BaseDemoFragment {
 		return view;
 	}
 
-	@OnClick({R.id.btn_test_subscribe_on, R.id.btn_cancel_task})
+	@OnClick({R.id.btn_test_subscribe_on, R.id.btn_cancel_task, R.id.btn_operation_task})
 	public void onClick(View view) {
 		int id = view.getId();
 		switch (id) {
@@ -42,6 +45,9 @@ public class RxJavaMainFragment extends BaseDemoFragment {
 				break;
 			case R.id.btn_cancel_task:
 				getOperationInf().replaceFragment(new CancelObserverFragment());
+				break;
+			case R.id.btn_operation_task:
+				getOperationInf().replaceFragment(new RxJavaOperationFragment());
 				break;
 			default:
 				break;

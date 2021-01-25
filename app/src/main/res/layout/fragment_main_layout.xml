@@ -25,6 +25,13 @@
                 android:layout_height="wrap_content"
                 android:text="取消任务"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn_operation_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="操作符测试"
+                android:textAllCaps="false" />
         </LinearLayout>
 
     </ScrollView>
