@@ -26,8 +26,8 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * @author yongjie created on 2021/1/14.
  */
-public class SubscribeOnFragment extends Fragment {
-	private static final String TAG = "SubscribeOnFragment";
+public class RxJavaSubscribeOnFragment extends Fragment {
+	private static final String TAG = "RxJavaSubscribeOnFragment";
 
 	@BindView(R.id.btn_test_exchange_thread)
 	Button testExchangeThread;
@@ -38,7 +38,7 @@ public class SubscribeOnFragment extends Fragment {
 	@BindView(R.id.btn_test_special_do_on_subscribe2)
 	Button testDoOnSubscribe2;
 	@BindView(R.id.btn_much_observable_subscribe)
-	Button testCustomObserverable;
+	Button testCustomObservable;
 
 
 	@Nullable

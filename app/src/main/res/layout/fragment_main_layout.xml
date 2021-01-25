@@ -13,24 +13,24 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btn_test_subscribe_on"
+                android:id="@+id/btn_test_rxjava_subscribe_on"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="subscribeOn()切线程"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/btn_cancel_task"
+                android:id="@+id/btn_rxjava_cancel_task"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="取消任务"
                 android:textAllCaps="false" />
 
             <Button
-                android:id="@+id/btn_operation_task"
+                android:id="@+id/btn_rxjava_operation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="操作符测试"
+                android:text="操作符"
                 android:textAllCaps="false" />
         </LinearLayout>
 

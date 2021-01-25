@@ -13,12 +13,22 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/btn_rxjava_custom_observable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义Observable" />
+            btn_concat_map_operation
+            <Button
+                android:id="@+id/btn_rxjava_flat_map"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="flatMap" />
+
+            <Button
                 android:id="@+id/btn_concat_map_operation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="concatMap操作符"
-                android:textAllCaps="false" />
-
+                android:text="concatMap" />
         </LinearLayout>
     </ScrollView>
 

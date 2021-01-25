@@ -19,6 +19,7 @@ import butterknife.OnClick;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
@@ -26,14 +27,16 @@ import io.reactivex.functions.Function;
 import io.reactivex.observers.DisposableObserver;
 import io.reactivex.schedulers.Schedulers;
 
-public class CancelObserverFragment extends BaseDemoFragment {
-	private static final String TAG = "CancelObserverFragment";
+public class RxJavaCancelObserverFragment extends BaseDemoFragment {
+	private static final String TAG = "RxJavaCancelObserverFragment";
 	@BindView(R.id.btn_cancel_way_one)
 	Button btnCancelOne;
 	@BindView(R.id.btn_cancel_way_two)
 	Button btnCancelTwo;
 	@BindView(R.id.btn_cancel_way_three)
 	Button btnCancelThree;
+	@BindView(R.id.btn_cancel_way_four)
+	Button btnCancelFour;
 
 	@Nullable
 	@Override
@@ -43,7 +46,7 @@ public class CancelObserverFragment extends BaseDemoFragment {
 		return view;
 	}
 
-	@OnClick({R.id.btn_cancel_way_one, R.id.btn_cancel_way_two, R.id.btn_cancel_way_three})
+	@OnClick({R.id.btn_cancel_way_one, R.id.btn_cancel_way_two, R.id.btn_cancel_way_three, R.id.btn_cancel_way_four})
 	public void onClick(View view) {
 		int id = view.getId();
 		switch (id) {
@@ -56,9 +59,61 @@ public class CancelObserverFragment extends BaseDemoFragment {
 			case R.id.btn_cancel_way_three:
 				cancelWayThree();
 				break;
+			case R.id.btn_cancel_way_four:
+				cancelWayFour();
+				break;
 			default:
 				break;
 		}
+	}
+
+	private void cancelWayFour() {
+		Disposable disposable1 = Observable.just(1)
+				.subscribeOn(Schedulers.io())
+				.map(new Function<Integer, Integer>() {
+					@Override
+					public Integer apply(@io.reactivex.annotations.NonNull Integer integer) throws Exception {
+						HiLogger.i(TAG, "apply1:==> %s", integer);
+						Thread.sleep(3000);
+						return integer;
+					}
+				}).observeOn(AndroidSchedulers.mainThread())
+				.subscribe(new Consumer<Integer>() {
+					@Override
+					public void accept(Integer integer) throws Exception {
+						HiLogger.i(TAG, "onNext1:==> %s", integer);
+					}
+				});
+
+		Disposable disposable2 = Observable.just(2)
+				.subscribeOn(Schedulers.io())
+				.map(new Function<Integer, Integer>() {
+					@Override
+					public Integer apply(@io.reactivex.annotations.NonNull Integer integer) throws Exception {
+						HiLogger.i(TAG, "apply2:==> %s", integer);
+						Thread.sleep(3000);
+						return integer;
+					}
+				}).observeOn(AndroidSchedulers.mainThread())
+				.subscribe(new Consumer<Integer>() {
+					@Override
+					public void accept(Integer integer) throws Exception {
+						HiLogger.i(TAG, "onNext2:==> %s", integer);
+					}
+				});
+
+		CompositeDisposable compositeDisposable = new CompositeDisposable(disposable1, disposable2);
+		MainHandler.getInstance().postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					HiLogger.i(TAG,"disposed");
+					compositeDisposable.dispose();
+				} catch (Exception e) {
+
+				}
+			}
+		}, 1000);
 	}
 
 	/**
